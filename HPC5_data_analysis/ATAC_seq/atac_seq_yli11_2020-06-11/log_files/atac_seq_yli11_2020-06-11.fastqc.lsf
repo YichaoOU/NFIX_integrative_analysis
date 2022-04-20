@@ -1,0 +1,23 @@
+
+
+#BSUB -P atac_seq
+#BSUB -o atac_seq_yli11_2020-06-11.fastqc.message_%J_%I.out -e atac_seq_yli11_2020-06-11.fastqc.message_%J_%I.err
+#BSUB -n 1
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=4000]"
+#BSUB -J "QC1[1-2]"
+module purge
+module load fastqc/0.11.5
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id atac_seq_yli11_2020-06-11.fastqc.input|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id atac_seq_yli11_2020-06-11.fastqc.input|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id atac_seq_yli11_2020-06-11.fastqc.input|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id atac_seq_yli11_2020-06-11.fastqc.input|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id atac_seq_yli11_2020-06-11.fastqc.input|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id atac_seq_yli11_2020-06-11.fastqc.input|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id atac_seq_yli11_2020-06-11.fastqc.input|tail -n1`
+
+fastqc ${COL1}
+
+		

@@ -1,0 +1,1000 @@
+ 1249  signal_plot.py --multi_to_multi input.list --computeMatrix_addon_parameters " --missingDataAsZero" --plotHeatmap_addon_parameters " --heatmapHeight 3 --zMin 0 --zMax 7 4 5" --figure_type pdf -u 3000 -d 3000
+ 1250  ls
+ 1251  cd Figure4/
+ 1252  ls
+ 1253  rm pu1.*
+ 1254  wc -l NFIX.open.st.bed 
+ 1255  shuf PU1_idr.open.bed | head -n 3774 > pu1.1
+ 1256  shuf PU1_idr.open.bed | head -n 3774 > pu1.2
+ 1257  shuf PU1_idr.open.bed | head -n 3774 > pu1.3
+ 1258  shuf PU1_idr.open.bed | head -n 3774 > pu1.4
+ 1259  shuf PU1_idr.open.bed | head -n 3774 > pu1.5
+ 1260  shuf PU1_idr.open.bed | head -n 3774 > pu1.6
+ 1261  shuf PU1_idr.open.bed | head -n 3774 > pu1.7
+ 1262  shuf PU1_idr.open.bed | head -n 3774 > pu1.8
+ 1263  shuf PU1_idr.open.bed | head -n 3774 > pu1.9
+ 1264  shuf PU1_idr.open.bed | head -n 3774 > pu1.10
+ 1265  for i in pu1.*;do pyGREAT.py -f $i -g mm9;done
+ 1266  wget -O result.tsv http://great.stanford.edu/public/cgi-bin/greatStart.php?outputType=batch&requestURL=https://www.dropbox.com/s/armelplm7buh1mc/208b68f1fb3d.pyGREAT?dl=0&requestSpecies=mm9&requestName=liyc-stjude&requestSender=HemTools
+ 1267  less result.tsv 
+ 1268  ls
+ 1269  rm result.tsv 
+ 1270  wget -O result.tsv "http://great.stanford.edu/public/cgi-bin/greatStart.php?outputType=batch&requestURL=https://www.dropbox.com/s/armelplm7buh1mc/208b68f1fb3d.pyGREAT?dl=0&requestSpecies=mm9&requestName=liyc-stjude&requestSender=HemTools"
+ 1271  less result.tsv 
+ 1272  wc -l result.tsv 
+ 1273  less result.tsv 
+ 1274  cd /research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/Projects/hgcOPT_insulator/Data/ChIP/dCTCF
+ 1275  ls
+ 1276  cd ..
+ 1277  find . -name "2018741*.gz"
+ 1278  cd dCTCF/
+ 1279  ln -s ../chenggrp_198442/2018741_Jurkat_20copy_ChIP_H3K27ac_300_700bp_S1_L002* .
+ 1280  ln -s ../chenggrp_198442/2018743_Jurkat_20copy_input_300_700bp_S9_L002*.gz .
+ 1281  ls
+ 1282  ln -s ../chenggrp_201110/2036257_Jurkat_20copy_ChIP_CTCF_300_700bp_2_S7*.gz .
+ 1283  ln -s ../chenggrp_201110/2036259_Jurkat_20copy_input_300_700bp_S9* .
+ 1284  ll -rht
+ 1285  rm 203*
+ 1286  ln -s ~/dirs/Sequencing_runs/chenggrp_201110/2036257_Jurkat_20copy_ChIP_CTCF_300_700bp_2_S7_*.gz .
+ 1287  ln -s ~/dirs/Sequencing_runs/chenggrp_201110/2036259_Jurkat_20copy_input_300_700bp_S9_*.gz .
+ 1288  ls
+ 1289  ln -s ~/dirs/Sequencing_runs/chenggrp_201110/203625[3-6]*.gz .
+ 1290  ls
+ 1291  ll -rht
+ 1292  merge_lanes_fastq.py *.gz
+ 1293  rm 2018741_Jurkat_20copy_ChIP_H3K27ac_300_700bp_S1_L002.read1.bam.stat
+ 1294  rm 203*L00*.gz
+ 1295  ls
+ 1296  ll -rht
+ 1297  ln -s ../1671211_Jurkat_20copy_CTCF_300_700bp_R*.gz .
+ 1298  ln -s ../final/raw/1950539_Jurkat_20copy_Rad21_300bp_700bp_R*gz .
+ 1299  ls
+ 1300  ll -rht
+ 1301  ls *input*
+ 1302  ls
+ 1303  ls *input*
+ 1304  cat *input*R1*.gz > Jurkat_20copy_input_R1.fastq.gz
+ 1305  cat *input*R2*.gz > Jurkat_20copy_input_R2.fastq.gz
+ 1306  ls 2*input*
+ 1307  rm 2*input*
+ 1308  ls
+ 1309  ln -s /home/yli11/dirs/Sequencing_runs/chenggrp_201935_ChIPseq_premade-1/*/*.gz .
+ 1310  ls
+ 1311  ll -rht
+ 1312  module list
+ 1313  HemTools chip_seq_pair --guess_input
+ 1314  ls *2036256*
+ 1315  md5sum *2036256*
+ 1316  mv 2036256_Jurkat_20copy_ChIP_Rad21_300_700bp_2_S6_R1_combine1.fastq.gz 2036256_Jurkat_20copy_ChIP_Rad21_300_700bp_2_S6_R1_combine.fastq.gz
+ 1317  rm fastq.tsv 
+ 1318  HemTools chip_seq_pair --guess_input
+ 1319  vim peakcall.tsv 
+ 1320  head -n 30 peakcall.tsv 
+ 1321  ll -rht
+ 1322  ls
+ 1323  ls *input*
+ 1324  rm peakcall.tsv 
+ 1325  vim peakcall.tsv
+ 1326  dos2unix peakcall.tsv 
+ 1327  HemTools chip_seq_pair -f fastq.tsv -d peakcall.tsv -g hg19_lenti
+ 1328  nano run.sh
+ 1329  ls
+ 1330  bjobs
+ 1331  bedlist_overlap.py -h
+ 1332  cd
+ 1333  cd HemTools/share/l
+ 1334  cd HemTools/share/lsf/
+ 1335  ls
+ 1336  grep "bwa index" *
+ 1337  pwd
+ 1338  ls
+ 1339  cd
+ 1340  module list
+ 1341  cd dirs
+ 1342  cd 20copy_project/
+ 1343  cd ChIP/
+ 1344  cd dCTCF/
+ 1345  ls
+ 1346  ll -rht
+ 1347  cd chenggrp_202429/
+ 1348  ls
+ 1349  ll -rht
+ 1350  cd ..
+ 1351  find . -name "*2045254*.gz"
+ 1352  ls
+ 1353  HemTools chip_seq_pair -f fastq.tsv -d peakcall.tsv -g hg19_dCTCF -j chip_seq_pair_yli11_2020-10-16_dCTCF_result 
+ 1354  ll -rht
+ 1355  rm chip_seq_pair_yli11_2020-10-16_dCTCF_result*
+ 1356  HemTools chip_seq_pair -f fastq.tsv -d peakcall.tsv -g hg19_dCTCF -j chip_seq_pair_yli11_2020-10-16_dCTCF_result 
+ 1357  cd chenggrp_202429/
+ 1358  ls
+ 1359  mkdir yichao_run
+ 1360  cd yichao_run/
+ 1361  ln -s ../*.gz .
+ 1362  ls
+ 1363  HemTools chip_seq_pair --guess_input
+ 1364  rm fastq.tsv 
+ 1365  ln -s ../../*input* .
+ 1366  ls
+ 1367  rm Jurkat_20copy_input*
+ 1368  rm chip_seq_pair_yli11_2020-10-16_dCTCF_result.
+ 1369  rm chip_seq_pair_yli11_2020-10-16_dCTCF_result.*
+ 1370  ls
+ 1371  HemTools chip_seq_pair --guess_input
+ 1372  more fastq.tsv 
+ 1373  head -n 20 peakcall.tsv 
+ 1374  rm peakcall.tsv 
+ 1375  nano peakcall.tsv
+ 1376  ll -rht
+ 1377  HemTools chip_seq_pair -f fastq.tsv -d peakcall.tsv -g hg19_dCTCF -j chip_seq_pair_yli11_2020-10-16_dCTCF_result 
+ 1378  cd ..
+ 1379  ls
+ 1380  cd ..
+ 1381  ls
+ 1382  cd
+ 1383  cd Share/
+ 1384  cd Phil/
+ 1385  ls
+ 1386  cd GATAmotif_mutation_diffPeak/
+ 1387  ls
+ 1388  less gata.bed 
+ 1389  chmod a+rx -R crispresso2_env
+ 1390  chmod a+rx -R ~/.conda/envs/crispresso2_env
+ 1391  ls
+ 1392  cd 113_compare/
+ 1393  ls
+ 1394  cd DiffPeak_yli11_2020-10-15/
+ 1395  ls
+ 1396  cd homer_motifs/
+ 1397  ls
+ 1398  less control-d113.diffRegions.txt
+ 1399  cd ..
+ 1400  for i in ls
+ 1401  find . -name "*.diffRegions.txt"
+ 1402  for i in `find . -name "*.diffRegions.txt"`;do echo $(basename $i);done
+ 1403  for i in `find . -name "*.diffRegions.txt"`;do input=$(basename $i);echo $input;done
+ 1404  for i in `find . -name "*.diffRegions.txt"`;do input=$(basename $i);echo cut -f 2,3,4,6,8,9 $i > $input.deseq2.bed;bedtools intersect -a $input.deseq2.bed -b gata.bed -u;done
+ 1405  ls
+ 1406  ll -rht
+ 1407  head control-WT.diffRegions.txt.deseq2.bed
+ 1408  for i in `find . -name "*.diffRegions.txt"`;do input=$(basename $i);cut -f 2,3,4,6,8,9 $i > $input.deseq2.bed;bedtools intersect -a $input.deseq2.bed -b gata.bed -u;done
+ 1409  for i in `find . -name "*.diffRegions.txt"`;do input=$(basename $i);cut -f 2,3,4,6,8,9 $i | tail -n +2 > $input.deseq2.bed;bedtools intersect -a $input.deseq2.bed -b gata.bed -u;done
+ 1410  ls
+ 1411  for i in `find . -name "*.diffRegions.txt"`;do input=$(basename $i);cut -f 2,3,4,6,8,9 $i | tail -n +2 > $input.deseq2.bed;bedtools intersect -a $input.deseq2.bed -b gata.bed -u;done
+ 1412  nano run.sh
+ 1413  ls
+ 1414  more gata.bed 
+ 1415  head gata.bed 
+ 1416  cd WT_compare/
+ 1417  ls
+ 1418  nano WT-186-GATA1_rep1_vs_IgG.rmdup_peaks.rmblck.narrowPeak 
+ 1419  vim WT-186-GATA1_rep1_vs_IgG.rmdup_peaks.rmblck.narrowPeak 
+ 1420  rm -r DiffPeak_yli11_2020-10-15/
+ 1421  module purge
+ 1422  module load python/2.7.12
+ 1423  cd ..
+ 1424  ll -rht
+ 1425  cd 110C_compare/
+ 1426  ls
+ 1427  module load bedtools
+ 1428  for i in *Peak;do bedtools intersect -a $i -b ../gata.bed -v > $i.filter.bed;done
+ 1429  wc -l *.bed
+ 1430  wc -l *Peak
+ 1431  cd ..
+ 1432  nano add.bed
+ 1433  cd 110C_compare/
+ 1434  cat ../add.bed 110C-186-GATA1_rep1_vs_IgG.rmdup_peaks.rmblck.narrowPeak.filter.bed > 110C-186-GATA1_rep1_vs_IgG.rmdup_peaks.rmblck.narrowPeak.filter.bed 
+ 1435  wc -l 110C-186-GATA1_rep1_vs_IgG.rmdup_peaks.rmblck.narrowPeak
+ 1436  less 110C-186-GATA1_rep1_vs_IgG.rmdup_peaks.rmblck.narrowPeak
+ 1437  less 110C-186-GATA1_rep1_vs_IgG.rmdup_peaks.rmblck.narrowPeak.filter.bed 
+ 1438  for i in *Peak;do bedtools intersect -a $i -b ../gata.bed -v > $i.filter.bed;done
+ 1439  wc -l *.bed
+ 1440  for i in *Peak;do bedtools intersect -a $i -b ../gata.bed -v > tmp;cat ../add.bed tmp > $i.filter.bed;done
+ 1441  wc -l *.bed
+ 1442  wc -l *Peak
+ 1443  less *bed
+ 1444  ls
+ 1445  for i in *Peak;do bedtools intersect -a $i -b ../gata.bed -v > tmp;cat ../add.bed tmp > $i.filter.bed;done
+ 1446  ls *bed > peak.list
+ 1447  diffPeak.py -b bam.list -d design.txt -p peak.list -z 1 --include_unmapped_reads
+ 1448  ls
+ 1449  ll -rht
+ 1450  bjobs
+ 1451  cd ..
+ 1452  cd WT_compare/
+ 1453  ls
+ 1454  diffPeak.py -b bam.list -d design.txt -p peak.list -z 1 --include_unmapped_reads
+ 1455  ll -rht
+ 1456  cd ..
+ 1457  ls
+ 1458  cd 113_compare/
+ 1459  for i in *Peak;do bedtools intersect -a $i -b ../gata.bed -v > tmp;cat ../add.bed tmp > $i.filter.bed;done
+ 1460  ls *bed > peak.list
+ 1461  diffPeak.py -b bam.list -d design.txt -p peak.list -z 1 --include_unmapped_reads
+ 1462  cd ..
+ 1463  cd 13nt_compare/
+ 1464  for i in *Peak;do bedtools intersect -a $i -b ../gata.bed -v > tmp;cat ../add.bed tmp > $i.filter.bed;done
+ 1465  ls *bed > peak.list
+ 1466  diffPeak.py -b bam.list -d design.txt -p peak.list -z 1 --include_unmapped_reads
+ 1467  cd ..
+ 1468  nano log.sh
+ 1469  cd /research/rgs01/home/clusterHome/yli11/Share/Phil/GATAmotif_mutation_diffPeak/113_compare/DiffPeak_yli11_2020-10-16/
+ 1470  ls
+ 1471  ll -rht
+ 1472  cd ..
+ 1473  ls
+ 1474  ll -rht
+ 1475  ll -rht ../113*bam
+ 1476  cd DiffPeak_yli11_2020-10-16/
+ 1477  ls
+ 1478  cd homer_motifs/
+ 1479  ls
+ 1480  less control-d113.diffRegions.txt
+ 1481  cd ..
+ 1482  ls
+ 1483  cd ..
+ 1484  cd DiffPeak_yli11_2020-10-15/homer_motifs/
+ 1485  less control-d113.diffRegions.txt
+ 1486  cd ..
+ 1487  ls
+ 1488  cd ..
+ 1489  ls
+ 1490  cd ..
+ 1491  bjobs
+ 1492  ll -rht
+ 1493  more log.sh 
+ 1494  more run.sh 
+ 1495  for i in `find . -name "*.diffRegions.txt"`;do input=$(basename $i);cut -f 2,3,4,6,8,9 $i | tail -n +2 > $input.deseq2.bed;bedtools intersect -a $input.deseq2.bed -b gata.bed -u;done
+ 1496  echo $i
+ 1497  less ./113_compare/DiffPeak_yli11_2020-10-16/homer_motifs/control-d113.diffRegions.txt
+ 1498  ls
+ 1499  cd 110C_compare/
+ 1500  diffPeak.py -b bam.list -d design.txt -p peak.list -z 1 -j peak_norm
+ 1501  cd ../113_compare/
+ 1502  diffPeak.py -b bam.list -d design.txt -p peak.list -z 1 -j peak_norm
+ 1503  cd ../13nt_compare/
+ 1504  diffPeak.py -b bam.list -d design.txt -p peak.list -z 1 -j peak_norm
+ 1505  cd ../WT_compare/
+ 1506  diffPeak.py -b bam.list -d design.txt -p peak.list -z 1 -j peak_norm
+ 1507  cd ..
+ 1508  more log.sh 
+ 1509  more run.sh 
+ 1510  bash run.sh 
+ 1511  nano run.sh
+ 1512  bash run.sh 
+ 1513  for i in `find . -name "*peak_norm*.diffRegions.txt"`;do input=$(basename $i);cut -f 2,3,4,6,8,9 $i | tail -n +2 > $input.deseq2.bed;bedtools intersect -a $input.deseq2.bed -b gata.bed -u;done
+ 1514  ls
+ 1515  cd /research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/Sequencing_runs/chenggrp_targeted_deep_sequencing_08222020
+ 1516  ls
+ 1517  ll -rht
+ 1518  cd crispresso2_BE_yli11_2020-09-08/
+ 1519  ls
+ 1520  less PE_info.tsv 
+ 1521  less ../crispresso2_BE_yli11_2020-09-08.input 
+ 1522  cd log_files/
+ 1523  ls
+ 1524  cd ..
+ 1525  ls
+ 1526  cd 293_HEK3_1_S79_L001
+ 1527  ls
+ 1528  less *.fasta
+ 1529  less 293_HEK3_1_S79_L001.fa
+ 1530  pwd
+ 1531  cd ..
+ 1532  cd 293PE_HEK3_1_S12_L001
+ 1533  ls
+ 1534  cd ..
+ 1535  find . -name "*293PE_HEK3_1_S12_L001*"
+ 1536  cd ./chenggrp_miseq_09022020_TCR_amplicon/crispresso2_BE_yli11_2020-09-07_b46ef609914d/293PE_HEK3_1_S12_L001/
+ 1537  ;s
+ 1538  ls
+ 1539  less *.fasta
+ 1540  pwd
+ 1541  cd ..
+ 1542  find . -name "*HEK3*.gz"
+ 1543  cd chenggrp_targeted_deep_sequencing_073032020
+ 1544  ll -rht
+ 1545  cd crispresso2_BE_tyee_2020-08-01_bea5f03cc090
+ 1546  ls
+ 1547  cd ..
+ 1548  cd crispresso2_BE_jchen6_2020-08-01
+ 1549  ls
+ 1550  less Ctrl_HEK31TtoG_1_S1_L001_amplicons.fasta 
+ 1551  pwd
+ 1552  cd ../..
+ 1553  ll -rht
+ 1554  cd chenggrp_targeted_deep_sequencing_101320JC
+ 1555  ls
+ 1556  ll -rht *HEK3*
+ 1557  less K562R2-HEK3_S57_L001_R1_001.fastq.gz
+ 1558  cd /research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/Sequencing_runs/chenggrp_targeted_deep_sequencing_073032020/crispresso2_BE_jchen6_2020-08-01
+ 1559  cd ..
+ 1560  ls
+ 1561  ll -rht
+ 1562  less HEK31TtoG-T05_S3_L001_R1_001.fastq.gz 
+ 1563  cd ..
+ 1564  ll -rht
+ 1565  cd *JC
+ 1566  ll -rht
+ 1567  run_lsf.py --guess_input
+ 1568  module purge
+ 1569  module load python/2.7.13
+ 1570  run_lsf.py --guess_input
+ 1571  pwd
+ 1572  prime_editing_SNV.py -h
+ 1573  prime_editing_SNV.py -f crispresso.input.tsv 
+ 1574  ll -rht
+ 1575  less prime_editing_SNV_yli11_2020-10-16.pe.input
+ 1576  less prime_editing_SNV_yli11_2020-10-16.se.input
+ 1577  rm -r prime_editing_SNV_yli11_2020-10-16
+ 1578  prime_editing_SNV.py -f crispresso.input.tsv 
+ 1579  ls prime_editing_SNV_yli11_2020-10-16
+ 1580  less prime_editing_SNV_yli11_2020-10-16/SE.lsf 
+ 1581  rm -r prime_editing_SNV_yli11_2020-10-16
+ 1582  prime_editing_SNV.py -f crispresso.input.tsv 
+ 1583  bjobs
+ 1584  cd /research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/Sequencing_runs/chenggrp_targeted_deep_sequencing_101320JC/prime_editing_SNV_yli11_2020-10-16
+ 1585  ls
+ 1586  cd log_files/
+ 1587  ls
+ 1588  tail -n 2 *err
+ 1589  cd ..
+ 1590  ls
+ 1591  cd ..
+ 1592  nano run2.list
+ 1593  prime_editing_SNV.py -f run2.list 
+ 1594  ls
+ 1595  cd *16_1e21dd49b2b8
+ 1596  ls
+ 1597  bsub < SE.lsf 
+ 1598  less SE.lsf 
+ 1599  cd ..
+ 1600  rm -r prime_editing_SNV_yli11_2020-10-16_1e21dd49b2b8
+ 1601  prime_editing_SNV.py -f run2.list 
+ 1602  head *input
+ 1603  prime_editing_SNV.py -f run2.list 
+ 1604  ls
+ 1605  less prime_editing_SNV_yli11_2020-10-16.se.input 
+ 1606  less prime_editing_SNV_yli11_2020-10-16.pe.input 
+ 1607  prime_editing_SNV.py -f run2.list 
+ 1608  bjobs
+ 1609  wc -l /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv
+ 1610  prime_editing_SNV.py -f run2.list 
+ 1611  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_s10
+ 1612  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_q10
+ 1613  bjobs
+ 1614  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_s20
+ 1615  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_q20
+ 1616  bjobs
+ 1617  nano ncd1_ncd2.list
+ 1618  crispresso2_WGS.py -h
+ 1619  crispresso2_WGS.py -f ncd1_ncd2.list 
+ 1620  crispresso2_BE.py --gRNA_and_primers_BWA ncd1_ncd2.list -q 10 
+ 1621  cd /research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/Sequencing_runs/chenggrp_targeted_deep_sequencing_101320JC/prime_editing_SNV_yli11_2020-10-16_q20
+ 1622  ls
+ 1623  cd log_files/
+ 1624  ls
+ 1625  tail -n 2 *err
+ 1626  pwd
+ 1627  bjobs
+ 1628  cd ..
+ 1629  wc -l input.txt 
+ 1630  less input.txt 
+ 1631  wc -l crispresso.input.tsv 
+ 1632  ls
+ 1633  cd prime_editing_SNV_yli11_2020-10-16
+ 1634  ls
+ 1635  cd log_files/
+ 1636  ls
+ 1637  ll -rht *.err | wc -l
+ 1638  cd ..
+ 1639  ls
+ 1640  cd ..
+ 1641  ll -rht
+ 1642  wc -l prime_editing_SNV_yli11_2020-10-16_s10.se.input
+ 1643  less prime_editing_SNV_yli11_2020-10-16
+ 1644  less prime_editing_SNV_yli11_2020-10-16_s10.se.input
+ 1645  less crispresso.input.tsv 
+ 1646  rm -r prime_editing_SNV_yli11_2020-10-16_*
+ 1647  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_q0
+ 1648  wc -l *q0*input
+ 1649  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_q10
+ 1650  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_q20
+ 1651  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_q30
+ 1652  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_s30
+ 1653  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_s20
+ 1654  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-16_s10
+ 1655  ll -rht
+ 1656  ls prime_editing_SNV_yli11_2020*input
+ 1657  rm prime_editing_SNV_yli11_2020*input
+ 1658  ll -rht
+ 1659  rm ncd3_*
+ 1660  cd prime_editing_SNV_yli11_2020-10-16
+ 1661  ls
+ 1662  cd *
+ 1663  ls
+ 1664  cd CRISPResso_on_293Ctrl-ncd1_S2_L001_R1_001_293Ctrl-ncd1_S2_L001_R2_001/
+ 1665  ls
+ 1666  less Nucleotide_percentage_table.txt 
+ 1667  pwd
+ 1668  cd ..
+ 1669  ls
+ 1670  cd ..
+ 1671  ls
+ 1672  pwd
+ 1673  cd ..
+ 1674  module list
+ 1675  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-17_q10
+ 1676  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-17_q20
+ 1677  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-17_q30
+ 1678  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-17_s30
+ 1679  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-17_s20
+ 1680  prime_editing_SNV.py -f crispresso.input.tsv -j prime_editing_SNV_yli11_2020-10-17_s10
+ 1681  ls
+ 1682  ll -rht
+ 1683  bash calculate.sh 
+ 1684  pwd
+ 1685  ll -rht
+ 1686  rm -r prime_editing_SNV_yli11_2020-10-17_*
+ 1687  rm -r prime_editing_SNV_yli11_2020-10-16_*
+ 1688  prime_editing_SNV.py -f crispresso.input.tsv 
+ 1689  prime_editing_SNV.py -f crispresso.input.tsv -q 10
+ 1690  prime_editing_SNV.py -f crispresso.input.tsv -q 20
+ 1691  prime_editing_SNV.py -f crispresso.input.tsv -q 30
+ 1692  prime_editing_SNV.py -f crispresso.input.tsv -s 10
+ 1693  prime_editing_SNV.py -f crispresso.input.tsv -s 20
+ 1694  prime_editing_SNV.py -f crispresso.input.tsv -s 30
+ 1695  bjobs
+ 1696  cd
+ 1697  cd dirs
+ 1698  cd hgcOPT
+ 1699  cd 20copy_data
+ 1700  ls
+ 1701  ll -rht CTCF*
+ 1702  less CTCF_in_peaks.bed.bedjs.sorted.gz
+ 1703  cd
+ 1704  cd R
+ 1705  cd /research/rgs01/home/clusterHome/yli11/Pipelines/example_NGS_data/cut_run/cut_run_yli11_2019-04-10/cut_run_footprint_yli11_2020-10-18_40b177c208be/test/motif_mapping/AAGGTTAGGCCG_43
+ 1706  ls
+ 1707  cd ../..
+ 1708  ls
+ 1709  combine_footprint_figures_and_motif_position_figures.py
+ 1710  ~/Programs/cut_run_pipeline_Nan_Liu/combine_footprint_figures_and_motif_position_figures.py homer_motifs_result/homer_all_motifs/all.motifs.list homer_motifs_result/homer_all_motifs/file.list footprint_figures.list
+ 1711  ll -rht
+ 1712  dataframe_to_html.py -f figure_html.tsv -o ${base}.html
+ 1713  less figure_html.tsv 
+ 1714  wc -l figure_html.tsv 
+ 1715  less figure_html.tsv 
+ 1716  dataframe_to_html.py -f figure_html.tsv -o ${base}.html
+ 1717  pwd
+ 1718  dataframe_to_html.py -f figure_html.tsv -o ${base}.html
+ 1719  dataframe_to_html.py -f figure_html.tsv
+ 1720  ls
+ 1721  cd  /research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/Projects/hgcOPT_insulator/Data/ChIP/dCTCF/chip_seq_pair_yli11_2020-10-16_dCTCF_result/ 
+ 1722  ls
+ 1723  cd peak_files/
+ 1724  ls
+ 1725  grep dCTCF *Peak
+ 1726  grep ^dCTCF *Peak
+ 1727  grep ^dCTCF *rmdup.uq.rmchrM_peaks.rmblck.narrowPeak
+ 1728  grep ^dCTCF *rmdup.uq.rmchrM_peaks.rmblck.narrowPeak | cut -f 1,2,3,4
+ 1729  grep ^dCTCF *rmdup.uq.rmchrM_peaks.rmblck.narrowPeak | cut -f 1,2,3
+ 1730  grep ^dCTCF *rmdup.uq.rmchrM_peaks.rmblck.narrowPeak | cut -f 1,2,3,7
+ 1731  grep ^dCTCF *_CTCF_*rmdup.uq.rmchrM_peaks.rmblck.narrowPeak | cut -f 1,2,3,7
+ 1732  ls
+ 1733  cd ..
+ 1734  ls
+ 1735  cd log_files/
+ 1736  ls
+ 1737  less *BWA*out
+ 1738  less /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../hg19_dctcf/bwa_16a_index/hg19_dctcf.fa
+ 1739  cd ../..
+ 1740  cd ..
+ 1741  ls
+ 1742  cd dCTCF/
+ 1743  ls
+ 1744  cd chenggrp_202429/
+ 1745  ls
+ 1746  cd yichao_run/
+ 1747  ls
+ 1748  cd chip_seq_pair_yli11_2020-10-16_dCTCF_result/
+ 1749  ls
+ 1750  cd peak_files/
+ 1751  grep ^dCTCF *_CTCF_*rmdup.uq.rmchrM_peaks.rmblck.narrowPeak | cut -f 1,2,3,7
+ 1752  ls
+ 1753  cd ..
+ 1754  cd bw_files/
+ 1755  ls
+ 1756  ls *input.rmdup.uq.rmchrM_FE.bw
+ 1757  mkdir upload
+ 1758  cd upload/
+ 1759  ln -s ../*input.rmdup.uq.rmchrM_FE.bw .
+ 1760  pwd
+ 1761  cd ..
+ 1762  cd chip_seq_pair_yli11_2020-10-16_dCTCF_result/bw_files/
+ 1763  ln -s ../*input.rmdup.uq.rmchrM_FE.bw .
+ 1764  ls
+ 1765  rm "*input.rmdup.uq.rmchrM_FE.bw"
+ 1766  mkdir upload
+ 1767  cd upload/
+ 1768  ln -s ../*input.rmdup.uq.rmchrM_FE.bw .
+ 1769  ls
+ 1770  pwd
+ 1771  cd
+ 1772  chmod a+rx -R HemTools/
+ 1773  cd dirs
+ 1774  ll -rht
+ 1775  cd captureC_20copy/
+ 1776  ls
+ 1777  cd ChiCMaxima/
+ 1778  ls
+ 1779  cd interaction_table2/
+ 1780  ls
+ 1781  more log.txt 
+ 1782  module load bedtools
+ 1783  bedtools closest -a 20copy_interactions.oe.st.bed -b IL2RG.annot.st.bed -D b > feature2_IL2RG_direction.tsv
+ 1784  nano log.txt 
+ 1785  pwd
+ 1786  less feature2_IL2RG_direction.tsv 
+ 1787  cd
+ 1788  cd dirs
+ 1789  cd
+ 1790  chmod a+rx -R /home/yli11/.conda/envs/diffPeaks
+ 1791  cd Share/Phil/GATAmotif_mutation_diffPeak/
+ 1792  ls
+ 1793  ll -rht
+ 1794  pwd
+ 1795  python
+ 1796  ls
+ 1797  nano input.tsv
+ 1798  ll -rht
+ 1799  module list
+ 1800  diffPeak.py -h
+ 1801  diffPeaks.py -h
+ 1802  diffPeaks.py -f input.tsv -d GATAmotif_mutation_diffPeak_matrix.tsv --MAnorm_PE_flag
+ 1803  diffPeaks.py -h
+ 1804  bjobs
+ 1805  ll -rht
+ 1806  cd diffPeaks_yli11_2020-10-18/
+ 1807  ls
+ 1808  ll -rht
+ 1809  cd log_files/
+ 1810  ls
+ 1811  tail *err
+ 1812  less homer_norm_110824435_10.err 
+ 1813  tail homer_norm_110824435_10.err 
+ 1814  module load homer
+ 1815  makeUCSCfile
+ 1816  tail homer_norm_110824435_10.err 
+ 1817  cd ..
+ 1818  ls
+ 1819  makeUCSCfile 110C-186-GATA1_rep1_tag -o test.bw -bigWig /home/yli11/Data/Human/hg19/annotations/hg19.chrom.sizes.sorted
+ 1820  ls /home/yli11/Data/Human/hg19/annotations/hg19.chrom.sizes.sorted
+ 1821  less /home/yli11/Data/Human/hg19/annotations/hg19.chrom.sizes.sorted
+ 1822  less log_files/homer_norm_110824435_*err
+ 1823  less log_files/homer_norm_110824435_*out
+ 1824  less log_files/homer_norm_110824435_*err
+ 1825  module load ucsc
+ 1826  makeUCSCfile 110C-186-GATA1_rep1_tag -o test.bw -bigWig /home/yli11/Data/Human/hg19/annotations/hg19.chrom.sizes.sorted -res 1 -avg -noheader -skipChr chr6_ssto_hap7 chr6_mcf_hap5 chr6_cox_hap2 chr6_mann_hap4 chr6_apd_hap1 chr6_qbl_hap6 chr6_dbb_hap3 chr17_ctg5_hap1 chr4_ctg9_hap1 chr1_gl000192_random chrUn_gl000225 chr4_gl000194_random chr4_gl000193_random chr9_gl000200_random chrUn_gl000222 chrUn_gl000212 chr7_gl000195_random chrUn_gl000223 chrUn_gl000224 chrUn_gl000219 chr17_gl000205_random chrUn_gl000215 chrUn_gl000216 chrUn_gl000217 chr9_gl000199_random chrUn_gl000211 chrUn_gl000213 chrUn_gl000220 chrUn_gl000218 chr19_gl000209_random chrUn_gl000221 chrUn_gl000214 chrUn_gl000228 chrUn_gl000227 chr1_gl000191_random chr19_gl000208_random chr9_gl000198_random chr17_gl000204_random chrUn_gl000233 chrUn_gl000237 chrUn_gl000230 chrUn_gl000242 chrUn_gl000243 chrUn_gl000241 chrUn_gl000236 chrUn_gl000240 chr17_gl000206_random chrUn_gl000232 chrUn_gl000234 chr11_gl000202_random chrUn_gl000238 chrUn_gl000244 chrUn_gl000248 chr8_gl000196_random chrUn_gl000249 chrUn_gl000246 chr17_gl000203_random chr8_gl000197_random chrUn_gl000245 chrUn_gl000247 chr9_gl000201_random chrUn_gl000235 chrUn_gl000239 chr21_gl000210_random chrUn_gl000231 chrUn_gl000229 chrUn_gl000226 chr18_gl000207_random chrM -fragLength 200 -norm 10000000 -normLength 100
+ 1827  module list
+ 1828  module load conda3
+ 1829  source activate /home/yli11/.conda/envs/rgt_hint
+ 1830  module load ucsc/041619
+ 1831  ls
+ 1832  ls *thor
+ 1833  ls THOR_results/
+ 1834  cp THOR_results/110C_vs_110C-186.thor .
+ 1835  rgt-THOR 110C_vs_110C-186.thor 
+ 1836  module list
+ 1837  source deactivate
+ 1838  cd ..
+ 1839  module purge
+ 1840  module load python/2.7.14
+ 1841  module load python/2.7.13
+ 1842  diffPeaks.py -f input.tsv -d GATAmotif_mutation_diffPeak_matrix.tsv --MAnorm_PE_flag
+ 1843  bjobs
+ 1844  bkill 110824436
+ 1845  bkill 110824440
+ 1846  bjobs
+ 1847  ]bjobs
+ 1848  bjobs
+ 1849  cd ..
+ 1850  ls
+ 1851  cd ..
+ 1852  ls
+ 1853  cd R
+ 1854  cd Ruopeng/
+ 1855  ls
+ 1856  cd log_files/
+ 1857  ls
+ 1858  pwd
+ 1859  tail *err
+ 1860  chmod a+rx -R /home/yli11/.conda/envs/diffPeaks/
+ 1861  ls
+ 1862  cd ~/Share/Megan/
+ 1863  ls
+ 1864  cd ATAC/
+ 1865  ls
+ 1866  ll -rht
+ 1867  less input.list 
+ 1868  ls
+ 1869  cd ../..
+ 1870  cd Megan/
+ 1871  cd Figures/2
+ 1872  ls
+ 1873  cd Figures/
+ 1874  cd Figure2/
+ 1875  ls
+ 1876  cd panel_c
+ 1877  cd panel_C
+ 1878  ls
+ 1879  more c.sh 
+ 1880  cd ..
+ 1881  cd Figure5/
+ 1882  ll -rht
+ 1883  wc -l NFIX_all_PU1.bed
+ 1884  module list
+ 1885  liftover.py -h
+ 1886  liftover.py --bed NFIX_all_PU1.bed -g mm9_hg19 -o NFIX_all_PU1.hg19.bed
+ 1887  pwd
+ 1888  ll -rht
+ 1889  wc -l NFIX_all_PU1.hg19.bed 
+ 1890  head e025ab882fa3
+ 1891  module load ucsc/041619;liftOver
+ 1892  liftover.py --bed NFIX_all_PU1.bed -g mm9_hg19 -o NFIX_all_PU1.hg19.bed
+ 1893  ll -rht
+ 1894  less NFIX_all_PU1.hg19.bed 
+ 1895  module list
+ 1896  GREGOR.py -h
+ 1897  ls NFIX_all_PU1.hg19.bed > snp_test.list
+ 1898  GREGOR.py -f snp_test.list -n VJ01 -j GREGOR_yli11_2020-10-19_VJ01
+ 1899  GREGOR.py -f snp_test.list -n VJ01_combined -j GREGOR_yli11_2020-10-19_VJ01_combined
+ 1900  GREGOR.py -f snp_test.list -n hg19_gwas -j GREGOR_yli11_2020-10-19_hg19_gwas
+ 1901  GREGOR.py -f snp_test.list -n VJ025 -j GREGOR_yli11_2020-10-19_VJ025
+ 1902  bjobs
+ 1903  bjobs | head
+ 1904  cd /research/rgs01/home/clusterHome/yli11/Share/Megan/Figures/Figure5/GREGOR_yli11_2020-10-19_VJ01/summary_files
+ 1905  ls
+ 1906  ll -rht
+ 1907  less heatmap.py 
+ 1908  python heatmap.py 
+ 1909  wc -l *.tsv
+ 1910  less BASO_COUNT.0.1.tsv
+ 1911  grep ExpectNum_of_InBed_SNP *
+ 1912  nano heatmap.py 
+ 1913  python heatmap.py 
+ 1914  nano heatmap.py 
+ 1915  python heatmap.py 
+ 1916  nano heatmap.py 
+ 1917  python heatmap.py 
+ 1918  nano heatmap.py 
+ 1919  python heatmap.py 
+ 1920  head *list
+ 1921  cd ..
+ 1922  ls
+ 1923  cd log_files/
+ 1924  ls
+ 1925  tail *err
+ 1926  ls /scratch_space/yli11/
+ 1927  tail *err
+ 1928  less Enrich_110861385_5.out 
+ 1929  cd ..
+ 1930  GREGOR.py -f snp_test.list -n VJ01_combined -j GREGOR_yli11_2020-10-19_VJ01_combined
+ 1931  GREGOR.py -f snp_test.list -n VJ01 -j GREGOR_yli11_2020-10-19_VJ01
+ 1932  GREGOR.py -f snp_test.list -n VJ025 -j GREGOR_yli11_2020-10-19_VJ025
+ 1933  bjobs
+ 1934  bkill 110861389
+ 1935  cd /research/rgs01/home/clusterHome/yli11/Share/Megan/Figures/Figure5/GREGOR_yli11_2020-10-19_VJ025_ccb2bde6ac0d/summary_files
+ 1936  ls
+ 1937  ll -rht
+ 1938  cd ..
+ 1939  ls
+ 1940  cd log_files/
+ 1941  ls
+ 1942  tail *err
+ 1943  less END_110861415_1.
+ 1944  less END_110861415_1.out 
+ 1945  less END_110861415_1.err
+ 1946  ls
+ 1947  cd ..
+ 1948  ls
+ 1949  cd summary_files/
+ 1950  ls
+ 1951  rm *.list
+ 1952  ls
+ 1953  python heatmap.py 
+ 1954  nano heatmap.py 
+ 1955  python heatmap.py 
+ 1956  rm *.list
+ 1957  python heatmap.py 
+ 1958  vim heatmap.py 
+ 1959  rm *.list
+ 1960  python heatmap.py 
+ 1961  ll -rht
+ 1962  less test.csv
+ 1963  rm *.list
+ 1964  rm *.csv
+ 1965  nano heatmap.py 
+ 1966  less *.list
+ 1967  python heatmap.py 
+ 1968  less *.list
+ 1969  cd ..
+ 1970  bjobs
+ 1971  cd ..
+ 1972  ls
+ 1973  ll -rht
+ 1974  bjobs
+ 1975  less homer_motif_discovery_yli11_2020-10-19_7f1ddf447ddd/homer.lsf 
+ 1976  cd homer_motif_discovery_yli11_2020-10-19_7f1ddf447ddd
+ 1977  ls
+ 1978  cd log_files/
+ 1979  ls
+ 1980  less homer_110850642_1.err 
+ 1981  less homer_110850642_1.out 
+ 1982  cd ..
+ 1983  ls
+ 1984  nano homer.lsf 
+ 1985  cp homer.lsf  ../
+ 1986  cd ..
+ 1987  bsub < homer.lsf 
+ 1988  ll -rht
+ 1989  cd GREGOR_yli11_2020-10-19_VJ01_d9bc1c3782e2
+ 1990  ls
+ 1991  cd summary_files/
+ 1992  ls
+ 1993  pwd
+ 1994  ls
+ 1995  cd ..
+ 1996  ls
+ 1997  cd ..
+ 1998  ls
+ 1999  ll -rht
+ 2000  head */*/*.list
+ 2001  GREGOR.py -f snp_test.list -n hg19_gwas -j GREGOR_yli11_2020-10-19_hg19_gwas
+ 2002  ls
+ 2003  cd ..
+ 2004  cd NFIX_bloood/
+ 2005  ls
+ 2006  ll -rht
+ 2007  less get_peaks.py 
+ 2008  cd ..
+ 2009  cd Figure5/
+ 2010  bjobs
+ 2011  bjobs | head
+ 2012  bpeek 110865391[1]
+ 2013  bjobs
+ 2014  pwd
+ 2015  bedtools
+ 2016  module load bedtools
+ 2017  bedtools intersect -a NFIX_all_PU1.bed -b matched_NFIX_motifs.bed -u | wc -l
+ 2018  ls
+ 2019  bedtools intersect -a NFIX_all_PU1.bed -b HPC5_ATAC.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak -u | wc -l
+ 2020  cd ..
+ 2021  find . -name "*R"
+ 2022  cd ./Figure5/log.R
+ 2023  less ./Figure2/panel_D/test.pdf.R
+ 2024  cd ..
+ 2025  find . -name "*R"
+ 2026  cd RNA_seq/GO/
+ 2027  ls
+ 2028  less barplot.R 
+ 2029  more down.tsv
+ 2030  head down.tsv
+ 2031  cut -f 1,3 down.tsv > test.tsv
+ 2032  head test.tsv
+ 2033  module load R/3.5.1
+ 2034  R
+ 2035  pwd
+ 2036  head test.tsv
+ 2037  cd
+ 2038  cd Share/
+ 2039  ls
+ 2040  ll -rht
+ 2041  cd Megan/
+ 2042  ls
+ 2043  ll -rht
+ 2044  cd HPC5
+ 2045  cd ..
+ 2046  cd HPC7
+ 2047  ls
+ 2048  cd upload/
+ 2049  ls
+ 2050  ll -rht
+ 2051  pwd
+ 2052  ls
+ 2053  cd
+ 2054  cd Data/
+ 2055  ll -rht
+ 2056  cd Human/
+ 2057  ls
+ 2058  cd hg19
+ 2059  ls
+ 2060  cd gencode33/
+ 2061  ls
+ 2062  ll -rht
+ 2063  cd gencode_regions/
+ 2064  ls
+ 2065  ll -rht
+ 2066  less create_without_rRNA_tRNA.sh 
+ 2067  less create_regions_from_gencode.R 
+ 2068  cd
+ 2069  ls
+ 2070  cd dirs
+ 2071  cd 20copy_project/
+ 2072  cd ..
+ 2073  cd captureC_20copy/
+ 2074  ls
+ 2075  ll -rht
+ 2076  less target.merge.bed 
+ 2077  wc -l target.merge.bed 
+ 2078  wc -l target.2kb.bed 
+ 2079  mkdir insulator_scatter_highlight
+ 2080  cd insulator_scatter_highlight/
+ 2081  cp ../target.2kb.bed .
+ 2082  cp ../ChiCMaxima/20copy_interactions.oe.bed .
+ 2083  wc -l 20copy_interactions.oe.bed 
+ 2084  ls
+ 2085  cat * > merge.bed
+ 2086  sort -k1,1 -k2,2n merge.bed 
+ 2087  sort -k1,1 -k2,2n merge.bed | bedtools merge -i - > highlight.bed
+ 2088  bedtools slop -b 10000 -i highlight.bed -g ~/dirs/genome_browser/yli11/hg19_20copy/hg19_20copy.chrom.sizes > highlight.10kb.bed 
+ 2089  cp highlight.*bed /home/yli11/hg19_20copy_result/tad_score_correlation/
+ 2090  cd
+ 2091  cd Share/Megan/
+ 2092  cd HPC5
+ 2093  cd tf_target_finder_mwalker2_2020-04-25_14a5a7ce285e/
+ 2094  ls
+ 2095  ll -rht
+ 2096  less assign_targets_output.tsv 
+ 2097  wc -l assign_targets_output.tsv 
+ 2098  ls $PWD/assign_targets_output.tsv
+ 2099  pwd
+ 2100  ls
+ 2101  nano assign_targets.bed
+ 2102  ls
+ 2103  cd peak_co_binding_test/
+ 2104  ls
+ 2105  cd ..
+ 2106  ls
+ 2107  cd motif_co_binding_test/
+ 2108  ls
+ 2109  cd ..
+ 2110  ls
+ 2111  cd ..
+ 2112  ls
+ 2113  cd 20201013_wt_pu1_tf_target_finder/
+ 2114  ls
+ 2115  wc -l assign_targets.log 
+ 2116  cd peak_co_binding_test/
+ 2117  ls
+ 2118  wc -l nfix_pu1_target_DEG.txt 
+ 2119  less nfix_pu1_target_DEG.txt 
+ 2120  cp ../../tf_target_finder_mwalker2_2020-04-25_14a5a7ce285e/abc.bed .
+ 2121  bedtools intersect -a abc.bed -b nfix_pu1_target_DEG.txt -u > NFIX_PU1.annot.bed
+ 2122  bedtools intersect -a abc.bed -b nfix_pu1_target_DEG.txt -u > NFIX_PU1.annot.tsv
+ 2123  pwd
+ 2124  wc -l *.tsv
+ 2125  pwd
+ 2126  ls $PWD/*tsv
+ 2127  less /home/yli11/Share/Megan/HPC5/20201013_wt_pu1_tf_target_finder/peak_co_binding_test/NFIX_PU1.annot.tsv
+ 2128  chmod a+rx -R ~/Share/Megan/HPC5
+ 2129  ll -rht
+ 2130  cd ..
+ 2131  ls
+ 2132  cd ..
+ 2133  ls
+ 2134  cd ..
+ 2135  ls
+ 2136  cd Figures/
+ 2137  cd Figure5
+ 2138  ls
+ 2139  pyGREAT.py -f NFIX_all_PU1.bed -g mm9
+ 2140  cd ..
+ 2141  ls
+ 2142  cd diff_PU1/
+ 2143  ls
+ 2144  less FC2_P5.bed 
+ 2145  pwd
+ 2146  ls \$PWD/FC2_P5.bed 
+ 2147  ls $PWD/FC2_P5.bed
+ 2148  ll -rht
+ 2149  module load htslib
+ 2150  create_tracks.py --current_dir -g mm9
+ 2151  cp ~/dirs/genome_browser/HemPipelines/yli11/create_tracks_yli11_2020-10-22fce8f7632cb1/tracks.json .
+ 2152  less tracks.json 
+ 2153  cd
+ 2154  cd dirs
+ 2155  cd genome_browser/
+ 2156  ls
+ 2157  cd yli11/Nfix/diffpeaks/diffPeaks_result_final_0917/
+ 2158  ls
+ 2159  cd PU1/
+ 2160  ls
+ 2161  ll -rht
+ 2162  wc -l *.bed
+ 2163  pwd
+ 2164  pyGREAT.py -f FC1.5_P5.bed -g mm9
+ 2165  cd
+ 2166  cd Share/Megan/Figures/
+ 2167  ls
+ 2168  cd Figure5/motif_scanning3/random_bed/
+ 2169  pwd
+ 2170  cd ..
+ 2171  ll -rht
+ 2172  bedtools intersect -a matched_PU.1_motifs.bed -b NFIX_all_PU1.bed -u | wc -l
+ 2173  bedtools intersect -b matched_PU.1_motifs.bed -a NFIX_all_PU1.bed -u | wc -l
+ 2174  cd
+ 2175  ls
+ 2176  cd Share/ME
+ 2177  cd Share/Megan/
+ 2178  cd Figures/
+ 2179  ls
+ 2180  ll -rht
+ 2181  cd Figure2
+ 2182  ls
+ 2183  pyGREAT.py -f PU1_idr.rmblck.st.bed -g mm9
+ 2184  pyGREAT.py -f wt_idr_peaks_noko.rmblck.st.bed -g mm9
+ 2185  cd ..
+ 2186  ls
+ 2187  cd diff_PU1/
+ 2188  ls
+ 2189  pwd
+ 2190  cd ..
+ 2191  chmod a+rx -R *
+ 2192  cd diff_PU1/
+ 2193  ls
+ 2194  cd FC1.5_P5.bed_result_given_20_2_-mask/
+ 2195  pwd
+ 2196  cd /home/yli11/Share/Megan/HPC7/upload/
+ 2197  ls
+ 2198  module list
+ 2199  mls
+ 2200  ls
+ 2201  mkdir corr
+ 2202  cd corr/
+ 2203  ln -s ../*.bw .
+ 2204  ls /home/yli11/Share/Megan/HPC5/NFIX/chip_seq_single_yli11_2020-09-17/bw_files/
+ 2205  ls /home/yli11/Share/Megan/HPC5/NFIX/chip_seq_single_yli11_2020-09-17/bw_files/*_NFIX*markdup.uq_FE.bw
+ 2206  ln -s  /home/yli11/Share/Megan/HPC5/NFIX/chip_seq_single_yli11_2020-09-17/bw_files/*_NFIX*markdup.uq_FE.bw .
+ 2207  ls
+ 2208  pwd
+ 2209  mv 1678570_MW119_P8_NFIX.vs.1678571_MW119_P8_Input.markdup.uq_FE.bw NFIX_r1.bw
+ 2210  mv 1678572_MW120_P13_NFIX.vs.1678573_MW120_P13_Input.markdup.uq_FE.bw NFIX_r2.bw
+ 2211  mv ERR1088371_EminusMTABminus3954_Cebpb_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw Cebpb.bw
+ 2212  mv ERR1088372_EminusMTABminus3954_cFos_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw cFos.bw
+ 2213  mv ERR1088373_EminusMTABminus3954_cMyc_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw cMyc.bw
+ 2214  mv ERR1088378_EminusMTABminus3954_E2f4_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw E2F4.bw
+ 2215  mv ERR1088379_EminusMTABminus3954_Egr1_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw EGR1.bw
+ 2216  mv ERR1088380_EminusMTABminus3954_Elf1_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw ELF1.bw
+ 2217  mv ERR1088381_EminusMTABminus3954_Eto2_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw ETO2.bw
+ 2218  mv ERR1088382_EminusMTABminus3954_Gata2_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw GATA2.bw
+ 2219  mv ERR1088383_EminusMTABminus3954_H2A_AcK5_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw H2AacK5 .bw
+ 2220  mv ERR1088384_EminusMTABminus3954_H3K27me3_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw H3K27me3.bw
+ 2221  mv ERR1088385_EminusMTABminus3954_H3K36me3_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw H3K36me3.bw
+ 2222  mv ERR1088386_EminusMTABminus3954_H3K4me3_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw H3K4me3.bw
+ 2223  mv ERR1088409_EminusMTABminus3954_Jun_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw JUN.bw
+ 2224  mv ERR1088410_EminusMTABminus3954_Ldb1_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw LDB1.bw
+ 2225  mv ERR1088411_EminusMTABminus3954_Max_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw MAX.bw
+ 2226  mv ERR1088412_EminusMTABminus3954_Myb_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw MYB.bw
+ 2227  mv ERR1088413_EminusMTABminus3954_Nfe2_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw NFE2.bw
+ 2228  mv ERR1088414_EminusMTABminus3954_p53_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw P52.bw
+ 2229  mv ERR1088415_EminusMTABminus3954_Rad21_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw RAD21.bw
+ 2230  mv ERR1088416_EminusMTABminus3954_Stat1P_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw STAT1P.bw
+ 2231  mv ERR1088417_EminusMTABminus3954_Stat3_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw STAT3.bw
+ 2232  mv H3K27Ac_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw H3K27ac.bw
+ 2233  mv SRR054909_GSM552232_HPC7_H3AcK9.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw H3acK9.bw
+ 2234  mv SRR054910_GSM552233_HPC7_Fli1.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw FLI1.bw
+ 2235  mv SRR054911_GSM552234_HPC7_Gata2.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw GATA2_r1.bw
+ 2236  mv SRR054912_GSM552235_HPC7_Gfi1b.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw GLI1b.bw
+ 2237  mv SRR054914_GSM552237_HPC7_Lmo2.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw LMO2.bw
+ 2238  mv SRR054915_GSM552238_HPC7_Lyl1.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw LYL1.bw
+ 2239  mv SRR054916_GSM552239_HPC7_Meis1.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw MEIS1.bw
+ 2240  mv SRR054917_GSM552240_HPC7_Pu1.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw PU.1.bw
+ 2241  mv SRR054918_GSM552241_HPC7_Runx1.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw RUNX1.bw
+ 2242  mv SRR054919_GSM552242_HPC7_Scl.vs.SRR054913_GSM552236_HPC7_IgG.markdup.uq_FE.bw SCL.bw
+ 2243  mv SRR908253_ChIPseq_Ctcf_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw CTCF.bw
+ 2244  mv SRR908254_ChIPseq_E2A_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw E2A.bw
+ 2245  ls
+ 2246  mv ERR1088383_EminusMTABminus3954_H2A_AcK5_HPC7.vs.ERR1088408_EminusMTABminus3954_IgG_HPC7.markdup.uq_FE.bw H2AacK5.bw
+ 2247  ls
+ 2248  history> log.txt

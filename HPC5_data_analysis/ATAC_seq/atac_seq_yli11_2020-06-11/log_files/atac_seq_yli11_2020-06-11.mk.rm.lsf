@@ -1,0 +1,43 @@
+
+
+#BSUB -P atac_seq
+#BSUB -o atac_seq_yli11_2020-06-11.markdup.rmdup.message_%J_%I.out -e atac_seq_yli11_2020-06-11.markdup.rmdup.message_%J_%I.err
+#BSUB -n 6
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=4000]"
+#BSUB -J "rmdup[1-1]"
+module purge
+#BSUB -w "ended(105192414[*])"
+module load samtools/1.7
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id fastq.tsv|tail -n1`
+
+samtools stats ${COL3}.bam > ${COL3}.bam.stat
+samtools sort -@ 6 -n -o ${COL3}.name.st.bam ${COL3}.bam
+samtools fixmate -@ 6 -m ${COL3}.name.st.bam ${COL3}.fixmate.bam
+samtools sort -@ 6 -o ${COL3}.fixmate.st.bam ${COL3}.fixmate.bam
+samtools markdup -@ 6 ${COL3}.fixmate.st.bam ${COL3}.markdup.bam
+samtools markdup -@ 6 -r ${COL3}.markdup.bam ${COL3}.rmdup.bam
+rm ${COL3}.name.st.bam ${COL3}.fixmate.bam ${COL3}.fixmate.st.bam
+samtools flagstat -@ 6 ${COL3}.markdup.bam > ${COL3}.markdup.report
+samtools index -@ 6 ${COL3}.markdup.bam
+samtools view -@ 6 -q 1 -b ${COL3}.markdup.bam > ${COL3}.markdup.uq.bam
+samtools index -@ 6 ${COL3}.markdup.uq.bam
+samtools view -@ 6 -b -h -f 3 -F 4 -F 8 -o ${COL3}.rmdup.f3.bam ${COL3}.rmdup.bam; rm ${COL3}.rmdup.bam; mv ${COL3}.rmdup.f3.bam ${COL3}.rmdup.bam
+samtools index -@ 6 ${COL3}.rmdup.bam
+samtools view -@ 6 -q 1 -b ${COL3}.rmdup.bam > ${COL3}.rmdup.uq.bam
+samtools index -@ 6 ${COL3}.rmdup.uq.bam
+samtools view -@ 6 ${COL3}.markdup.bam chrM -b > ${COL3}.markdup.chrM.bam
+samtools flagstat -@ 6 ${COL3}.markdup.chrM.bam > ${COL3}.markdup.chrM.report
+samtools idxstats ${COL3}.rmdup.uq.bam | cut -f 1 | grep -v  chrM| xargs samtools view -@ 6 -b ${COL3}.rmdup.uq.bam > ${COL3}.rmdup.uq.rmchrM.bam
+samtools idxstats ${COL3}.markdup.bam | cut -f 1 | grep -v  chrM| xargs samtools view -@ 6 -b ${COL3}.markdup.bam > ${COL3}.markdup.rmchrM.bam
+samtools flagstat -@ 6 ${COL3}.markdup.rmchrM.bam > ${COL3}.markdup.rmchrM.report
+
+		

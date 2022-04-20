@@ -1,0 +1,37 @@
+
+
+#BSUB -P plot_bw_co
+#BSUB -o plot_bw_corr_yli11_2020-10-23_b5200f30fe6b/log_files/cor_%J_%I.out -e plot_bw_corr_yli11_2020-10-23_b5200f30fe6b/log_files/cor_%J_%I.err
+#BSUB -n 1
+#BSUB -q priority
+#BSUB -R "span[hosts=1] rusage[mem=16000]"
+#BSUB -J "cor[1-1]"
+
+
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1`
+
+module load python/2.7.15-rhel7
+ncore=1
+mem=16000
+q=priority
+multiBigwigSummary bins -b LYL1.bw cFos.bw MYB.bw SCL.bw GATA2_r1.bw NFIX_r1.bw E2F4.bw RUNX1.bw PU.1.bw FLI1.bw EGR1.bw RAD21.bw STAT1P.bw NFE2.bw GLI1b.bw ETO2.bw STAT3.bw E2A.bw MEIS1.bw GATA2.bw CTCF.bw MAX.bw LDB1.bw H3K27me3.bw H3K27ac.bw NFIX_r2.bw H3acK9.bw ELF1.bw JUN.bw cMyc.bw Cebpb.bw H3K36me3.bw P52.bw H2AacK5.bw H3K4me3.bw LMO2.bw -o plot_bw_corr_yli11_2020-10-23_b5200f30fe6b/results.npz -bs 10000  -p 10 --smartLabels 
+multiBigwigSummary BED-file -b LYL1.bw cFos.bw MYB.bw SCL.bw GATA2_r1.bw NFIX_r1.bw E2F4.bw RUNX1.bw PU.1.bw FLI1.bw EGR1.bw RAD21.bw STAT1P.bw NFE2.bw GLI1b.bw ETO2.bw STAT3.bw E2A.bw MEIS1.bw GATA2.bw CTCF.bw MAX.bw LDB1.bw H3K27me3.bw H3K27ac.bw NFIX_r2.bw H3acK9.bw ELF1.bw JUN.bw cMyc.bw Cebpb.bw H3K36me3.bw P52.bw H2AacK5.bw H3K4me3.bw LMO2.bw -o plot_bw_corr_yli11_2020-10-23_b5200f30fe6b/results_bed.npz --BED wt_idr_peaks_noko.rmblck.bed  -p 10 --smartLabels 
+cd plot_bw_corr_yli11_2020-10-23_b5200f30fe6b
+plotCorrelation  -in results.npz --corMethod spearman --skipZeros --plotTitle "Spearman Correlation of Read Counts" --whatToPlot heatmap --colorMap RdYlBu --plotNumbers -o plotCorrelation_spearman.pdf --outFileCorMatrix plotCorrelation_spearman.tab
+plotCorrelation  -in results_bed.npz --corMethod spearman --skipZeros --plotTitle "Spearman Correlation of Signal in Peaks" --whatToPlot heatmap --colorMap RdYlBu --plotNumbers -o plotCorrelation_spearman_bed.pdf --outFileCorMatrix plotCorrelation_spearman_bed.tab
+plotCorrelation  -in results.npz --corMethod pearson --skipZeros --plotTitle "Pearson Correlation of Read Counts" --whatToPlot heatmap --colorMap RdYlBu --plotNumbers -o plotCorrelation_pearson.pdf --outFileCorMatrix plotCorrelation_pearson.tab
+plotCorrelation  -in results_bed.npz --corMethod pearson --skipZeros --plotTitle "Pearson Correlation of Signal in Peaks" --whatToPlot heatmap --colorMap RdYlBu --plotNumbers -o plotCorrelation_pearson_bed.pdf --outFileCorMatrix plotCorrelation_pearson_bed.tab
+

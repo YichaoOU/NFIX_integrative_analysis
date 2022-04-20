@@ -1,0 +1,263 @@
+
+	
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">  </script>
+	<style  type="text/css" >  
+
+		.blank.level0 {
+			display: none;
+		}
+		.row_heading {
+			display: none;
+		}
+	</style>
+	</head>
+	<body>
+		<div name="content" class="container">
+			<div class="row">
+				<div class="col-xs-9">
+					<h1>atac_seq_yli11_2020-06-11</h1>
+					<h4>Number of samples: 1</h4>
+					<h4>Report generated at : 2020-06-12</h4>
+					<h4>Pipeline type: atac_seq</h4>
+					<h4>Aligner: BWA 0.7.16a</h4>
+					<h4>Peak caller: macs2 2.1.1</h4>
+					<h4>Contact: Yichao.Li@stjude.org or Yong.Cheng@stjude.org</h4>
+					<hr>
+					<h1>FASTQC report</h1>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HPC5 ATAC R1 </th>
+      <th>HPC5 ATAC R2 </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Basic Statistics</th>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Per base sequence quality</th>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Per sequence quality scores</th>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Per base sequence content</th>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+    </tr>
+    <tr>
+      <th>Per sequence GC content</th>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Per base N content</th>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Sequence Length Distribution</th>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Sequence Duplication Levels</th>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+    </tr>
+    <tr>
+      <th>Overrepresented sequences</th>
+      <td>pass</td>
+      <td><span style="color:orange">warn</span></td>
+    </tr>
+    <tr>
+      <th>Adapter Content</th>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+    </tr>
+    <tr>
+      <th>Kmer Content</th>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+    </tr>
+  </tbody>
+</table>
+					<hr>
+					<h1>Alignment report</h1>
+					<h2>Flagstat (raw BAM)</h2>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HPC5 ATAC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mapped passed</th>
+      <td>446076208.0</td>
+    </tr>
+    <tr>
+      <th>total passed</th>
+      <td>449988396.0</td>
+    </tr>
+    <tr>
+      <th>mapped passed pct</th>
+      <td>99.13</td>
+    </tr>
+    <tr>
+      <th>properly paired passed</th>
+      <td>440522092.0</td>
+    </tr>
+    <tr>
+      <th>properly paired passed pct</th>
+      <td>98.2</td>
+    </tr>
+    <tr>
+      <th>duplicates passed</th>
+      <td>241302688.0</td>
+    </tr>
+    <tr>
+      <th>duplication rate pct</th>
+      <td>53.62420234498669</td>
+    </tr>
+  </tbody>
+</table>
+					<h2>Flagstat (chrM BAM)</h2>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HPC5 ATAC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mapped passed</th>
+      <td>20324604.0</td>
+    </tr>
+    <tr>
+      <th>total passed</th>
+      <td>20329229.0</td>
+    </tr>
+    <tr>
+      <th>mapped passed pct</th>
+      <td>99.98</td>
+    </tr>
+    <tr>
+      <th>properly paired passed</th>
+      <td>20210514.0</td>
+    </tr>
+    <tr>
+      <th>properly paired passed pct</th>
+      <td>99.56</td>
+    </tr>
+    <tr>
+      <th>duplicates passed</th>
+      <td>18122745.0</td>
+    </tr>
+    <tr>
+      <th>duplication rate pct</th>
+      <td>89.14624848783002</td>
+    </tr>
+  </tbody>
+</table>
+					<h2>Flagstat (non-chrM BAM)</h2>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HPC5 ATAC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>total passed</th>
+      <td>429659167.0</td>
+    </tr>
+    <tr>
+      <th>duplicates passed</th>
+      <td>223179943.0</td>
+    </tr>
+    <tr>
+      <th>mapped passed</th>
+      <td>425751604.0</td>
+    </tr>
+    <tr>
+      <th>properly paired passed</th>
+      <td>420311578.0</td>
+    </tr>
+    <tr>
+      <th>duplication rate</th>
+      <td>0.5194348454341252</td>
+    </tr>
+    <tr>
+      <th>mapped passed pct</th>
+      <td>0.9909054355169851</td>
+    </tr>
+    <tr>
+      <th>properly paired passed pct</th>
+      <td>0.9782441765056068</td>
+    </tr>
+  </tbody>
+</table>
+					<h2>Library complexity (filtered non-mito BAM)</h2>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HPC5 ATAC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Total Reads</th>
+      <td>425751604.0</td>
+    </tr>
+    <tr>
+      <th>Distinct Reads</th>
+      <td>150039954.0</td>
+    </tr>
+    <tr>
+      <th>One Read</th>
+      <td>71338352.0</td>
+    </tr>
+    <tr>
+      <th>Two Reads</th>
+      <td>34809738.0</td>
+    </tr>
+    <tr>
+      <th>NRF = Distinct/Total</th>
+      <td>0.352412</td>
+    </tr>
+    <tr>
+      <th>PBC1 = OneRead/Distinct</th>
+      <td>0.475462</td>
+    </tr>
+    <tr>
+      <th>PBC2 = OneRead/TwoReads</th>
+      <td>2.049379</td>
+    </tr>
+  </tbody>
+</table>
+
+				</div>  
+			</div>
+		</div>
+	</body>
+</html> 
+	

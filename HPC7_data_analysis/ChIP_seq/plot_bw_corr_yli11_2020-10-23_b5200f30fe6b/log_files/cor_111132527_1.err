@@ -1,0 +1,8 @@
+Number of bins found: 265502
+Number of bins found: 6783
+*Warning*. 47102 NaN values were found. They will be removed along with the corresponding bins in other samples for the computation and plotting
+*Warning*. 7 NaN values were found. They will be removed along with the corresponding bins in other samples for the computation and plotting
+*Warning*. 47102 NaN values were found. They will be removed along with the corresponding bins in other samples for the computation and plotting
+*Warning*. 7 NaN values were found. They will be removed along with the corresponding bins in other samples for the computation and plotting
+
+Outliers were detected in the data. Consider using the --removeOutliers parameter to avoid a bias in the pearson correlation.

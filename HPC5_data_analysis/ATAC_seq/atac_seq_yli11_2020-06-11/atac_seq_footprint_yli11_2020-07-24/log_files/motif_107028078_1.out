@@ -1,0 +1,87 @@
+Sender: LSF System <lsfadmin@nodecn213>
+Subject: Job 107028078[1]: <motif[1-1]> in cluster <hpcf_research_cluster> Done
+
+Job <motif[1-1]> was submitted from host <nodecn104> by user <yli11> in cluster <hpcf_research_cluster> at Fri Jul 24 18:44:34 2020.
+Job was executed on host(s) <nodecn213>, in queue <priority>, as user <yli11> in cluster <hpcf_research_cluster> at Fri Jul 24 21:45:49 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/ATAC/HPC5_WT/atac_seq_yli11_2020-06-11/footprint_bw> was used as the working directory.
+Started at Fri Jul 24 21:45:49 2020.
+Terminated at Fri Jul 24 21:54:33 2020.
+Results reported at Fri Jul 24 21:54:33 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P atac_seq_f
+#BSUB -o atac_seq_footprint_yli11_2020-07-24/log_files/motif_%J_%I.out -e atac_seq_footprint_yli11_2020-07-24/log_files/motif_%J_%I.err
+#BSUB -n 1
+#BSUB -q priority
+#BSUB -R "span[hosts=1] rusage[mem=8000]"
+#BSUB -J "motif[1-1]"
+
+#BSUB -w "ended(107028076[*])"
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id input.list|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id input.list|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id input.list|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id input.list|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id input.list|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id input.list|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id input.list|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id input.list|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id input.list|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id input.list|tail -n1`
+
+ncore=1
+mem=8000
+q=priority
+module purge
+module load conda3
+source activate /home/yli11/.conda/envs/costa_RGT_footprint/
+cd atac_seq_footprint_yli11_2020-07-24
+rgt-motifanalysis matching --organism mm9 --input-files ${COL3}.bed --output-location ${COL3}_motif_match
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   552.17 sec.
+    Max Memory :                                 1123 MB
+    Average Memory :                             1090.23 MB
+    Total Requested Memory :                     8000.00 MB
+    Delta Memory :                               6877.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                32
+    Run time :                                   523 sec.
+    Turnaround time :                            11399 sec.
+
+The output (if any) follows:
+
+>> output location: HPC5_WT_motif_match
+>> genome: mm9
+>> pseudocounts: 1.0
+>> fpr threshold: 0.0001
+>>> input file HPC5_WT loaded: 810265 regions
+>> all files loaded
+>> used database(s): jaspar_vertebrates
+>> motifs loaded: 746
+
+>> matching [HPC5_WT], 810265 regions... [500.681 seconds]
+
+[total time: 0h 8m 28s]
+
+
+PS:
+
+Read file <atac_seq_footprint_yli11_2020-07-24/log_files/motif_107028078_1.err> for stderr output of this job.
+

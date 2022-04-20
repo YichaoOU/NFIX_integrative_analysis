@@ -1,0 +1,65 @@
+Sender: LSF System <lsfadmin@nodecn219>
+Subject: Job 109803377[5]: <spp[1-10]> in cluster <hpcf_research_cluster> Done
+
+Job <spp[1-10]> was submitted from host <nodecn125> by user <yli11> in cluster <hpcf_research_cluster> at Thu Sep 17 16:38:13 2020.
+Job was executed on host(s) <2*nodecn219>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Thu Sep 17 20:36:48 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/HPC5/NFIX> was used as the working directory.
+Started at Thu Sep 17 20:36:48 2020.
+Terminated at Thu Sep 17 21:11:37 2020.
+Results reported at Thu Sep 17 21:11:37 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P chip_seq_single
+#BSUB -o chip_seq_single_yli11_2020-09-17.spp.message_%J_%I.out -e chip_seq_single_yli11_2020-09-17.spp.message_%J_%I.err
+#BSUB -n 2
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=6000]"
+#BSUB -J "spp[1-10]"
+module purge
+#BSUB -w "ended(109803376[*])"
+module load R/3.4.0
+module load samtools/1.7
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id fastq.tsv|tail -n1`
+
+Rscript /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/run_spp.R -c=${COL2}.markdup.uq.bam -p=2 -savp -odir=. -rf > ${COL2}.spp.log
+
+		
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   3585.01 sec.
+    Max Memory :                                 3479 MB
+    Average Memory :                             2548.97 MB
+    Total Requested Memory :                     12000.00 MB
+    Delta Memory :                               8521.00 MB
+    Max Swap :                                   -
+    Max Processes :                              7
+    Max Threads :                                8
+    Run time :                                   2088 sec.
+    Turnaround time :                            16404 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <chip_seq_single_yli11_2020-09-17.spp.message_109803377_5.err> for stderr output of this job.
+

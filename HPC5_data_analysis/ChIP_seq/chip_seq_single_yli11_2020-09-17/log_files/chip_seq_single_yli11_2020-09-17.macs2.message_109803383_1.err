@@ -1,0 +1,738 @@
+INFO  @ Fri, 18 Sep 2020 05:02:25: 
+# Command line: callpeak -t 1706657_MW127_KONFIX_0423.bam -c 1706667_MW127_KO0423_INPUT.bam --keep-dup all -n 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT -B -g mm
+# ARGUMENTS LIST:
+# name = 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT
+# format = AUTO
+# ChIP-seq file = ['1706657_MW127_KONFIX_0423.bam']
+# control file = ['1706667_MW127_KO0423_INPUT.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ Fri, 18 Sep 2020 05:02:25: #1 read tag files... 
+INFO  @ Fri, 18 Sep 2020 05:02:25: #1 read treatment tags... 
+INFO  @ Fri, 18 Sep 2020 05:02:25: Detected format is: BAM 
+INFO  @ Fri, 18 Sep 2020 05:02:25: * Input file is gzipped. 
+INFO  @ Fri, 18 Sep 2020 05:02:30:  1000000 
+INFO  @ Fri, 18 Sep 2020 05:02:35:  2000000 
+INFO  @ Fri, 18 Sep 2020 05:02:39:  3000000 
+INFO  @ Fri, 18 Sep 2020 05:02:43:  4000000 
+INFO  @ Fri, 18 Sep 2020 05:02:48:  5000000 
+INFO  @ Fri, 18 Sep 2020 05:02:53:  6000000 
+INFO  @ Fri, 18 Sep 2020 05:02:57:  7000000 
+INFO  @ Fri, 18 Sep 2020 05:03:02:  8000000 
+INFO  @ Fri, 18 Sep 2020 05:03:06:  9000000 
+INFO  @ Fri, 18 Sep 2020 05:03:11:  10000000 
+INFO  @ Fri, 18 Sep 2020 05:03:15:  11000000 
+INFO  @ Fri, 18 Sep 2020 05:03:20:  12000000 
+INFO  @ Fri, 18 Sep 2020 05:03:24:  13000000 
+INFO  @ Fri, 18 Sep 2020 05:03:28:  14000000 
+INFO  @ Fri, 18 Sep 2020 05:03:33:  15000000 
+INFO  @ Fri, 18 Sep 2020 05:03:37:  16000000 
+INFO  @ Fri, 18 Sep 2020 05:03:42:  17000000 
+INFO  @ Fri, 18 Sep 2020 05:03:46:  18000000 
+INFO  @ Fri, 18 Sep 2020 05:03:51:  19000000 
+INFO  @ Fri, 18 Sep 2020 05:03:55:  20000000 
+INFO  @ Fri, 18 Sep 2020 05:03:59:  21000000 
+INFO  @ Fri, 18 Sep 2020 05:04:04:  22000000 
+INFO  @ Fri, 18 Sep 2020 05:04:08:  23000000 
+INFO  @ Fri, 18 Sep 2020 05:04:12:  24000000 
+INFO  @ Fri, 18 Sep 2020 05:04:17:  25000000 
+INFO  @ Fri, 18 Sep 2020 05:04:21:  26000000 
+INFO  @ Fri, 18 Sep 2020 05:04:25:  27000000 
+INFO  @ Fri, 18 Sep 2020 05:04:30:  28000000 
+INFO  @ Fri, 18 Sep 2020 05:04:34:  29000000 
+INFO  @ Fri, 18 Sep 2020 05:04:38:  30000000 
+INFO  @ Fri, 18 Sep 2020 05:04:42:  31000000 
+INFO  @ Fri, 18 Sep 2020 05:04:47:  32000000 
+INFO  @ Fri, 18 Sep 2020 05:04:51:  33000000 
+INFO  @ Fri, 18 Sep 2020 05:04:55:  34000000 
+INFO  @ Fri, 18 Sep 2020 05:04:59:  35000000 
+INFO  @ Fri, 18 Sep 2020 05:05:04:  36000000 
+INFO  @ Fri, 18 Sep 2020 05:05:08:  37000000 
+INFO  @ Fri, 18 Sep 2020 05:05:12:  38000000 
+INFO  @ Fri, 18 Sep 2020 05:05:17:  39000000 
+INFO  @ Fri, 18 Sep 2020 05:05:21:  40000000 
+INFO  @ Fri, 18 Sep 2020 05:05:25:  41000000 
+INFO  @ Fri, 18 Sep 2020 05:05:29:  42000000 
+INFO  @ Fri, 18 Sep 2020 05:05:34:  43000000 
+INFO  @ Fri, 18 Sep 2020 05:05:37: #1.2 read input tags... 
+INFO  @ Fri, 18 Sep 2020 05:05:37: Detected format is: BAM 
+INFO  @ Fri, 18 Sep 2020 05:05:37: * Input file is gzipped. 
+INFO  @ Fri, 18 Sep 2020 05:05:41:  1000000 
+INFO  @ Fri, 18 Sep 2020 05:05:45:  2000000 
+INFO  @ Fri, 18 Sep 2020 05:05:49:  3000000 
+INFO  @ Fri, 18 Sep 2020 05:05:54:  4000000 
+INFO  @ Fri, 18 Sep 2020 05:05:58:  5000000 
+INFO  @ Fri, 18 Sep 2020 05:06:02:  6000000 
+INFO  @ Fri, 18 Sep 2020 05:06:06:  7000000 
+INFO  @ Fri, 18 Sep 2020 05:06:10:  8000000 
+INFO  @ Fri, 18 Sep 2020 05:06:15:  9000000 
+INFO  @ Fri, 18 Sep 2020 05:06:19:  10000000 
+INFO  @ Fri, 18 Sep 2020 05:06:23:  11000000 
+INFO  @ Fri, 18 Sep 2020 05:06:27:  12000000 
+INFO  @ Fri, 18 Sep 2020 05:06:31:  13000000 
+INFO  @ Fri, 18 Sep 2020 05:06:35:  14000000 
+INFO  @ Fri, 18 Sep 2020 05:06:40:  15000000 
+INFO  @ Fri, 18 Sep 2020 05:06:44:  16000000 
+INFO  @ Fri, 18 Sep 2020 05:06:48:  17000000 
+INFO  @ Fri, 18 Sep 2020 05:06:52:  18000000 
+INFO  @ Fri, 18 Sep 2020 05:06:56:  19000000 
+INFO  @ Fri, 18 Sep 2020 05:07:01:  20000000 
+INFO  @ Fri, 18 Sep 2020 05:07:05:  21000000 
+INFO  @ Fri, 18 Sep 2020 05:07:09:  22000000 
+INFO  @ Fri, 18 Sep 2020 05:07:13:  23000000 
+INFO  @ Fri, 18 Sep 2020 05:07:17:  24000000 
+INFO  @ Fri, 18 Sep 2020 05:07:22:  25000000 
+INFO  @ Fri, 18 Sep 2020 05:07:26:  26000000 
+INFO  @ Fri, 18 Sep 2020 05:07:30:  27000000 
+INFO  @ Fri, 18 Sep 2020 05:07:34:  28000000 
+INFO  @ Fri, 18 Sep 2020 05:07:38:  29000000 
+INFO  @ Fri, 18 Sep 2020 05:07:42:  30000000 
+INFO  @ Fri, 18 Sep 2020 05:07:47:  31000000 
+INFO  @ Fri, 18 Sep 2020 05:07:51:  32000000 
+INFO  @ Fri, 18 Sep 2020 05:07:55:  33000000 
+INFO  @ Fri, 18 Sep 2020 05:07:59:  34000000 
+INFO  @ Fri, 18 Sep 2020 05:08:03:  35000000 
+INFO  @ Fri, 18 Sep 2020 05:08:07:  36000000 
+INFO  @ Fri, 18 Sep 2020 05:08:12:  37000000 
+INFO  @ Fri, 18 Sep 2020 05:08:16:  38000000 
+INFO  @ Fri, 18 Sep 2020 05:08:20:  39000000 
+INFO  @ Fri, 18 Sep 2020 05:08:24:  40000000 
+INFO  @ Fri, 18 Sep 2020 05:08:28:  41000000 
+INFO  @ Fri, 18 Sep 2020 05:08:32:  42000000 
+INFO  @ Fri, 18 Sep 2020 05:08:37:  43000000 
+INFO  @ Fri, 18 Sep 2020 05:08:41:  44000000 
+INFO  @ Fri, 18 Sep 2020 05:08:45:  45000000 
+INFO  @ Fri, 18 Sep 2020 05:08:49:  46000000 
+INFO  @ Fri, 18 Sep 2020 05:08:54:  47000000 
+INFO  @ Fri, 18 Sep 2020 05:08:58:  48000000 
+INFO  @ Fri, 18 Sep 2020 05:09:02:  49000000 
+INFO  @ Fri, 18 Sep 2020 05:09:06:  50000000 
+INFO  @ Fri, 18 Sep 2020 05:09:10:  51000000 
+INFO  @ Fri, 18 Sep 2020 05:09:15:  52000000 
+INFO  @ Fri, 18 Sep 2020 05:09:19:  53000000 
+INFO  @ Fri, 18 Sep 2020 05:09:23:  54000000 
+INFO  @ Fri, 18 Sep 2020 05:09:27:  55000000 
+INFO  @ Fri, 18 Sep 2020 05:09:31:  56000000 
+INFO  @ Fri, 18 Sep 2020 05:09:35:  57000000 
+INFO  @ Fri, 18 Sep 2020 05:09:40:  58000000 
+INFO  @ Fri, 18 Sep 2020 05:09:44:  59000000 
+INFO  @ Fri, 18 Sep 2020 05:09:48:  60000000 
+INFO  @ Fri, 18 Sep 2020 05:09:52:  61000000 
+INFO  @ Fri, 18 Sep 2020 05:09:56:  62000000 
+INFO  @ Fri, 18 Sep 2020 05:10:01:  63000000 
+INFO  @ Fri, 18 Sep 2020 05:10:05:  64000000 
+INFO  @ Fri, 18 Sep 2020 05:10:09:  65000000 
+INFO  @ Fri, 18 Sep 2020 05:10:13:  66000000 
+INFO  @ Fri, 18 Sep 2020 05:10:17:  67000000 
+INFO  @ Fri, 18 Sep 2020 05:10:21:  68000000 
+INFO  @ Fri, 18 Sep 2020 05:10:25:  69000000 
+INFO  @ Fri, 18 Sep 2020 05:10:30:  70000000 
+INFO  @ Fri, 18 Sep 2020 05:10:34:  71000000 
+INFO  @ Fri, 18 Sep 2020 05:10:38:  72000000 
+INFO  @ Fri, 18 Sep 2020 05:10:42:  73000000 
+INFO  @ Fri, 18 Sep 2020 05:10:46:  74000000 
+INFO  @ Fri, 18 Sep 2020 05:10:51:  75000000 
+INFO  @ Fri, 18 Sep 2020 05:10:55:  76000000 
+INFO  @ Fri, 18 Sep 2020 05:10:59:  77000000 
+INFO  @ Fri, 18 Sep 2020 05:11:03:  78000000 
+INFO  @ Fri, 18 Sep 2020 05:11:07:  79000000 
+INFO  @ Fri, 18 Sep 2020 05:11:12: #1 tag size is determined as 51 bps 
+INFO  @ Fri, 18 Sep 2020 05:11:12: #1 tag size = 51 
+INFO  @ Fri, 18 Sep 2020 05:11:12: #1  total tags in treatment: 41973648 
+INFO  @ Fri, 18 Sep 2020 05:11:12: #1  total tags in control: 77280435 
+INFO  @ Fri, 18 Sep 2020 05:11:12: #1 finished! 
+INFO  @ Fri, 18 Sep 2020 05:11:12: #2 Build Peak Model... 
+INFO  @ Fri, 18 Sep 2020 05:11:12: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Fri, 18 Sep 2020 05:11:16: #2 number of paired peaks: 4044 
+INFO  @ Fri, 18 Sep 2020 05:11:16: start model_add_line... 
+INFO  @ Fri, 18 Sep 2020 05:11:17: start X-correlation... 
+INFO  @ Fri, 18 Sep 2020 05:11:17: end of X-cor 
+INFO  @ Fri, 18 Sep 2020 05:11:17: #2 finished! 
+INFO  @ Fri, 18 Sep 2020 05:11:17: #2 predicted fragment length is 47 bps 
+INFO  @ Fri, 18 Sep 2020 05:11:17: #2 alternative fragment length(s) may be 47,224 bps 
+INFO  @ Fri, 18 Sep 2020 05:11:17: #2.2 Generate R script for model : 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_model.r 
+WARNING @ Fri, 18 Sep 2020 05:11:17: #2 Since the d (47) calculated from paired-peaks are smaller than 2*tag length, it may be influenced by unknown sequencing problem! 
+WARNING @ Fri, 18 Sep 2020 05:11:17: #2 You may need to consider one of the other alternative d(s): 47,224 
+WARNING @ Fri, 18 Sep 2020 05:11:17: #2 You can restart the process with --nomodel --extsize XXX with your choice or an arbitrary number. Nontheless, MACS will continute computing. 
+INFO  @ Fri, 18 Sep 2020 05:11:17: #3 Call peaks... 
+INFO  @ Fri, 18 Sep 2020 05:11:17: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Fri, 18 Sep 2020 05:15:15: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Fri, 18 Sep 2020 05:15:15: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_treat_pileup.bdg 
+INFO  @ Fri, 18 Sep 2020 05:15:15: #3   Write bedGraph files for control lambda (after scaling if necessary)... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_control_lambda.bdg 
+INFO  @ Fri, 18 Sep 2020 05:15:15: #3   Pileup will be based on sequencing depth in treatment. 
+INFO  @ Fri, 18 Sep 2020 05:15:15: #3 Call peaks for each chromosome... 
+INFO  @ Fri, 18 Sep 2020 05:23:26: #4 Write output xls file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_peaks.xls 
+INFO  @ Fri, 18 Sep 2020 05:23:26: #4 Write peak in narrowPeak format file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_peaks.narrowPeak 
+INFO  @ Fri, 18 Sep 2020 05:23:27: #4 Write summits bed file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_summits.bed 
+INFO  @ Fri, 18 Sep 2020 05:23:27: Done! 
+INFO  @ Fri, 18 Sep 2020 05:23:29: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 05:24:44: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 05:26:36: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 05:27:23: Calculate scores comparing treatment and control by 'qpois'... 
+INFO  @ Fri, 18 Sep 2020 05:29:34: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 05:30:04: Finished 'qpois'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_treat_pvalue.bdg'! 
+INFO  @ Fri, 18 Sep 2020 05:30:06: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 05:31:22: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 05:33:15: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 05:34:02: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Fri, 18 Sep 2020 05:47:45: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 05:51:43: Finished 'FE'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_FE.bdg'! 
+INFO  @ Fri, 18 Sep 2020 05:51:45: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 05:53:00: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 05:54:51: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 05:55:38: Calculate scores comparing treatment and control by 'logLR'... 
+INFO  @ Fri, 18 Sep 2020 05:56:27: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 06:02:00: Finished 'logLR'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_logLR.bdg'! 
+INFO  @ Fri, 18 Sep 2020 06:02:02: Read and build bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:02:09: Call peaks from bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:02:10: Write peaks... 
+INFO  @ Fri, 18 Sep 2020 06:02:10: Done 
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 147, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 111, in main
+    get_annotation_data(args)
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 85, in get_annotation_data
+    args.tss = myData['%s_gencode33_TSS'%(args.genome)]
+KeyError: 'mm9_gencode33_TSS'
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 95, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 74, in main
+    args.sep = guess_sep(args.input)
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 35, in guess_sep
+    with open(x) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT_peaks.rmblck.narrowPeak.annot.tsv'
+INFO  @ Fri, 18 Sep 2020 06:09:31: 
+# Command line: callpeak -t 1706657_MW127_KONFIX_0423.rmdup.uq.rmchrM.bam -c 1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM.bam --keep-dup all -n 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM -B -g mm
+# ARGUMENTS LIST:
+# name = 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM
+# format = AUTO
+# ChIP-seq file = ['1706657_MW127_KONFIX_0423.rmdup.uq.rmchrM.bam']
+# control file = ['1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ Fri, 18 Sep 2020 06:09:31: #1 read tag files... 
+INFO  @ Fri, 18 Sep 2020 06:09:31: #1 read treatment tags... 
+INFO  @ Fri, 18 Sep 2020 06:09:31: Detected format is: BAM 
+INFO  @ Fri, 18 Sep 2020 06:09:31: * Input file is gzipped. 
+INFO  @ Fri, 18 Sep 2020 06:09:35:  1000000 
+INFO  @ Fri, 18 Sep 2020 06:09:39:  2000000 
+INFO  @ Fri, 18 Sep 2020 06:09:43:  3000000 
+INFO  @ Fri, 18 Sep 2020 06:09:47:  4000000 
+INFO  @ Fri, 18 Sep 2020 06:09:51:  5000000 
+INFO  @ Fri, 18 Sep 2020 06:09:55:  6000000 
+INFO  @ Fri, 18 Sep 2020 06:10:00:  7000000 
+INFO  @ Fri, 18 Sep 2020 06:10:04:  8000000 
+INFO  @ Fri, 18 Sep 2020 06:10:08:  9000000 
+INFO  @ Fri, 18 Sep 2020 06:10:12:  10000000 
+INFO  @ Fri, 18 Sep 2020 06:10:16:  11000000 
+INFO  @ Fri, 18 Sep 2020 06:10:20:  12000000 
+INFO  @ Fri, 18 Sep 2020 06:10:25:  13000000 
+INFO  @ Fri, 18 Sep 2020 06:10:29:  14000000 
+INFO  @ Fri, 18 Sep 2020 06:10:33:  15000000 
+INFO  @ Fri, 18 Sep 2020 06:10:37:  16000000 
+INFO  @ Fri, 18 Sep 2020 06:10:41:  17000000 
+INFO  @ Fri, 18 Sep 2020 06:10:46:  18000000 
+INFO  @ Fri, 18 Sep 2020 06:10:50:  19000000 
+INFO  @ Fri, 18 Sep 2020 06:10:54:  20000000 
+INFO  @ Fri, 18 Sep 2020 06:10:58:  21000000 
+INFO  @ Fri, 18 Sep 2020 06:11:02:  22000000 
+INFO  @ Fri, 18 Sep 2020 06:11:06:  23000000 
+INFO  @ Fri, 18 Sep 2020 06:11:10:  24000000 
+INFO  @ Fri, 18 Sep 2020 06:11:14:  25000000 
+INFO  @ Fri, 18 Sep 2020 06:11:19:  26000000 
+INFO  @ Fri, 18 Sep 2020 06:11:23:  27000000 
+INFO  @ Fri, 18 Sep 2020 06:11:27:  28000000 
+INFO  @ Fri, 18 Sep 2020 06:11:29: #1.2 read input tags... 
+INFO  @ Fri, 18 Sep 2020 06:11:29: Detected format is: BAM 
+INFO  @ Fri, 18 Sep 2020 06:11:29: * Input file is gzipped. 
+INFO  @ Fri, 18 Sep 2020 06:11:33:  1000000 
+INFO  @ Fri, 18 Sep 2020 06:11:37:  2000000 
+INFO  @ Fri, 18 Sep 2020 06:11:41:  3000000 
+INFO  @ Fri, 18 Sep 2020 06:11:46:  4000000 
+INFO  @ Fri, 18 Sep 2020 06:11:50:  5000000 
+INFO  @ Fri, 18 Sep 2020 06:11:54:  6000000 
+INFO  @ Fri, 18 Sep 2020 06:11:58:  7000000 
+INFO  @ Fri, 18 Sep 2020 06:12:02:  8000000 
+INFO  @ Fri, 18 Sep 2020 06:12:06:  9000000 
+INFO  @ Fri, 18 Sep 2020 06:12:10:  10000000 
+INFO  @ Fri, 18 Sep 2020 06:12:15:  11000000 
+INFO  @ Fri, 18 Sep 2020 06:12:19:  12000000 
+INFO  @ Fri, 18 Sep 2020 06:12:23:  13000000 
+INFO  @ Fri, 18 Sep 2020 06:12:27:  14000000 
+INFO  @ Fri, 18 Sep 2020 06:12:31:  15000000 
+INFO  @ Fri, 18 Sep 2020 06:12:35:  16000000 
+INFO  @ Fri, 18 Sep 2020 06:12:39:  17000000 
+INFO  @ Fri, 18 Sep 2020 06:12:43:  18000000 
+INFO  @ Fri, 18 Sep 2020 06:12:48:  19000000 
+INFO  @ Fri, 18 Sep 2020 06:12:52:  20000000 
+INFO  @ Fri, 18 Sep 2020 06:12:56:  21000000 
+INFO  @ Fri, 18 Sep 2020 06:13:00:  22000000 
+INFO  @ Fri, 18 Sep 2020 06:13:04:  23000000 
+INFO  @ Fri, 18 Sep 2020 06:13:08:  24000000 
+INFO  @ Fri, 18 Sep 2020 06:13:12:  25000000 
+INFO  @ Fri, 18 Sep 2020 06:13:16:  26000000 
+INFO  @ Fri, 18 Sep 2020 06:13:20:  27000000 
+INFO  @ Fri, 18 Sep 2020 06:13:24:  28000000 
+INFO  @ Fri, 18 Sep 2020 06:13:29:  29000000 
+INFO  @ Fri, 18 Sep 2020 06:13:33:  30000000 
+INFO  @ Fri, 18 Sep 2020 06:13:37:  31000000 
+INFO  @ Fri, 18 Sep 2020 06:13:41:  32000000 
+INFO  @ Fri, 18 Sep 2020 06:13:45:  33000000 
+INFO  @ Fri, 18 Sep 2020 06:13:49:  34000000 
+INFO  @ Fri, 18 Sep 2020 06:13:53:  35000000 
+INFO  @ Fri, 18 Sep 2020 06:13:57:  36000000 
+INFO  @ Fri, 18 Sep 2020 06:14:02:  37000000 
+INFO  @ Fri, 18 Sep 2020 06:14:06:  38000000 
+INFO  @ Fri, 18 Sep 2020 06:14:10:  39000000 
+INFO  @ Fri, 18 Sep 2020 06:14:14:  40000000 
+INFO  @ Fri, 18 Sep 2020 06:14:18:  41000000 
+INFO  @ Fri, 18 Sep 2020 06:14:22:  42000000 
+INFO  @ Fri, 18 Sep 2020 06:14:26:  43000000 
+INFO  @ Fri, 18 Sep 2020 06:14:30:  44000000 
+INFO  @ Fri, 18 Sep 2020 06:14:34:  45000000 
+INFO  @ Fri, 18 Sep 2020 06:14:39:  46000000 
+INFO  @ Fri, 18 Sep 2020 06:14:43:  47000000 
+INFO  @ Fri, 18 Sep 2020 06:14:47:  48000000 
+INFO  @ Fri, 18 Sep 2020 06:14:51:  49000000 
+INFO  @ Fri, 18 Sep 2020 06:14:55: #1 tag size is determined as 51 bps 
+INFO  @ Fri, 18 Sep 2020 06:14:55: #1 tag size = 51 
+INFO  @ Fri, 18 Sep 2020 06:14:55: #1  total tags in treatment: 28423409 
+INFO  @ Fri, 18 Sep 2020 06:14:55: #1  total tags in control: 49962988 
+INFO  @ Fri, 18 Sep 2020 06:14:55: #1 finished! 
+INFO  @ Fri, 18 Sep 2020 06:14:55: #2 Build Peak Model... 
+INFO  @ Fri, 18 Sep 2020 06:14:55: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Fri, 18 Sep 2020 06:14:58: #2 number of paired peaks: 7738 
+INFO  @ Fri, 18 Sep 2020 06:14:58: start model_add_line... 
+INFO  @ Fri, 18 Sep 2020 06:14:58: start X-correlation... 
+INFO  @ Fri, 18 Sep 2020 06:14:58: end of X-cor 
+INFO  @ Fri, 18 Sep 2020 06:14:58: #2 finished! 
+INFO  @ Fri, 18 Sep 2020 06:14:58: #2 predicted fragment length is 275 bps 
+INFO  @ Fri, 18 Sep 2020 06:14:58: #2 alternative fragment length(s) may be 275 bps 
+INFO  @ Fri, 18 Sep 2020 06:14:58: #2.2 Generate R script for model : 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_model.r 
+INFO  @ Fri, 18 Sep 2020 06:14:58: #3 Call peaks... 
+INFO  @ Fri, 18 Sep 2020 06:14:58: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Fri, 18 Sep 2020 06:17:57: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Fri, 18 Sep 2020 06:17:57: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_treat_pileup.bdg 
+INFO  @ Fri, 18 Sep 2020 06:17:57: #3   Write bedGraph files for control lambda (after scaling if necessary)... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_control_lambda.bdg 
+INFO  @ Fri, 18 Sep 2020 06:17:57: #3   Pileup will be based on sequencing depth in treatment. 
+INFO  @ Fri, 18 Sep 2020 06:17:57: #3 Call peaks for each chromosome... 
+INFO  @ Fri, 18 Sep 2020 06:24:23: #4 Write output xls file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_peaks.xls 
+INFO  @ Fri, 18 Sep 2020 06:24:23: #4 Write peak in narrowPeak format file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_peaks.narrowPeak 
+INFO  @ Fri, 18 Sep 2020 06:24:23: #4 Write summits bed file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_summits.bed 
+INFO  @ Fri, 18 Sep 2020 06:24:23: Done! 
+INFO  @ Fri, 18 Sep 2020 06:24:25: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:25:30: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:26:42: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 06:27:17: Calculate scores comparing treatment and control by 'qpois'... 
+INFO  @ Fri, 18 Sep 2020 06:28:14: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 06:28:31: Finished 'qpois'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_treat_pvalue.bdg'! 
+INFO  @ Fri, 18 Sep 2020 06:28:33: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:29:39: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:30:51: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 06:31:26: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Fri, 18 Sep 2020 06:41:38: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 06:45:43: Finished 'FE'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_FE.bdg'! 
+INFO  @ Fri, 18 Sep 2020 06:45:45: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:46:52: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:48:03: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 06:48:38: Calculate scores comparing treatment and control by 'logLR'... 
+INFO  @ Fri, 18 Sep 2020 06:49:13: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 06:53:19: Finished 'logLR'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_logLR.bdg'! 
+INFO  @ Fri, 18 Sep 2020 06:53:21: Read and build bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:53:24: Call peaks from bedGraph... 
+INFO  @ Fri, 18 Sep 2020 06:53:24: Write peaks... 
+INFO  @ Fri, 18 Sep 2020 06:53:24: Done 
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 147, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 111, in main
+    get_annotation_data(args)
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 85, in get_annotation_data
+    args.tss = myData['%s_gencode33_TSS'%(args.genome)]
+KeyError: 'mm9_gencode33_TSS'
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 95, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 74, in main
+    args.sep = guess_sep(args.input)
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 35, in guess_sep
+    with open(x) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak.annot.tsv'
+INFO  @ Fri, 18 Sep 2020 06:59:56: 
+# Command line: callpeak -t 1706657_MW127_KONFIX_0423.rmdup.bam -c 1706667_MW127_KO0423_INPUT.rmdup.bam --keep-dup all -n 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup -B -g mm
+# ARGUMENTS LIST:
+# name = 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup
+# format = AUTO
+# ChIP-seq file = ['1706657_MW127_KONFIX_0423.rmdup.bam']
+# control file = ['1706667_MW127_KO0423_INPUT.rmdup.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ Fri, 18 Sep 2020 06:59:56: #1 read tag files... 
+INFO  @ Fri, 18 Sep 2020 06:59:56: #1 read treatment tags... 
+INFO  @ Fri, 18 Sep 2020 06:59:56: Detected format is: BAM 
+INFO  @ Fri, 18 Sep 2020 06:59:56: * Input file is gzipped. 
+INFO  @ Fri, 18 Sep 2020 07:00:00:  1000000 
+INFO  @ Fri, 18 Sep 2020 07:00:04:  2000000 
+INFO  @ Fri, 18 Sep 2020 07:00:09:  3000000 
+INFO  @ Fri, 18 Sep 2020 07:00:13:  4000000 
+INFO  @ Fri, 18 Sep 2020 07:00:17:  5000000 
+INFO  @ Fri, 18 Sep 2020 07:00:21:  6000000 
+INFO  @ Fri, 18 Sep 2020 07:00:25:  7000000 
+INFO  @ Fri, 18 Sep 2020 07:00:30:  8000000 
+INFO  @ Fri, 18 Sep 2020 07:00:34:  9000000 
+INFO  @ Fri, 18 Sep 2020 07:00:38:  10000000 
+INFO  @ Fri, 18 Sep 2020 07:00:42:  11000000 
+INFO  @ Fri, 18 Sep 2020 07:00:46:  12000000 
+INFO  @ Fri, 18 Sep 2020 07:00:50:  13000000 
+INFO  @ Fri, 18 Sep 2020 07:00:55:  14000000 
+INFO  @ Fri, 18 Sep 2020 07:00:59:  15000000 
+INFO  @ Fri, 18 Sep 2020 07:01:03:  16000000 
+INFO  @ Fri, 18 Sep 2020 07:01:07:  17000000 
+INFO  @ Fri, 18 Sep 2020 07:01:11:  18000000 
+INFO  @ Fri, 18 Sep 2020 07:01:15:  19000000 
+INFO  @ Fri, 18 Sep 2020 07:01:19:  20000000 
+INFO  @ Fri, 18 Sep 2020 07:01:23:  21000000 
+INFO  @ Fri, 18 Sep 2020 07:01:27:  22000000 
+INFO  @ Fri, 18 Sep 2020 07:01:32:  23000000 
+INFO  @ Fri, 18 Sep 2020 07:01:36:  24000000 
+INFO  @ Fri, 18 Sep 2020 07:01:40:  25000000 
+INFO  @ Fri, 18 Sep 2020 07:01:44:  26000000 
+INFO  @ Fri, 18 Sep 2020 07:01:48:  27000000 
+INFO  @ Fri, 18 Sep 2020 07:01:53:  28000000 
+INFO  @ Fri, 18 Sep 2020 07:01:57:  29000000 
+INFO  @ Fri, 18 Sep 2020 07:02:01:  30000000 
+INFO  @ Fri, 18 Sep 2020 07:02:05:  31000000 
+INFO  @ Fri, 18 Sep 2020 07:02:09:  32000000 
+INFO  @ Fri, 18 Sep 2020 07:02:12:  33000000 
+INFO  @ Fri, 18 Sep 2020 07:02:14: #1.2 read input tags... 
+INFO  @ Fri, 18 Sep 2020 07:02:14: Detected format is: BAM 
+INFO  @ Fri, 18 Sep 2020 07:02:14: * Input file is gzipped. 
+INFO  @ Fri, 18 Sep 2020 07:02:18:  1000000 
+INFO  @ Fri, 18 Sep 2020 07:02:22:  2000000 
+INFO  @ Fri, 18 Sep 2020 07:02:26:  3000000 
+INFO  @ Fri, 18 Sep 2020 07:02:30:  4000000 
+INFO  @ Fri, 18 Sep 2020 07:02:35:  5000000 
+INFO  @ Fri, 18 Sep 2020 07:02:39:  6000000 
+INFO  @ Fri, 18 Sep 2020 07:02:43:  7000000 
+INFO  @ Fri, 18 Sep 2020 07:02:47:  8000000 
+INFO  @ Fri, 18 Sep 2020 07:02:51:  9000000 
+INFO  @ Fri, 18 Sep 2020 07:02:55:  10000000 
+INFO  @ Fri, 18 Sep 2020 07:02:59:  11000000 
+INFO  @ Fri, 18 Sep 2020 07:03:03:  12000000 
+INFO  @ Fri, 18 Sep 2020 07:03:07:  13000000 
+INFO  @ Fri, 18 Sep 2020 07:03:11:  14000000 
+INFO  @ Fri, 18 Sep 2020 07:03:15:  15000000 
+INFO  @ Fri, 18 Sep 2020 07:03:20:  16000000 
+INFO  @ Fri, 18 Sep 2020 07:03:24:  17000000 
+INFO  @ Fri, 18 Sep 2020 07:03:28:  18000000 
+INFO  @ Fri, 18 Sep 2020 07:03:32:  19000000 
+INFO  @ Fri, 18 Sep 2020 07:03:36:  20000000 
+INFO  @ Fri, 18 Sep 2020 07:03:40:  21000000 
+INFO  @ Fri, 18 Sep 2020 07:03:44:  22000000 
+INFO  @ Fri, 18 Sep 2020 07:03:48:  23000000 
+INFO  @ Fri, 18 Sep 2020 07:03:53:  24000000 
+INFO  @ Fri, 18 Sep 2020 07:03:57:  25000000 
+INFO  @ Fri, 18 Sep 2020 07:04:01:  26000000 
+INFO  @ Fri, 18 Sep 2020 07:04:05:  27000000 
+INFO  @ Fri, 18 Sep 2020 07:04:09:  28000000 
+INFO  @ Fri, 18 Sep 2020 07:04:13:  29000000 
+INFO  @ Fri, 18 Sep 2020 07:04:17:  30000000 
+INFO  @ Fri, 18 Sep 2020 07:04:22:  31000000 
+INFO  @ Fri, 18 Sep 2020 07:04:26:  32000000 
+INFO  @ Fri, 18 Sep 2020 07:04:30:  33000000 
+INFO  @ Fri, 18 Sep 2020 07:04:34:  34000000 
+INFO  @ Fri, 18 Sep 2020 07:04:38:  35000000 
+INFO  @ Fri, 18 Sep 2020 07:04:42:  36000000 
+INFO  @ Fri, 18 Sep 2020 07:04:46:  37000000 
+INFO  @ Fri, 18 Sep 2020 07:04:50:  38000000 
+INFO  @ Fri, 18 Sep 2020 07:04:55:  39000000 
+INFO  @ Fri, 18 Sep 2020 07:04:59:  40000000 
+INFO  @ Fri, 18 Sep 2020 07:05:03:  41000000 
+INFO  @ Fri, 18 Sep 2020 07:05:07:  42000000 
+INFO  @ Fri, 18 Sep 2020 07:05:11:  43000000 
+INFO  @ Fri, 18 Sep 2020 07:05:15:  44000000 
+INFO  @ Fri, 18 Sep 2020 07:05:19:  45000000 
+INFO  @ Fri, 18 Sep 2020 07:05:24:  46000000 
+INFO  @ Fri, 18 Sep 2020 07:05:28:  47000000 
+INFO  @ Fri, 18 Sep 2020 07:05:32:  48000000 
+INFO  @ Fri, 18 Sep 2020 07:05:36:  49000000 
+INFO  @ Fri, 18 Sep 2020 07:05:40:  50000000 
+INFO  @ Fri, 18 Sep 2020 07:05:44:  51000000 
+INFO  @ Fri, 18 Sep 2020 07:05:48:  52000000 
+INFO  @ Fri, 18 Sep 2020 07:05:52:  53000000 
+INFO  @ Fri, 18 Sep 2020 07:05:56:  54000000 
+INFO  @ Fri, 18 Sep 2020 07:06:01:  55000000 
+INFO  @ Fri, 18 Sep 2020 07:06:05:  56000000 
+INFO  @ Fri, 18 Sep 2020 07:06:09:  57000000 
+INFO  @ Fri, 18 Sep 2020 07:06:12:  58000000 
+INFO  @ Fri, 18 Sep 2020 07:06:14:  59000000 
+INFO  @ Fri, 18 Sep 2020 07:06:15: #1 tag size is determined as 51 bps 
+INFO  @ Fri, 18 Sep 2020 07:06:15: #1 tag size = 51 
+INFO  @ Fri, 18 Sep 2020 07:06:15: #1  total tags in treatment: 32468557 
+INFO  @ Fri, 18 Sep 2020 07:06:15: #1  total tags in control: 57351739 
+INFO  @ Fri, 18 Sep 2020 07:06:15: #1 finished! 
+INFO  @ Fri, 18 Sep 2020 07:06:15: #2 Build Peak Model... 
+INFO  @ Fri, 18 Sep 2020 07:06:15: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Fri, 18 Sep 2020 07:06:18: #2 number of paired peaks: 5642 
+INFO  @ Fri, 18 Sep 2020 07:06:18: start model_add_line... 
+INFO  @ Fri, 18 Sep 2020 07:06:19: start X-correlation... 
+INFO  @ Fri, 18 Sep 2020 07:06:19: end of X-cor 
+INFO  @ Fri, 18 Sep 2020 07:06:19: #2 finished! 
+INFO  @ Fri, 18 Sep 2020 07:06:19: #2 predicted fragment length is 229 bps 
+INFO  @ Fri, 18 Sep 2020 07:06:19: #2 alternative fragment length(s) may be 229 bps 
+INFO  @ Fri, 18 Sep 2020 07:06:19: #2.2 Generate R script for model : 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_model.r 
+INFO  @ Fri, 18 Sep 2020 07:06:19: #3 Call peaks... 
+INFO  @ Fri, 18 Sep 2020 07:06:19: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Fri, 18 Sep 2020 07:09:46: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Fri, 18 Sep 2020 07:09:46: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_treat_pileup.bdg 
+INFO  @ Fri, 18 Sep 2020 07:09:46: #3   Write bedGraph files for control lambda (after scaling if necessary)... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_control_lambda.bdg 
+INFO  @ Fri, 18 Sep 2020 07:09:46: #3   Pileup will be based on sequencing depth in treatment. 
+INFO  @ Fri, 18 Sep 2020 07:09:46: #3 Call peaks for each chromosome... 
+INFO  @ Fri, 18 Sep 2020 07:16:27: #4 Write output xls file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_peaks.xls 
+INFO  @ Fri, 18 Sep 2020 07:16:27: #4 Write peak in narrowPeak format file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_peaks.narrowPeak 
+INFO  @ Fri, 18 Sep 2020 07:16:27: #4 Write summits bed file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_summits.bed 
+INFO  @ Fri, 18 Sep 2020 07:16:27: Done! 
+INFO  @ Fri, 18 Sep 2020 07:16:29: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 07:17:44: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 07:18:46: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 07:19:21: Calculate scores comparing treatment and control by 'qpois'... 
+INFO  @ Fri, 18 Sep 2020 07:20:21: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 07:20:38: Finished 'qpois'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_treat_pvalue.bdg'! 
+INFO  @ Fri, 18 Sep 2020 07:20:40: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 07:21:55: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 07:22:57: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 07:23:32: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Fri, 18 Sep 2020 07:33:47: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 07:37:50: Finished 'FE'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_FE.bdg'! 
+INFO  @ Fri, 18 Sep 2020 07:37:52: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 07:39:08: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 07:40:09: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 07:40:42: Calculate scores comparing treatment and control by 'logLR'... 
+INFO  @ Fri, 18 Sep 2020 07:41:17: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 07:45:12: Finished 'logLR'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_logLR.bdg'! 
+INFO  @ Fri, 18 Sep 2020 07:45:13: Read and build bedGraph... 
+INFO  @ Fri, 18 Sep 2020 07:45:16: Call peaks from bedGraph... 
+INFO  @ Fri, 18 Sep 2020 07:45:16: Write peaks... 
+INFO  @ Fri, 18 Sep 2020 07:45:17: Done 
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 147, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 111, in main
+    get_annotation_data(args)
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 85, in get_annotation_data
+    args.tss = myData['%s_gencode33_TSS'%(args.genome)]
+KeyError: 'mm9_gencode33_TSS'
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 95, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 74, in main
+    args.sep = guess_sep(args.input)
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 35, in guess_sep
+    with open(x) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.rmdup_peaks.rmblck.narrowPeak.annot.tsv'
+INFO  @ Fri, 18 Sep 2020 07:51:26: 
+# Command line: callpeak -t 1706657_MW127_KONFIX_0423.markdup.uq.bam -c 1706667_MW127_KO0423_INPUT.markdup.uq.bam --keep-dup all -n 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq -B -g mm
+# ARGUMENTS LIST:
+# name = 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq
+# format = AUTO
+# ChIP-seq file = ['1706657_MW127_KONFIX_0423.markdup.uq.bam']
+# control file = ['1706667_MW127_KO0423_INPUT.markdup.uq.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ Fri, 18 Sep 2020 07:51:26: #1 read tag files... 
+INFO  @ Fri, 18 Sep 2020 07:51:26: #1 read treatment tags... 
+INFO  @ Fri, 18 Sep 2020 07:51:26: Detected format is: BAM 
+INFO  @ Fri, 18 Sep 2020 07:51:26: * Input file is gzipped. 
+INFO  @ Fri, 18 Sep 2020 07:51:30:  1000000 
+INFO  @ Fri, 18 Sep 2020 07:51:34:  2000000 
+INFO  @ Fri, 18 Sep 2020 07:51:38:  3000000 
+INFO  @ Fri, 18 Sep 2020 07:51:41:  4000000 
+INFO  @ Fri, 18 Sep 2020 07:51:45:  5000000 
+INFO  @ Fri, 18 Sep 2020 07:51:49:  6000000 
+INFO  @ Fri, 18 Sep 2020 07:51:53:  7000000 
+INFO  @ Fri, 18 Sep 2020 07:51:57:  8000000 
+INFO  @ Fri, 18 Sep 2020 07:52:01:  9000000 
+INFO  @ Fri, 18 Sep 2020 07:52:05:  10000000 
+INFO  @ Fri, 18 Sep 2020 07:52:09:  11000000 
+INFO  @ Fri, 18 Sep 2020 07:52:13:  12000000 
+INFO  @ Fri, 18 Sep 2020 07:52:17:  13000000 
+INFO  @ Fri, 18 Sep 2020 07:52:21:  14000000 
+INFO  @ Fri, 18 Sep 2020 07:52:25:  15000000 
+INFO  @ Fri, 18 Sep 2020 07:52:29:  16000000 
+INFO  @ Fri, 18 Sep 2020 07:52:33:  17000000 
+INFO  @ Fri, 18 Sep 2020 07:52:37:  18000000 
+INFO  @ Fri, 18 Sep 2020 07:52:40:  19000000 
+INFO  @ Fri, 18 Sep 2020 07:52:44:  20000000 
+INFO  @ Fri, 18 Sep 2020 07:52:48:  21000000 
+INFO  @ Fri, 18 Sep 2020 07:52:52:  22000000 
+INFO  @ Fri, 18 Sep 2020 07:52:56:  23000000 
+INFO  @ Fri, 18 Sep 2020 07:53:00:  24000000 
+INFO  @ Fri, 18 Sep 2020 07:53:04:  25000000 
+INFO  @ Fri, 18 Sep 2020 07:53:08:  26000000 
+INFO  @ Fri, 18 Sep 2020 07:53:12:  27000000 
+INFO  @ Fri, 18 Sep 2020 07:53:16:  28000000 
+INFO  @ Fri, 18 Sep 2020 07:53:20:  29000000 
+INFO  @ Fri, 18 Sep 2020 07:53:24:  30000000 
+INFO  @ Fri, 18 Sep 2020 07:53:28:  31000000 
+INFO  @ Fri, 18 Sep 2020 07:53:32:  32000000 
+INFO  @ Fri, 18 Sep 2020 07:53:36:  33000000 
+INFO  @ Fri, 18 Sep 2020 07:53:40:  34000000 
+INFO  @ Fri, 18 Sep 2020 07:53:42: #1.2 read input tags... 
+INFO  @ Fri, 18 Sep 2020 07:53:42: Detected format is: BAM 
+INFO  @ Fri, 18 Sep 2020 07:53:42: * Input file is gzipped. 
+INFO  @ Fri, 18 Sep 2020 07:53:46:  1000000 
+INFO  @ Fri, 18 Sep 2020 07:53:49:  2000000 
+INFO  @ Fri, 18 Sep 2020 07:53:53:  3000000 
+INFO  @ Fri, 18 Sep 2020 07:53:57:  4000000 
+INFO  @ Fri, 18 Sep 2020 07:54:01:  5000000 
+INFO  @ Fri, 18 Sep 2020 07:54:05:  6000000 
+INFO  @ Fri, 18 Sep 2020 07:54:09:  7000000 
+INFO  @ Fri, 18 Sep 2020 07:54:13:  8000000 
+INFO  @ Fri, 18 Sep 2020 07:54:16:  9000000 
+INFO  @ Fri, 18 Sep 2020 07:54:20:  10000000 
+INFO  @ Fri, 18 Sep 2020 07:54:24:  11000000 
+INFO  @ Fri, 18 Sep 2020 07:54:28:  12000000 
+INFO  @ Fri, 18 Sep 2020 07:54:32:  13000000 
+INFO  @ Fri, 18 Sep 2020 07:54:36:  14000000 
+INFO  @ Fri, 18 Sep 2020 07:54:40:  15000000 
+INFO  @ Fri, 18 Sep 2020 07:54:43:  16000000 
+INFO  @ Fri, 18 Sep 2020 07:54:47:  17000000 
+INFO  @ Fri, 18 Sep 2020 07:54:51:  18000000 
+INFO  @ Fri, 18 Sep 2020 07:54:55:  19000000 
+INFO  @ Fri, 18 Sep 2020 07:54:59:  20000000 
+INFO  @ Fri, 18 Sep 2020 07:55:03:  21000000 
+INFO  @ Fri, 18 Sep 2020 07:55:07:  22000000 
+INFO  @ Fri, 18 Sep 2020 07:55:11:  23000000 
+INFO  @ Fri, 18 Sep 2020 07:55:15:  24000000 
+INFO  @ Fri, 18 Sep 2020 07:55:18:  25000000 
+INFO  @ Fri, 18 Sep 2020 07:55:22:  26000000 
+INFO  @ Fri, 18 Sep 2020 07:55:26:  27000000 
+INFO  @ Fri, 18 Sep 2020 07:55:30:  28000000 
+INFO  @ Fri, 18 Sep 2020 07:55:34:  29000000 
+INFO  @ Fri, 18 Sep 2020 07:55:38:  30000000 
+INFO  @ Fri, 18 Sep 2020 07:55:42:  31000000 
+INFO  @ Fri, 18 Sep 2020 07:55:46:  32000000 
+INFO  @ Fri, 18 Sep 2020 07:55:49:  33000000 
+INFO  @ Fri, 18 Sep 2020 07:55:53:  34000000 
+INFO  @ Fri, 18 Sep 2020 07:55:57:  35000000 
+INFO  @ Fri, 18 Sep 2020 07:56:01:  36000000 
+INFO  @ Fri, 18 Sep 2020 07:56:05:  37000000 
+INFO  @ Fri, 18 Sep 2020 07:56:09:  38000000 
+INFO  @ Fri, 18 Sep 2020 07:56:13:  39000000 
+INFO  @ Fri, 18 Sep 2020 07:56:17:  40000000 
+INFO  @ Fri, 18 Sep 2020 07:56:21:  41000000 
+INFO  @ Fri, 18 Sep 2020 07:56:24:  42000000 
+INFO  @ Fri, 18 Sep 2020 07:56:28:  43000000 
+INFO  @ Fri, 18 Sep 2020 07:56:32:  44000000 
+INFO  @ Fri, 18 Sep 2020 07:56:36:  45000000 
+INFO  @ Fri, 18 Sep 2020 07:56:40:  46000000 
+INFO  @ Fri, 18 Sep 2020 07:56:44:  47000000 
+INFO  @ Fri, 18 Sep 2020 07:56:48:  48000000 
+INFO  @ Fri, 18 Sep 2020 07:56:51:  49000000 
+INFO  @ Fri, 18 Sep 2020 07:56:55:  50000000 
+INFO  @ Fri, 18 Sep 2020 07:56:59:  51000000 
+INFO  @ Fri, 18 Sep 2020 07:57:03:  52000000 
+INFO  @ Fri, 18 Sep 2020 07:57:07:  53000000 
+INFO  @ Fri, 18 Sep 2020 07:57:11:  54000000 
+INFO  @ Fri, 18 Sep 2020 07:57:15:  55000000 
+INFO  @ Fri, 18 Sep 2020 07:57:19:  56000000 
+INFO  @ Fri, 18 Sep 2020 07:57:22:  57000000 
+INFO  @ Fri, 18 Sep 2020 07:57:26:  58000000 
+INFO  @ Fri, 18 Sep 2020 07:57:30:  59000000 
+INFO  @ Fri, 18 Sep 2020 07:57:34:  60000000 
+INFO  @ Fri, 18 Sep 2020 07:57:38:  61000000 
+INFO  @ Fri, 18 Sep 2020 07:57:42:  62000000 
+INFO  @ Fri, 18 Sep 2020 07:57:43: #1 tag size is determined as 51 bps 
+INFO  @ Fri, 18 Sep 2020 07:57:43: #1 tag size = 51 
+INFO  @ Fri, 18 Sep 2020 07:57:43: #1  total tags in treatment: 34354982 
+INFO  @ Fri, 18 Sep 2020 07:57:43: #1  total tags in control: 62156805 
+INFO  @ Fri, 18 Sep 2020 07:57:43: #1 finished! 
+INFO  @ Fri, 18 Sep 2020 07:57:43: #2 Build Peak Model... 
+INFO  @ Fri, 18 Sep 2020 07:57:43: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Fri, 18 Sep 2020 07:57:46: #2 number of paired peaks: 7306 
+INFO  @ Fri, 18 Sep 2020 07:57:46: start model_add_line... 
+INFO  @ Fri, 18 Sep 2020 07:57:47: start X-correlation... 
+INFO  @ Fri, 18 Sep 2020 07:57:47: end of X-cor 
+INFO  @ Fri, 18 Sep 2020 07:57:47: #2 finished! 
+INFO  @ Fri, 18 Sep 2020 07:57:47: #2 predicted fragment length is 277 bps 
+INFO  @ Fri, 18 Sep 2020 07:57:47: #2 alternative fragment length(s) may be 50,244,277 bps 
+INFO  @ Fri, 18 Sep 2020 07:57:47: #2.2 Generate R script for model : 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_model.r 
+INFO  @ Fri, 18 Sep 2020 07:57:47: #3 Call peaks... 
+INFO  @ Fri, 18 Sep 2020 07:57:47: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Fri, 18 Sep 2020 08:01:16: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Fri, 18 Sep 2020 08:01:16: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_treat_pileup.bdg 
+INFO  @ Fri, 18 Sep 2020 08:01:16: #3   Write bedGraph files for control lambda (after scaling if necessary)... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_control_lambda.bdg 
+INFO  @ Fri, 18 Sep 2020 08:01:16: #3   Pileup will be based on sequencing depth in treatment. 
+INFO  @ Fri, 18 Sep 2020 08:01:16: #3 Call peaks for each chromosome... 
+INFO  @ Fri, 18 Sep 2020 08:07:17: #4 Write output xls file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_peaks.xls 
+INFO  @ Fri, 18 Sep 2020 08:07:17: #4 Write peak in narrowPeak format file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_peaks.narrowPeak 
+INFO  @ Fri, 18 Sep 2020 08:07:17: #4 Write summits bed file... 1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_summits.bed 
+INFO  @ Fri, 18 Sep 2020 08:07:17: Done! 
+INFO  @ Fri, 18 Sep 2020 08:07:19: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 08:08:23: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 08:09:27: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 08:09:59: Calculate scores comparing treatment and control by 'qpois'... 
+INFO  @ Fri, 18 Sep 2020 08:11:54: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 08:12:16: Finished 'qpois'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_treat_pvalue.bdg'! 
+INFO  @ Fri, 18 Sep 2020 08:12:18: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 08:13:22: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 08:14:25: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 08:14:57: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Fri, 18 Sep 2020 08:24:24: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 08:28:09: Finished 'FE'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_FE.bdg'! 
+INFO  @ Fri, 18 Sep 2020 08:28:11: Read and build treatment bedGraph... 
+INFO  @ Fri, 18 Sep 2020 08:29:15: Read and build control bedGraph... 
+INFO  @ Fri, 18 Sep 2020 08:30:19: Build scoreTrackII... 
+INFO  @ Fri, 18 Sep 2020 08:30:51: Calculate scores comparing treatment and control by 'logLR'... 
+INFO  @ Fri, 18 Sep 2020 08:31:25: Write bedGraph of scores... 
+INFO  @ Fri, 18 Sep 2020 08:35:13: Finished 'logLR'! Please check '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_logLR.bdg'! 
+INFO  @ Fri, 18 Sep 2020 08:35:14: Read and build bedGraph... 
+INFO  @ Fri, 18 Sep 2020 08:35:20: Call peaks from bedGraph... 
+INFO  @ Fri, 18 Sep 2020 08:35:21: Write peaks... 
+INFO  @ Fri, 18 Sep 2020 08:35:21: Done 
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 147, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 111, in main
+    get_annotation_data(args)
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 85, in get_annotation_data
+    args.tss = myData['%s_gencode33_TSS'%(args.genome)]
+KeyError: 'mm9_gencode33_TSS'
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 95, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 74, in main
+    args.sep = guess_sep(args.input)
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 35, in guess_sep
+    with open(x) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '1706657_MW127_KONFIX_0423.vs.1706667_MW127_KO0423_INPUT.markdup.uq_peaks.rmblck.narrowPeak.annot.tsv'

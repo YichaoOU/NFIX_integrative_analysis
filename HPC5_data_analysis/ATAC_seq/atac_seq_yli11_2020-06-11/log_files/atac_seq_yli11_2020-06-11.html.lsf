@@ -1,0 +1,117 @@
+
+
+#BSUB -P atac_seq
+#BSUB -o atac_seq_yli11_2020-06-11/log_files/atac_seq_yli11_2020-06-11.html.message_%J_%I.out -e atac_seq_yli11_2020-06-11/log_files/atac_seq_yli11_2020-06-11.html.message_%J_%I.err
+#BSUB -n 1
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=8000]"
+#BSUB -J "html[1-1]"
+module purge
+#BSUB -w "ended(105192413) && ended(105192412) && ended(105192415) && ended(105192414) && ended(105192422) && ended(105192420) && ended(105192418) && ended(105192421) && ended(105192419) && ended(105192416)"
+module load python/2.7.13
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id fastq.tsv|tail -n1`
+
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/NGS.report.py atac_seq_yli11_2020-06-11 atac_seq HPC5_ATAC_R1.fastq.gz,HPC5_ATAC_R2.fastq.gz HPC5_ATAC
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/send_email.py aa2fbf5d85f8.bwDict
+mkdir atac_seq_yli11_2020-06-11
+mkdir atac_seq_yli11_2020-06-11/figures_tables
+mv atac_seq_yli11_2020-06-11.report.html atac_seq_yli11_2020-06-11/figures_tables
+mkdir atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.fastqc.input atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.fastqc.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.fastqc.message_105192412_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.fastqc.message_105192412_1.err atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.fastqc.message_105192412_2.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.fastqc.message_105192412_2.err atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.skewer.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.skewer.message_105192413_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.skewer.message_105192413_1.err atac_seq_yli11_2020-06-11/log_files
+mv HPC5_ATAC-trimmed.log atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.bwa.input atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.BWA.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.BWA.message_105192414_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.BWA.message_105192414_1.err atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.mk.rm.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.markdup.rmdup.message_105192415_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.markdup.rmdup.message_105192415_1.err atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.all.bw.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.all.bw.message_105192416_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.all.bw.message_105192416_1.err atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.rmdup.bw.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.rmdup.bw.message_105192418_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.rmdup.bw.message_105192418_1.err atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.rmdup.uq.bw.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.rmdup.uq.bw.message_105192419_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.rmdup.uq.bw.message_105192419_1.err atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.libx.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.lib.complexity.message_105192420_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.lib.complexity.message_105192420_1.err atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.macs2.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.macs2.message_105192421_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.macs2.message_105192421_1.err atac_seq_yli11_2020-06-11/log_files
+mv HPC5_ATAC*.r atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.tracks.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.tracks.message_105192422_1.out atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.tracks.message_105192422_1.err atac_seq_yli11_2020-06-11/log_files
+mv aa2fbf5d85f8.bwDict atac_seq_yli11_2020-06-11/log_files
+mkdir atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.all.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.rmdup.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.rmdup.uq.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.markdup.rmchrM_FE.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.markdup.rmchrM_logLR.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.markdup.rmchrM_treat_pvalue.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.rmdup_FE.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.rmdup_logLR.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.rmdup_treat_pvalue.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.rmdup.uq.rmchrM_FE.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.rmdup.uq.rmchrM_logLR.bw atac_seq_yli11_2020-06-11/bw_files
+mv HPC5_ATAC.rmdup.uq.rmchrM_treat_pvalue.bw atac_seq_yli11_2020-06-11/bw_files
+mkdir atac_seq_yli11_2020-06-11/peak_files
+mv HPC5_ATAC*.bed atac_seq_yli11_2020-06-11/peak_files
+mv HPC5_ATAC*.xls atac_seq_yli11_2020-06-11/peak_files
+mv HPC5_ATAC*narrowPeak* atac_seq_yli11_2020-06-11/peak_files
+mkdir atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC_R1_fastqc.html atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC_R1_fastqc.zip atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC_R2_fastqc.html atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC_R2_fastqc.zip atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC.markdup.report atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC.markdup.chrM.report atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC.bam.stat atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC.markdup.rmchrM.report atac_seq_yli11_2020-06-11/QC_files
+mv HPC5_ATAC.lib.complexity atac_seq_yli11_2020-06-11/QC_files
+mkdir atac_seq_yli11_2020-06-11/bdg_files
+mv HPC5_ATAC*.bdg atac_seq_yli11_2020-06-11/bdg_files
+mkdir atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.bam atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.markdup.bam atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.markdup.bam.bai atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.markdup.chrM.bam atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.rmdup.bam atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.rmdup.bam.bai atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.rmdup.uq.bam atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.markdup.uq.bam atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.rmdup.uq.bam.bai atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.markdup.uq.bam.bai atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.rmdup.uq.rmchrM.bam atac_seq_yli11_2020-06-11/bam_files
+mv HPC5_ATAC.markdup.rmchrM.bam atac_seq_yli11_2020-06-11/bam_files
+mv atac_seq_yli11_2020-06-11.html.lsf atac_seq_yli11_2020-06-11/log_files
+mv atac_seq_yli11_2020-06-11.log atac_seq_yli11_2020-06-11/log_files
+HemTools my_dir -a atac_seq_yli11_2020-06-11,/research/rgs01/home/clusterHome/yli11/Share/Megan/ATAC/2-1176680,atac_seq
+module load conda3
+source activate /home/yli11/.conda/envs/multiQC/
+export LC_ALL=en_US.utf-8
+export LANG=en_US.utf-8
+cd atac_seq_yli11_2020-06-11
+multiqc .
+
+		

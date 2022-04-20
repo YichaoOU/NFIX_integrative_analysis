@@ -1,0 +1,63 @@
+
+
+#BSUB -P atac_seq
+#BSUB -o atac_seq_yli11_2020-06-11.macs2.message_%J_%I.out -e atac_seq_yli11_2020-06-11.macs2.message_%J_%I.err
+#BSUB -n 1
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=30000]"
+#BSUB -J "macs2[1-1]"
+module purge
+#BSUB -w "ended(105192415)"
+module load macs2/2.1.1
+module load bedtools/2.29.2
+module load conda3
+source activate /home/yli11/.conda/envs/py2
+export PATH=$PATH:"/home/yli11/HemTools/bin"
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id fastq.tsv|tail -n1`
+
+macs2 callpeak --nomodel --shift -100 --extsize 200 -t ${COL3}.markdup.rmchrM.bam -B -n ${COL3}.markdup.rmchrM -g mm
+macs2 bdgcmp -t ${COL3}.markdup.rmchrM_treat_pileup.bdg -c ${COL3}.markdup.rmchrM_control_lambda.bdg -m qpois -o ${COL3}.markdup.rmchrM_treat_pvalue.bdg
+macs2 bdgcmp -t ${COL3}.markdup.rmchrM_treat_pileup.bdg -c ${COL3}.markdup.rmchrM_control_lambda.bdg -m FE -o ${COL3}.markdup.rmchrM_FE.bdg
+macs2 bdgcmp -t ${COL3}.markdup.rmchrM_treat_pileup.bdg -c ${COL3}.markdup.rmchrM_control_lambda.bdg -m logLR -o ${COL3}.markdup.rmchrM_logLR.bdg -p 0.01
+macs2 bdgpeakcall -i ${COL3}.markdup.rmchrM_treat_pvalue.bdg -c 1.301 -l 100 -g 75 -o ${COL3}.markdup.rmchrM_bdgpeaks.bed
+intersectBed -a ${COL3}.markdup.rmchrM_peaks.narrowPeak -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}.markdup.rmchrM_peaks.rmblck.narrowPeak
+intersectBed -a ${COL3}.markdup.rmchrM_bdgpeaks.bed -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}.markdup.rmchrM_bdgpeaks.rmblck.bed
+annot_gene_features.py -f ${COL3}.markdup.rmchrM_peaks.rmblck.narrowPeak -o ${COL3}.markdup.rmchrM_peaks.rmblck.narrowPeak.annot.tsv -g mm9
+pie_plot.py -f ${COL3}.markdup.rmchrM_peaks.rmblck.narrowPeak.annot.tsv --order Exon,Promoter,5UTR,3UTR,Intron,Intergenic --use_col -1 --header -o ${COL3}.markdup.rmchrM_peaks.rmblck.narrowPeak.genomic_features.pie_chart
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.markdup.rmchrM_treat_pvalue.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.markdup.rmchrM_treat_pvalue.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.markdup.rmchrM_FE.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.markdup.rmchrM_FE.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.markdup.rmchrM_logLR.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.markdup.rmchrM_logLR.bw
+macs2 callpeak --nomodel --shift -100 --extsize 200 -t ${COL3}.rmdup.uq.rmchrM.bam -B -n ${COL3}.rmdup.uq.rmchrM -g mm
+macs2 bdgcmp -t ${COL3}.rmdup.uq.rmchrM_treat_pileup.bdg -c ${COL3}.rmdup.uq.rmchrM_control_lambda.bdg -m qpois -o ${COL3}.rmdup.uq.rmchrM_treat_pvalue.bdg
+macs2 bdgcmp -t ${COL3}.rmdup.uq.rmchrM_treat_pileup.bdg -c ${COL3}.rmdup.uq.rmchrM_control_lambda.bdg -m FE -o ${COL3}.rmdup.uq.rmchrM_FE.bdg
+macs2 bdgcmp -t ${COL3}.rmdup.uq.rmchrM_treat_pileup.bdg -c ${COL3}.rmdup.uq.rmchrM_control_lambda.bdg -m logLR -o ${COL3}.rmdup.uq.rmchrM_logLR.bdg -p 0.01
+macs2 bdgpeakcall -i ${COL3}.rmdup.uq.rmchrM_treat_pvalue.bdg -c 1.301 -l 100 -g 75 -o ${COL3}.rmdup.uq.rmchrM_bdgpeaks.bed
+intersectBed -a ${COL3}.rmdup.uq.rmchrM_peaks.narrowPeak -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak
+intersectBed -a ${COL3}.rmdup.uq.rmchrM_bdgpeaks.bed -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}.rmdup.uq.rmchrM_bdgpeaks.rmblck.bed
+annot_gene_features.py -f ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak -o ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak.annot.tsv -g mm9
+pie_plot.py -f ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak.annot.tsv --order Exon,Promoter,5UTR,3UTR,Intron,Intergenic --use_col -1 --header -o ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak.genomic_features.pie_chart
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup.uq.rmchrM_treat_pvalue.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup.uq.rmchrM_treat_pvalue.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup.uq.rmchrM_FE.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup.uq.rmchrM_FE.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup.uq.rmchrM_logLR.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup.uq.rmchrM_logLR.bw
+macs2 callpeak --nomodel --shift -100 --extsize 200 -t ${COL3}.rmdup.bam -B -n ${COL3}.rmdup -g mm
+macs2 bdgcmp -t ${COL3}.rmdup_treat_pileup.bdg -c ${COL3}.rmdup_control_lambda.bdg -m qpois -o ${COL3}.rmdup_treat_pvalue.bdg
+macs2 bdgcmp -t ${COL3}.rmdup_treat_pileup.bdg -c ${COL3}.rmdup_control_lambda.bdg -m FE -o ${COL3}.rmdup_FE.bdg
+macs2 bdgcmp -t ${COL3}.rmdup_treat_pileup.bdg -c ${COL3}.rmdup_control_lambda.bdg -m logLR -o ${COL3}.rmdup_logLR.bdg -p 0.01
+macs2 bdgpeakcall -i ${COL3}.rmdup_treat_pvalue.bdg -c 1.301 -l 100 -g 75 -o ${COL3}.rmdup_bdgpeaks.bed
+intersectBed -a ${COL3}.rmdup_peaks.narrowPeak -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}.rmdup_peaks.rmblck.narrowPeak
+intersectBed -a ${COL3}.rmdup_bdgpeaks.bed -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}.rmdup_bdgpeaks.rmblck.bed
+annot_gene_features.py -f ${COL3}.rmdup_peaks.rmblck.narrowPeak -o ${COL3}.rmdup_peaks.rmblck.narrowPeak.annot.tsv -g mm9
+pie_plot.py -f ${COL3}.rmdup_peaks.rmblck.narrowPeak.annot.tsv --order Exon,Promoter,5UTR,3UTR,Intron,Intergenic --use_col -1 --header -o ${COL3}.rmdup_peaks.rmblck.narrowPeak.genomic_features.pie_chart
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup_treat_pvalue.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup_treat_pvalue.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup_FE.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup_FE.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup_logLR.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup_logLR.bw
+
+		

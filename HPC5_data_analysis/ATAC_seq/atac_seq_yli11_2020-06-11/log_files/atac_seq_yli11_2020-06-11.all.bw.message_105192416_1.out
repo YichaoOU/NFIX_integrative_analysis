@@ -1,0 +1,65 @@
+Sender: LSF System <lsfadmin@nodecn224>
+Subject: Job 105192416[1]: <all.bw[1-1]> in cluster <hpcf_research_cluster> Done
+
+Job <all.bw[1-1]> was submitted from host <nodecn121> by user <yli11> in cluster <hpcf_research_cluster> at Thu Jun 11 23:37:59 2020.
+Job was executed on host(s) <6*nodecn224>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Fri Jun 12 14:41:54 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/ATAC/2-1176680> was used as the working directory.
+Started at Fri Jun 12 14:41:54 2020.
+Terminated at Fri Jun 12 15:04:19 2020.
+Results reported at Fri Jun 12 15:04:19 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P atac_seq
+#BSUB -o atac_seq_yli11_2020-06-11.all.bw.message_%J_%I.out -e atac_seq_yli11_2020-06-11.all.bw.message_%J_%I.err
+#BSUB -n 6
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=4500]"
+#BSUB -J "all.bw[1-1]"
+module purge
+#BSUB -w "ended(105192415[*])"
+#BSUB -R "select[rhel7]"
+module load python/2.7.15-rhel7
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id fastq.tsv|tail -n1`
+
+bamCoverage -b ${COL3}.markdup.bam -o ${COL3}.all.bw --smoothLength=200 --ignoreForNormalization chrX chrM   --effectiveGenomeSize 1865500000 --numberOfProcessors 6 --centerReads
+
+		
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   6150.46 sec.
+    Max Memory :                                 16040 MB
+    Average Memory :                             6351.22 MB
+    Total Requested Memory :                     27000.00 MB
+    Delta Memory :                               10960.00 MB
+    Max Swap :                                   -
+    Max Processes :                              10
+    Max Threads :                                14
+    Run time :                                   1345 sec.
+    Turnaround time :                            55580 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <atac_seq_yli11_2020-06-11.all.bw.message_105192416_1.err> for stderr output of this job.
+

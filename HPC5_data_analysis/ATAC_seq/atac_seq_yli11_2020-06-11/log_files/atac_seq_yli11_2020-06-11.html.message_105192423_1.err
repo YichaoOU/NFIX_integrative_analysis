@@ -1,0 +1,21 @@
+mv: cannot stat ‘HPC5_ATAC*.r’: No such file or directory
+2020-06-12 18:02:01,135 [INFO ]  Reading user's my_dir.csv
+2020-06-12 18:02:01,164 [INFO ]  Adding entry atac_seq_yli11_2020-06-11,/research/rgs01/home/clusterHome/yli11/Share/Megan/ATAC/2-1176680,atac_seq
+2020-06-12 18:02:01,167 [INFO ]  Saving profile!
+2020-06-12 18:02:01,193 [INFO ]  Bye!
+/home/yli11/.conda/envs/multiQC/lib/python3.6/site-packages/multiqc/utils/config.py:45: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  configs = yaml.load(f)
+/home/yli11/.conda/envs/multiQC/lib/python3.6/site-packages/multiqc/utils/config.py:51: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  sp = yaml.load(f)
+[WARNING]         multiqc : MultiQC Version v1.9 now available!
+[INFO   ]         multiqc : This is MultiQC v1.7
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching '.'
+[INFO   ]        samtools : Found 1 stats reports
+[INFO   ]        samtools : Found 3 flagstat reports
+[INFO   ]          skewer : Found 1 reports
+[INFO   ]          fastqc : Found 2 reports
+[INFO   ]         multiqc : Compressing plot data
+[INFO   ]         multiqc : Report      : multiqc_report.html
+[INFO   ]         multiqc : Data        : multiqc_data
+[INFO   ]         multiqc : MultiQC complete

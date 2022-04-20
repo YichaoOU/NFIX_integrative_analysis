@@ -1,0 +1,64 @@
+Sender: LSF System <lsfadmin@nodecn247>
+Subject: Job 109803374[7]: <QC1[1-10]> in cluster <hpcf_research_cluster> Done
+
+Job <QC1[1-10]> was submitted from host <nodecn125> by user <yli11> in cluster <hpcf_research_cluster> at Thu Sep 17 16:38:13 2020.
+Job was executed on host(s) <nodecn247>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Thu Sep 17 16:38:15 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/HPC5/NFIX> was used as the working directory.
+Started at Thu Sep 17 16:38:15 2020.
+Terminated at Thu Sep 17 16:44:58 2020.
+Results reported at Thu Sep 17 16:44:58 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P chip_seq_single
+#BSUB -o chip_seq_single_yli11_2020-09-17.fastqc.message_%J_%I.out -e chip_seq_single_yli11_2020-09-17.fastqc.message_%J_%I.err
+#BSUB -n 1
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=4000]"
+#BSUB -J "QC1[1-10]"
+module purge
+module load fastqc/0.11.5
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id chip_seq_single_yli11_2020-09-17.fastqc.input|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id chip_seq_single_yli11_2020-09-17.fastqc.input|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id chip_seq_single_yli11_2020-09-17.fastqc.input|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id chip_seq_single_yli11_2020-09-17.fastqc.input|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id chip_seq_single_yli11_2020-09-17.fastqc.input|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id chip_seq_single_yli11_2020-09-17.fastqc.input|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id chip_seq_single_yli11_2020-09-17.fastqc.input|tail -n1`
+
+fastqc ${COL1}
+
+		
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   414.49 sec.
+    Max Memory :                                 182 MB
+    Average Memory :                             168.43 MB
+    Total Requested Memory :                     4000.00 MB
+    Delta Memory :                               3818.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                17
+    Run time :                                   402 sec.
+    Turnaround time :                            405 sec.
+
+The output (if any) follows:
+
+Analysis complete for 1706659_MW127_KONFIX_0417.fastq.gz
+
+
+PS:
+
+Read file <chip_seq_single_yli11_2020-09-17.fastqc.message_109803374_7.err> for stderr output of this job.
+

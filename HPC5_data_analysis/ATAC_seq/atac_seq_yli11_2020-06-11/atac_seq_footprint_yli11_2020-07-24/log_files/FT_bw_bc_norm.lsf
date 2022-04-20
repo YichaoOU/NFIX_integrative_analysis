@@ -1,0 +1,33 @@
+
+
+#BSUB -P atac_seq_f
+#BSUB -o atac_seq_footprint_yli11_2020-07-24/log_files/FT_bw_bc_norm_%J_%I.out -e atac_seq_footprint_yli11_2020-07-24/log_files/FT_bw_bc_norm_%J_%I.err
+#BSUB -n 1
+#BSUB -q priority
+#BSUB -R "span[hosts=1] rusage[mem=25000]"
+#BSUB -J "FT_bw_bc_norm[1-1]"
+
+
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id input.list|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id input.list|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id input.list|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id input.list|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id input.list|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id input.list|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id input.list|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id input.list|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id input.list|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id input.list|tail -n1`
+
+ncore=1
+mem=25000
+q=priority
+module load conda3
+source activate /home/yli11/.conda/envs/rgt_hint/
+rgt-hint tracks --organism mm9 --bc --norm --bigWig --output-location atac_seq_footprint_yli11_2020-07-24 --output-prefix ${COL3}_bc_norm ${COL1} ${COL2}
+rgt-hint tracks --organism mm9 --bc --norm --bigWig --output-location atac_seq_footprint_yli11_2020-07-24 --strand-specific --output-prefix ${COL3}_bc_norm_strand ${COL1} ${COL2}
+

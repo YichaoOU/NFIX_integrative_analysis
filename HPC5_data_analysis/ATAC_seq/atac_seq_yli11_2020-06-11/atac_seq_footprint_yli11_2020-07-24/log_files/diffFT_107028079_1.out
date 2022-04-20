@@ -1,0 +1,77 @@
+Sender: LSF System <lsfadmin@nodecn100>
+Subject: Job 107028079[1]: <diffFT[1-1]> in cluster <hpcf_research_cluster> Exited
+
+Job <diffFT[1-1]> was submitted from host <nodecn104> by user <yli11> in cluster <hpcf_research_cluster> at Fri Jul 24 18:44:34 2020.
+Job was executed on host(s) <nodecn100>, in queue <priority>, as user <yli11> in cluster <hpcf_research_cluster> at Fri Jul 24 21:54:33 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/ATAC/HPC5_WT/atac_seq_yli11_2020-06-11/footprint_bw> was used as the working directory.
+Started at Fri Jul 24 21:54:33 2020.
+Terminated at Fri Jul 24 21:55:01 2020.
+Results reported at Fri Jul 24 21:55:01 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P atac_seq_f
+#BSUB -o atac_seq_footprint_yli11_2020-07-24/log_files/diffFT_%J_%I.out -e atac_seq_footprint_yli11_2020-07-24/log_files/diffFT_%J_%I.err
+#BSUB -n 1
+#BSUB -q priority
+#BSUB -R "span[hosts=1] rusage[mem=16000]"
+#BSUB -J "diffFT[1-1]"
+
+#BSUB -w "ended(107028078)"
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1`
+
+ncore=1
+mem=16000
+q=priority
+module load conda3
+source activate /home/yli11/.conda/envs/rgt_hint/
+rgt-hint differential --organism=mm9 --bc --nc 10 --mpbs-files=./atac_seq_footprint_yli11_2020-07-24/None_motif_match/None_mpbs.bed,./atac_seq_footprint_yli11_2020-07-24/None_motif_match/None_mpbs.bed --reads-files=None,None --conditions=None,None --output-location=atac_seq_footprint_yli11_2020-07-24/Diff_footprints_None_None --output-profiles
+cd Diff_footprints_None_None
+mkdir temp_files
+mv None*.txt temp_files
+mv None*.txt temp_files
+
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.33 sec.
+    Max Memory :                                 95 MB
+    Average Memory :                             45.17 MB
+    Total Requested Memory :                     16000.00 MB
+    Delta Memory :                               15905.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                83
+    Run time :                                   28 sec.
+    Turnaround time :                            11427 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <atac_seq_footprint_yli11_2020-07-24/log_files/diffFT_107028079_1.err> for stderr output of this job.
+

@@ -1,0 +1,82 @@
+Sender: LSF System <lsfadmin@nodecn235>
+Subject: Job 109803376[7]: <rmdup[1-10]> in cluster <hpcf_research_cluster> Done
+
+Job <rmdup[1-10]> was submitted from host <nodecn125> by user <yli11> in cluster <hpcf_research_cluster> at Thu Sep 17 16:38:13 2020.
+Job was executed on host(s) <6*nodecn235>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Thu Sep 17 18:16:14 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/HPC5/NFIX> was used as the working directory.
+Started at Thu Sep 17 18:16:14 2020.
+Terminated at Thu Sep 17 20:07:54 2020.
+Results reported at Thu Sep 17 20:07:54 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P chip_seq_single
+#BSUB -o chip_seq_single_yli11_2020-09-17.markdup.rmdup.message_%J_%I.out -e chip_seq_single_yli11_2020-09-17.markdup.rmdup.message_%J_%I.err
+#BSUB -n 6
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=4000]"
+#BSUB -J "rmdup[1-10]"
+module purge
+#BSUB -w "ended(109803375[*])"
+module load samtools/1.7
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id fastq.tsv|tail -n1`
+
+samtools stats ${COL2}.bam > ${COL2}.bam.stat
+samtools sort -@ 6 -n -o ${COL2}.name.st.bam ${COL2}.bam
+samtools fixmate -@ 6 -m ${COL2}.name.st.bam ${COL2}.fixmate.bam
+samtools sort -@ 6 -o ${COL2}.fixmate.st.bam ${COL2}.fixmate.bam
+samtools markdup -@ 6 ${COL2}.fixmate.st.bam ${COL2}.markdup.bam
+samtools markdup -@ 6 -r ${COL2}.markdup.bam ${COL2}.rmdup.bam
+rm ${COL2}.name.st.bam ${COL2}.fixmate.bam ${COL2}.fixmate.st.bam
+samtools flagstat -@ 6 ${COL2}.markdup.bam > ${COL2}.markdup.report
+samtools index -@ 6 ${COL2}.markdup.bam
+samtools view -@ 6 -q 1 -b ${COL2}.markdup.bam > ${COL2}.markdup.uq.bam
+samtools index -@ 6 ${COL2}.markdup.uq.bam
+samtools index -@ 6 ${COL2}.rmdup.bam
+samtools view -@ 6 -q 1 -b ${COL2}.rmdup.bam > ${COL2}.rmdup.uq.bam
+samtools index -@ 6 ${COL2}.rmdup.uq.bam
+samtools view -@ 6 ${COL2}.markdup.bam chrM -b > ${COL2}.markdup.chrM.bam
+samtools flagstat -@ 6 ${COL2}.markdup.chrM.bam > ${COL2}.markdup.chrM.report
+samtools idxstats ${COL2}.rmdup.uq.bam | cut -f 1 | grep -v  chrM| xargs samtools view -@ 6 -b ${COL2}.rmdup.uq.bam > ${COL2}.rmdup.uq.rmchrM.bam
+samtools idxstats ${COL2}.markdup.bam | cut -f 1 | grep -v  chrM| xargs samtools view -@ 6 -b ${COL2}.markdup.bam > ${COL2}.markdup.rmchrM.bam
+samtools flagstat -@ 6 ${COL2}.markdup.rmchrM.bam > ${COL2}.markdup.rmchrM.report
+
+		
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   4909.68 sec.
+    Max Memory :                                 5316 MB
+    Average Memory :                             336.02 MB
+    Total Requested Memory :                     24000.00 MB
+    Delta Memory :                               18684.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                19
+    Run time :                                   6698 sec.
+    Turnaround time :                            12581 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <chip_seq_single_yli11_2020-09-17.markdup.rmdup.message_109803376_7.err> for stderr output of this job.
+

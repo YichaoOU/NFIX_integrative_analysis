@@ -1,0 +1,87 @@
+Sender: LSF System <lsfadmin@nodecn004>
+Subject: Job 105192413[1]: <trim[1-1]> in cluster <hpcf_research_cluster> Done
+
+Job <trim[1-1]> was submitted from host <nodecn121> by user <yli11> in cluster <hpcf_research_cluster> at Thu Jun 11 23:37:58 2020.
+Job was executed on host(s) <4*nodecn004>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Thu Jun 11 23:39:50 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/ATAC/2-1176680> was used as the working directory.
+Started at Thu Jun 11 23:39:50 2020.
+Terminated at Fri Jun 12 01:11:43 2020.
+Results reported at Fri Jun 12 01:11:43 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P atac_seq
+#BSUB -o atac_seq_yli11_2020-06-11.skewer.message_%J_%I.out -e atac_seq_yli11_2020-06-11.skewer.message_%J_%I.err
+#BSUB -n 4
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=4000]"
+#BSUB -J "trim[1-1]"
+module purge
+
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id fastq.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id fastq.tsv|tail -n1`
+
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/skewer-0.2.2-linux-x86_64 -t 4 -x CTGTCTCTTATACACATCT -y CTGTCTCTTATACACATCT ${COL1} 		${COL2} -z yes -o ${COL3}
+
+		
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   15811.56 sec.
+    Max Memory :                                 9 MB
+    Average Memory :                             8.99 MB
+    Total Requested Memory :                     16000.00 MB
+    Delta Memory :                               15991.00 MB
+    Max Swap :                                   -
+    Max Processes :                              10
+    Max Threads :                                14
+    Run time :                                   5512 sec.
+    Turnaround time :                            5625 sec.
+
+The output (if any) follows:
+
+.--. .-.
+: .--': :.-.
+`. `. : `'.' .--. .-..-..-. .--. .--.
+_`, :: . `.' '_.': `; `; :' '_.': ..'
+`.__.':_;:_;`.__.'`.__.__.'`.__.':_;
+skewer v0.2.2 [April 4, 2016]
+Parameters used:
+-- 3' end adapter sequence (-x):[0;33m	CTGTCTCTTATACACATCT
+[0m-- paired 3' end adapter sequence (-y):[0;33m	CTGTCTCTTATACACATCT
+[0m-- maximum error ratio allowed (-r):	0.100
+-- maximum indel error ratio allowed (-d):	0.030
+-- minimum read length allowed after trimming (-l):	18
+-- file format (-f):		Sanger/Illumina 1.8+ FASTQ (auto detected)
+-- number of concurrent threads (-t):	4
+Thu Jun 11 23:39:52 2020[0;32m >> started[0m
+
+Fri Jun 12 01:11:42 2020[0;32m >> done[0m (5510.275s)
+224309974 read pairs processed; of these:
+     3397 ( 0.00%) short read pairs filtered out after trimming by size control
+      831 ( 0.00%) empty read pairs filtered out after trimming by size control
+224305746 (100.00%) read pairs available; of these:
+ 88939915 (39.65%) trimmed read pairs available after processing
+135365831 (60.35%) untrimmed read pairs available after processing
+log has been saved to "HPC5_ATAC-trimmed.log".
+
+
+PS:
+
+Read file <atac_seq_yli11_2020-06-11.skewer.message_105192413_1.err> for stderr output of this job.
+
