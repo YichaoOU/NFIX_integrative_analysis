@@ -1,0 +1,87 @@
+a
+b
+c
+
+
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@noderome112>
+Subject: Job 143735607[1]: <break_point[1-1]> in cluster <hpcf_research_cluster> Done
+
+Job <break_point[1-1]> was submitted from host <noderome194> by user <yli11> in cluster <hpcf_research_cluster> at Fri Oct 29 12:18:19 2021
+Job was executed on host(s) <noderome112>, in queue <priority>, as user <yli11> in cluster <hpcf_research_cluster> at Fri Oct 29 14:02:22 2021
+</home/yli11> was used as the home directory.
+</home/yli11/dirs/NFIX_megan/predict_NFIX_PU1_cobinding> was used as the working directory.
+Started at Fri Oct 29 14:02:22 2021
+Terminated at Fri Oct 29 14:02:27 2021
+Results reported at Fri Oct 29 14:02:27 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P final2_two
+#BSUB -o final2_two_motif_coBinding_S3Norm_50bp/log_files/break_point_%J_%I.out -e final2_two_motif_coBinding_S3Norm_50bp/log_files/break_point_%J_%I.err
+#BSUB -n 1
+#BSUB -q priority
+#BSUB -R "span[hosts=1] rusage[mem=2000]"
+#BSUB -J "break_point[1-1]"
+
+#BSUB -w "ended(143735604) && ended(143735605) && ended(143735606)"
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1`
+
+echo ${COL1}
+echo ${COL2}
+echo ${COL3}
+echo ${COL4}
+echo ${COL5}
+echo ${COL6}
+
+ncore=1
+mem=2000
+q=priority
+module load java/10.0.2
+Catchitt_path=/home/yli11/HemTools/share/script/jar/Catchitt-0.1.4b.jar
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.45 sec.
+    Max Memory :                                 12 MB
+    Average Memory :                             8.00 MB
+    Total Requested Memory :                     2000.00 MB
+    Delta Memory :                               1988.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                6
+    Run time :                                   4 sec.
+    Turnaround time :                            6248 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <final2_two_motif_coBinding_S3Norm_50bp/log_files/break_point_143735607_1.err> for stderr output of this job.
+

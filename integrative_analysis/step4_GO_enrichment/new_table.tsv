@@ -1,0 +1,55 @@
+Description	logFDR	enrichment	Cluster
+antigen processing and presentation	4.037175669	0.125	LTHSC.1
+regulation of leukocyte mediated cytotoxicity	3.561490287	0.104166667	LTHSC.1
+regulation of viral entry into host cell	2.283192129	0.0625	LTHSC.1
+cytoplasmic translation	1.724454667	0.0625	LTHSC.1
+oxidative phosphorylation	1.609342399	0.0625	LTHSC.1
+antigen processing and presentation	9.652137995	0.163934426	LTHSC.2
+positive regulation of T cell mediated cytotoxicity	7.692673051	0.114754098	LTHSC.2
+regulation of viral entry into host cell	5.274334565	0.081967213	LTHSC.2
+cytoplasmic translation	2.752601209	0.06557377	LTHSC.2
+response to UV	1.329403114	0.049180328	LTHSC.2
+intrinsic apoptotic signaling pathway in response to DNA damage by p53 class mediator	2.192114914	0.12	STHSC.1
+regulation of innate immune response	2.017005584	0.16	STHSC.1
+positive regulation of cytokine production	1.910195133	0.2	STHSC.1
+response to UV	2.745835721	0.096774194	MPP
+DNA repair	2.619773447	0.14516129	MPP
+negative regulation of cell cycle	1.758894557	0.112903226	MPP
+regulation of hematopoietic stem cell differentiation	1.758894557	0.032258065	MPP
+regulation of mitochondrial membrane permeability	1.758894557	0.048387097	MPP
+regulation of viral process	1.797992869	0.153846154	MKP
+positive regulation of phospholipid transport	2.812257343	0.044776119	MEP
+ATP metabolic process	2.595613036	0.104477612	MEP
+oxidative phosphorylation	2.544310868	0.074626866	MEP
+response to UV	1.734188628	0.059701493	MEP
+energy coupled proton transport, down electrochemical gradient	1.560283055	0.029850746	MEP
+ATP metabolic process	6.371854919	0.275862069	ERP
+oxidative phosphorylation	5.882576514	0.206896552	ERP
+energy coupled proton transport, down electrochemical gradient	3.567054345	0.103448276	ERP
+positive regulation of T cell mediated cytotoxicity	2.893198614	0.103448276	ERP
+cytoplasmic translation	6.883082458	0.25	GMP
+peptidyl-cysteine S-nitrosylation	1.928264178	0.083333333	GMP
+leukocyte aggregation	1.928264178	0.083333333	GMP
+regulation of viral entry into host cell	1.659361693	0.083333333	GMP
+ATP metabolic process	1.517329011	0.125	GMP
+regulation of viral process	2.161327178	0.173913043	CMP
+cytoplasmic translation	1.205877625	0.086956522	CMP
+negative regulation of tumor necrosis factor production	1.4142084	0.117647059	Ery
+cytoplasmic translation	1.4142084	0.117647059	Ery
+antigen processing and presentation	1.4142084	0.117647059	Ery
+regulation of cell-cell adhesion	1.4142084	0.176470588	Ery
+regulation of tumor necrosis factor superfamily cytokine production	1.4142084	0.117647059	Ery
+positive regulation of T cell mediated cytotoxicity	1.272261596	0.058823529	Ery
+cytoplasmic translation	7.538820583	0.090909091	LTHSC.1
+ATP metabolic process	2.01165069	0.072727273	LTHSC.1
+ribosomal small subunit assembly	1.735910495	0.027272727	LTHSC.1
+ribonucleoprotein complex biogenesis	1.351941984	0.072727273	LTHSC.1
+oxidative phosphorylation	1.714779242	0.045454545	LTHSC.1
+ribonucleoprotein complex assembly	1.714779242	0.054545455	LTHSC.1
+intrinsic apoptotic signaling pathway	1.694490785	0.056910569	LTHSC.2
+extrinsic apoptotic signaling pathway	1.582343083	0.048780488	LTHSC.2
+cytoplasmic translation	8.443359008	0.089430894	LTHSC.2
+intrinsic apoptotic signaling pathway in response to DNA damage	2.106184382	0.040650407	LTHSC.2
+positive regulation of myeloid cell differentiation	1.372599753	0.06	MKP
+regulation of megakaryocyte differentiation	1.362781337	0.04	MKP
+

@@ -1,0 +1,108 @@
+Ery
+chr17
+
+
+
+
+1 4
+1 4
+2 6
+2 6
+1 4
+1 4
+2 6
+2 6
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@noderome169>
+Subject: Job 143735616[39]: <predict[1-230]> in cluster <hpcf_research_cluster> Done
+
+Job <predict[1-230]> was submitted from host <noderome194> by user <yli11> in cluster <hpcf_research_cluster> at Fri Oct 29 12:18:20 2021
+Job was executed on host(s) <noderome169>, in queue <priority>, as user <yli11> in cluster <hpcf_research_cluster> at Fri Oct 29 17:49:50 2021
+</home/yli11> was used as the home directory.
+</home/yli11/dirs/NFIX_megan/predict_NFIX_PU1_cobinding> was used as the working directory.
+Started at Fri Oct 29 17:49:50 2021
+Terminated at Fri Oct 29 18:19:28 2021
+Results reported at Fri Oct 29 18:19:28 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P final2_two
+#BSUB -o final2_two_motif_coBinding_S3Norm_50bp/log_files/predict_%J_%I.out -e final2_two_motif_coBinding_S3Norm_50bp/log_files/predict_%J_%I.err
+#BSUB -n 1
+#BSUB -q priority
+#BSUB -R "span[hosts=1] rusage[mem=20000]"
+#BSUB -J "predict[1-230]"
+
+#BSUB -w "ended(143735604) && ended(143735605) && ended(143735606) && ended(143735607) && ended(143735608) && ended(143735609) && ended(143735610) && ended(143735611) && ended(143735612) && ended(143735613) && ended(143735614) && ended(143735615)"
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id final2_two_motif_coBinding_S3Norm_50bp.list|tail -n1`
+
+echo ${COL1}
+echo ${COL2}
+echo ${COL3}
+echo ${COL4}
+echo ${COL5}
+echo ${COL6}
+
+ncore=1
+mem=20000
+q=priority
+module load java/10.0.2
+Catchitt_path=/home/yli11/HemTools/share/script/jar/Catchitt-0.1.4b.jar
+label=model1_5_14_02
+mkdir final2_two_motif_coBinding_S3Norm_50bp/prediction/$label/
+mkdir final2_two_motif_coBinding_S3Norm_50bp/prediction/$label/${COL1}/
+mkdir final2_two_motif_coBinding_S3Norm_50bp/prediction/$label/${COL1}/${COL2}
+java -jar -Xmx20g ${Catchitt_path} predict  \
+c=final2_two_motif_coBinding_S3Norm_50bp/trained_model/$label/Classifiers.xml \
+a=final2_two_motif_coBinding_S3Norm_50bp/ATAC/${COL1}/Chromatin_accessibility.tsv.gz \
+m=final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz m=final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz \
+f=/home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai \
+p="${COL2}" \
+outdir=final2_two_motif_coBinding_S3Norm_50bp/prediction/$label/${COL1}/${COL2}
+label=model1_5_14_001
+mkdir final2_two_motif_coBinding_S3Norm_50bp/prediction/$label/
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1771.53 sec.
+    Max Memory :                                 789 MB
+    Average Memory :                             690.01 MB
+    Total Requested Memory :                     20000.00 MB
+    Delta Memory :                               19211.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                16
+    Run time :                                   1783 sec.
+    Turnaround time :                            21668 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <final2_two_motif_coBinding_S3Norm_50bp/log_files/predict_143735616_39.err> for stderr output of this job.
+

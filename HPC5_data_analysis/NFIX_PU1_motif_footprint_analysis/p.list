@@ -1,0 +1,3 @@
+fimo --motif NFIX --norc --text --thresh 0.0001 selected.homer.meme /home/yli11/Data/Mouse/mm9/index/STAR/Mus_musculus.NCBIM37.67.add_chr.dna.toplevel.fa > NFIX.mm9.fimo
+fimo --motif PU1 --parse-genomic-coord --text --thresh 0.0001 selected.homer.meme /home/yli11/Data/Mouse/mm9/index/STAR/Mus_musculus.NCBIM37.67.add_chr.dna.toplevel.fa > PU1.mm9.fimo
+

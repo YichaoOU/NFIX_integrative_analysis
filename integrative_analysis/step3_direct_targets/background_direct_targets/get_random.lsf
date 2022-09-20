@@ -1,0 +1,15 @@
+=cut run 1
+
+inputFile=input
+
+ncore=1
+mem=40000
+q=priority
+
+module load conda3/202011
+
+source activate captureC
+
+#python parallel_random.py ${COL2} ${COL1} ${COL3}
+
+python background_random2.py ${COL2} ${COL1} ${COL3}

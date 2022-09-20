@@ -1,0 +1,92 @@
+MEG
+/research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/HemPortal/HemTools_uniform_processed_files/Mouse/ATAC/blood_lineage/atac_seq_yli11_2021-09-24/bam_files/S3norm_yli11_2021-10-09/S3norm_rc_bedgraph/mouse_MEG_ATAC.markdup.s3norm.bdg.s3norm.bw
+
+
+
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@noderome172>
+Subject: Job 143735605[3]: <atac_bw[1-10]> in cluster <hpcf_research_cluster> Done
+
+Job <atac_bw[1-10]> was submitted from host <noderome194> by user <yli11> in cluster <hpcf_research_cluster> at Fri Oct 29 12:18:19 2021
+Job was executed on host(s) <noderome172>, in queue <priority>, as user <yli11> in cluster <hpcf_research_cluster> at Fri Oct 29 12:18:24 2021
+</home/yli11> was used as the home directory.
+</home/yli11/dirs/NFIX_megan/predict_NFIX_PU1_cobinding> was used as the working directory.
+Started at Fri Oct 29 12:18:24 2021
+Terminated at Fri Oct 29 12:29:18 2021
+Results reported at Fri Oct 29 12:29:18 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P final2_two
+#BSUB -o final2_two_motif_coBinding_S3Norm_50bp/log_files/atac_bw_%J_%I.out -e final2_two_motif_coBinding_S3Norm_50bp/log_files/atac_bw_%J_%I.err
+#BSUB -n 1
+#BSUB -q priority
+#BSUB -R "span[hosts=1] rusage[mem=20000]"
+#BSUB -J "atac_bw[1-10]"
+
+
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id ATAC.list2|tail -n1`
+
+echo ${COL1}
+echo ${COL2}
+echo ${COL3}
+echo ${COL4}
+echo ${COL5}
+echo ${COL6}
+
+ncore=1
+mem=20000
+q=priority
+Catchitt_path=/home/yli11/HemTools/share/script/jar/Catchitt-0.1.4b.jar
+module load java/10.0.2
+java -jar -Xmx20g ${Catchitt_path} access d="Bigwig" \
+i=${COL2} \
+f=/home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai \
+outdir=final2_two_motif_coBinding_S3Norm_50bp/ATAC/${COL1} \
+b=50
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   647.39 sec.
+    Max Memory :                                 4395 MB
+    Average Memory :                             3285.72 MB
+    Total Requested Memory :                     20000.00 MB
+    Delta Memory :                               15605.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                16
+    Run time :                                   654 sec.
+    Turnaround time :                            659 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <final2_two_motif_coBinding_S3Norm_50bp/log_files/atac_bw_143735605_3.err> for stderr output of this job.
+

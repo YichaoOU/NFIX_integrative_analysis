@@ -1,0 +1,120 @@
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_14_02/’: File exists
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_14_02/STHSC/’: File exists
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Prediction" (predict, version: 0.1):
+c - Classifiers (The classifiers trained by iterative training, type = xml)	= final2_two_motif_coBinding_S3Norm_50bp/trained_model/model1_5_14_02/Classifiers.xml
+a - Accessibility (File containing accessibility features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/STHSC/Chromatin_accessibility.tsv.gz
+	The following parameter(s) can be used multiple times:
+	m (1) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz
+	m (2) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz
+f - FAI of genome (FastA index file of the genome, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+p - Prediction chromosomes (Prediction chromosomes, separated by commas, OPTIONAL)	= chr16
+abb - Aggregation: bins before (Number of bins before the current one considered for aggregation., OPTIONAL)	= null
+aba - Aggregation: bins after (Number of bins after the current one considered for aggregation., OPTIONAL)	= null
+n - Number of classifiers (Use only the first k (last k for negative values) classifiers for predictions., OPTIONAL)	= null
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_14_02/STHSC/chr16
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_14_001/’: File exists
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_14_001/STHSC/’: File exists
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Prediction" (predict, version: 0.1):
+c - Classifiers (The classifiers trained by iterative training, type = xml)	= final2_two_motif_coBinding_S3Norm_50bp/trained_model/model1_5_14_001/Classifiers.xml
+a - Accessibility (File containing accessibility features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/STHSC/Chromatin_accessibility.tsv.gz
+	The following parameter(s) can be used multiple times:
+	m (1) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz
+	m (2) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz
+f - FAI of genome (FastA index file of the genome, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+p - Prediction chromosomes (Prediction chromosomes, separated by commas, OPTIONAL)	= chr16
+abb - Aggregation: bins before (Number of bins before the current one considered for aggregation., OPTIONAL)	= null
+aba - Aggregation: bins after (Number of bins after the current one considered for aggregation., OPTIONAL)	= null
+n - Number of classifiers (Use only the first k (last k for negative values) classifiers for predictions., OPTIONAL)	= null
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_14_001/STHSC/chr16
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_26_001/’: File exists
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_26_001/STHSC/’: File exists
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Prediction" (predict, version: 0.1):
+c - Classifiers (The classifiers trained by iterative training, type = xml)	= final2_two_motif_coBinding_S3Norm_50bp/trained_model/model1_5_26_001/Classifiers.xml
+a - Accessibility (File containing accessibility features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/STHSC/Chromatin_accessibility.tsv.gz
+	The following parameter(s) can be used multiple times:
+	m (1) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz
+	m (2) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz
+f - FAI of genome (FastA index file of the genome, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+p - Prediction chromosomes (Prediction chromosomes, separated by commas, OPTIONAL)	= chr16
+abb - Aggregation: bins before (Number of bins before the current one considered for aggregation., OPTIONAL)	= null
+aba - Aggregation: bins after (Number of bins after the current one considered for aggregation., OPTIONAL)	= null
+n - Number of classifiers (Use only the first k (last k for negative values) classifiers for predictions., OPTIONAL)	= null
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_26_001/STHSC/chr16
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_26_02/’: File exists
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_26_02/STHSC/’: File exists
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Prediction" (predict, version: 0.1):
+c - Classifiers (The classifiers trained by iterative training, type = xml)	= final2_two_motif_coBinding_S3Norm_50bp/trained_model/model1_5_26_02/Classifiers.xml
+a - Accessibility (File containing accessibility features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/STHSC/Chromatin_accessibility.tsv.gz
+	The following parameter(s) can be used multiple times:
+	m (1) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz
+	m (2) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz
+f - FAI of genome (FastA index file of the genome, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+p - Prediction chromosomes (Prediction chromosomes, separated by commas, OPTIONAL)	= chr16
+abb - Aggregation: bins before (Number of bins before the current one considered for aggregation., OPTIONAL)	= null
+aba - Aggregation: bins after (Number of bins after the current one considered for aggregation., OPTIONAL)	= null
+n - Number of classifiers (Use only the first k (last k for negative values) classifiers for predictions., OPTIONAL)	= null
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_5_26_02/STHSC/chr16
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_14_02/’: File exists
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_14_02/STHSC/’: File exists
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Prediction" (predict, version: 0.1):
+c - Classifiers (The classifiers trained by iterative training, type = xml)	= final2_two_motif_coBinding_S3Norm_50bp/trained_model/model1_3_14_02/Classifiers.xml
+a - Accessibility (File containing accessibility features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/STHSC/Chromatin_accessibility.tsv.gz
+	The following parameter(s) can be used multiple times:
+	m (1) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz
+	m (2) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz
+f - FAI of genome (FastA index file of the genome, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+p - Prediction chromosomes (Prediction chromosomes, separated by commas, OPTIONAL)	= chr16
+abb - Aggregation: bins before (Number of bins before the current one considered for aggregation., OPTIONAL)	= null
+aba - Aggregation: bins after (Number of bins after the current one considered for aggregation., OPTIONAL)	= null
+n - Number of classifiers (Use only the first k (last k for negative values) classifiers for predictions., OPTIONAL)	= null
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_14_02/STHSC/chr16
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_14_001/’: File exists
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_14_001/STHSC/’: File exists
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Prediction" (predict, version: 0.1):
+c - Classifiers (The classifiers trained by iterative training, type = xml)	= final2_two_motif_coBinding_S3Norm_50bp/trained_model/model1_3_14_001/Classifiers.xml
+a - Accessibility (File containing accessibility features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/STHSC/Chromatin_accessibility.tsv.gz
+	The following parameter(s) can be used multiple times:
+	m (1) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz
+	m (2) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz
+f - FAI of genome (FastA index file of the genome, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+p - Prediction chromosomes (Prediction chromosomes, separated by commas, OPTIONAL)	= chr16
+abb - Aggregation: bins before (Number of bins before the current one considered for aggregation., OPTIONAL)	= null
+aba - Aggregation: bins after (Number of bins after the current one considered for aggregation., OPTIONAL)	= null
+n - Number of classifiers (Use only the first k (last k for negative values) classifiers for predictions., OPTIONAL)	= null
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_14_001/STHSC/chr16
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_26_001/’: File exists
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_26_001/STHSC/’: File exists
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Prediction" (predict, version: 0.1):
+c - Classifiers (The classifiers trained by iterative training, type = xml)	= final2_two_motif_coBinding_S3Norm_50bp/trained_model/model1_3_26_001/Classifiers.xml
+a - Accessibility (File containing accessibility features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/STHSC/Chromatin_accessibility.tsv.gz
+	The following parameter(s) can be used multiple times:
+	m (1) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz
+	m (2) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz
+f - FAI of genome (FastA index file of the genome, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+p - Prediction chromosomes (Prediction chromosomes, separated by commas, OPTIONAL)	= chr16
+abb - Aggregation: bins before (Number of bins before the current one considered for aggregation., OPTIONAL)	= null
+aba - Aggregation: bins after (Number of bins after the current one considered for aggregation., OPTIONAL)	= null
+n - Number of classifiers (Use only the first k (last k for negative values) classifiers for predictions., OPTIONAL)	= null
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_26_001/STHSC/chr16
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_26_02/’: File exists
+mkdir: cannot create directory ‘final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_26_02/STHSC/’: File exists
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Prediction" (predict, version: 0.1):
+c - Classifiers (The classifiers trained by iterative training, type = xml)	= final2_two_motif_coBinding_S3Norm_50bp/trained_model/model1_3_26_02/Classifiers.xml
+a - Accessibility (File containing accessibility features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/STHSC/Chromatin_accessibility.tsv.gz
+	The following parameter(s) can be used multiple times:
+	m (1) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/NFIX.homer/Motif_scores.tsv.gz
+	m (2) - Motif (File containing motif features, type = tsv.gz)	= final2_two_motif_coBinding_S3Norm_50bp/Motif/PU1.homer/Motif_scores.tsv.gz
+f - FAI of genome (FastA index file of the genome, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+p - Prediction chromosomes (Prediction chromosomes, separated by commas, OPTIONAL)	= chr16
+abb - Aggregation: bins before (Number of bins before the current one considered for aggregation., OPTIONAL)	= null
+aba - Aggregation: bins after (Number of bins after the current one considered for aggregation., OPTIONAL)	= null
+n - Number of classifiers (Use only the first k (last k for negative values) classifiers for predictions., OPTIONAL)	= null
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/prediction/model1_3_26_02/STHSC/chr16

@@ -1,0 +1,6 @@
+mv: missing destination file operand after ‘/research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/HemPortal/HemTools_uniform_processed_files/Mouse/ATAC/blood_lineage/atac_seq_yli11_2021-09-24/bam_files/a8fe51c13a28’
+Try 'mv --help' for more information.
+
+real	859m59.998s
+user	798m34.236s
+sys	53m6.637s

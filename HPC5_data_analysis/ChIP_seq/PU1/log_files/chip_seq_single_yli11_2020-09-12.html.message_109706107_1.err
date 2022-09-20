@@ -1,0 +1,20 @@
+2020-09-12 15:47:02,307 [INFO ]  Reading user's my_dir.csv
+2020-09-12 15:47:02,338 [INFO ]  Adding entry chip_seq_single_yli11_2020-09-12,/research/rgs01/home/clusterHome/yli11/Share/Megan/HPC5/PU1/pu1_fastq_files,chip_seq_single
+2020-09-12 15:47:02,341 [INFO ]  Saving profile!
+2020-09-12 15:47:02,362 [INFO ]  Bye!
+/home/yli11/.conda/envs/multiQC/lib/python3.6/site-packages/multiqc/utils/config.py:45: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  configs = yaml.load(f)
+/home/yli11/.conda/envs/multiQC/lib/python3.6/site-packages/multiqc/utils/config.py:51: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  sp = yaml.load(f)
+[WARNING]         multiqc : MultiQC Version v1.9 now available!
+[INFO   ]         multiqc : This is MultiQC v1.7
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching '.'
+[INFO   ]           macs2 : Found 32 logs
+[INFO   ]        samtools : Found 12 stats reports
+[INFO   ]        samtools : Found 36 flagstat reports
+[INFO   ]          fastqc : Found 12 reports
+[INFO   ]         multiqc : Compressing plot data
+[INFO   ]         multiqc : Report      : multiqc_report.html
+[INFO   ]         multiqc : Data        : multiqc_data
+[INFO   ]         multiqc : MultiQC complete

@@ -1,0 +1,100 @@
+HPC5
+/research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/HemPortal/HemTools_uniform_processed_files/Mouse/ATAC/blood_lineage/atac_seq_yli11_2021-09-24/bam_files/S3norm_yli11_2021-10-09/S3norm_rc_bedgraph/HPC5_ATAC.markdup.s3norm.bdg.s3norm.bw
+
+
+
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@noderome122>
+Subject: Job 143735617[1]: <predict2[1-10]> in cluster <hpcf_research_cluster> Done
+
+Job <predict2[1-10]> was submitted from host <noderome194> by user <yli11> in cluster <hpcf_research_cluster> at Fri Oct 29 12:18:20 2021
+Job was executed on host(s) <noderome122>, in queue <priority>, as user <yli11> in cluster <hpcf_research_cluster> at Fri Oct 29 19:12:08 2021
+</home/yli11> was used as the home directory.
+</home/yli11/dirs/NFIX_megan/predict_NFIX_PU1_cobinding> was used as the working directory.
+Started at Fri Oct 29 19:12:08 2021
+Terminated at Fri Oct 29 19:18:07 2021
+Results reported at Fri Oct 29 19:18:07 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P final2_two
+#BSUB -o final2_two_motif_coBinding_S3Norm_50bp/log_files/predict2_%J_%I.out -e final2_two_motif_coBinding_S3Norm_50bp/log_files/predict2_%J_%I.err
+#BSUB -n 1
+#BSUB -q priority
+#BSUB -R "span[hosts=1] rusage[mem=10000]"
+#BSUB -J "predict2[1-10]"
+
+#BSUB -w "ended(143735604) && ended(143735605) && ended(143735606) && ended(143735607) && ended(143735608) && ended(143735609) && ended(143735610) && ended(143735611) && ended(143735612) && ended(143735613) && ended(143735614) && ended(143735615) && ended(143735616)"
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id ATAC.list2|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id ATAC.list2|tail -n1`
+
+echo ${COL1}
+echo ${COL2}
+echo ${COL3}
+echo ${COL4}
+echo ${COL5}
+echo ${COL6}
+
+ncore=1
+mem=10000
+q=priority
+module load python/2.7.13
+label=model1_3_26_02
+cd final2_two_motif_coBinding_S3Norm_50bp/prediction/$label/${COL1}
+cat */Predictions.tsv.gz > Predictions.tsv.gz
+Catchitt_prediction_to_bed.py Predictions.tsv.gz 0.5 ${COL1}.05.peaks.bed 50
+mv ${COL1}.05.peaks.bed ../
+cd ../../../../
+label=model1_3_26_001
+cd final2_two_motif_coBinding_S3Norm_50bp/prediction/$label/${COL1}
+cat */Predictions.tsv.gz > Predictions.tsv.gz
+Catchitt_prediction_to_bed.py Predictions.tsv.gz 0.5 ${COL1}.05.peaks.bed 50
+mv ${COL1}.05.peaks.bed ../
+cd ../../../../
+label=model1_3_14_02
+cd final2_two_motif_coBinding_S3Norm_50bp/prediction/$label/${COL1}
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   330.32 sec.
+    Max Memory :                                 4160 MB
+    Average Memory :                             1050.51 MB
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               5840.00 MB
+    Max Swap :                                   -
+    Max Processes :                              8
+    Max Threads :                                68
+    Run time :                                   358 sec.
+    Turnaround time :                            25187 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <final2_two_motif_coBinding_S3Norm_50bp/log_files/predict2_143735617_1.err> for stderr output of this job.
+

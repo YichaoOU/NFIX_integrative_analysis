@@ -1,0 +1,1111 @@
+a
+b
+c
+
+
+
+read first file name
+get bed file
+get first file signals
+HPC5_ATAC.markdup.s3norm.bdg
+get all file signals
+mouse_CFUe_ATAC.markdup.s3norm.bdg
+mouse_CMP_ATAC.markdup.s3norm.bdg
+mouse_Ery_ATAC.markdup.s3norm.bdg
+mouse_GMP_ATAC.markdup.s3norm.bdg
+mouse_LTHSC_ATAC.markdup.s3norm.bdg
+mouse_MEG_ATAC.markdup.s3norm.bdg
+mouse_MEP_ATAC.markdup.s3norm.bdg
+mouse_MPP_ATAC.markdup.s3norm.bdg
+mouse_STHSC_ATAC.markdup.s3norm.bdg
+get average_ref
+get reference mean
+get output bedgraph file
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t HPC5_ATAC.markdup.s3norm.bdg
+User provide outputname: -o HPC5_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+202227
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+reference_pk_num
+949
+target_pk_num
+202227
+use FDR common peaks
+use FDR common background
+common peaks number:
+113677
+common background number:
+132097999
+check!!!
+5312628
+Iteration 0 | dFB: 0.104610
+[0.005949122726187935, 1.895390342737964]
+Iteration 10 | dFB: 0.027337
+[0.11312661763763263, 1.309342059646609]
+Iteration 20 | dFB: 0.000626
+[0.15861817906375403, 1.237769484586469]
+Iteration 30 | dFB: 0.000007
+[0.15941797430807897, 1.2366813061099833]
+converged!
+used: [A, B]
+[0.15941797430807897, 1.2366813061099833]
+transformation: B: 1.2366813061099833; A: 0.15941797430807897
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_CFUe_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_CFUe_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+9250
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+237.0
+reference_pk_num
+949
+target_pk_num
+9250
+use FDR common peaks
+use FDR common background
+common peaks number:
+91625
+common background number:
+132145830
+check!!!
+5526520
+Iteration 0 | dFB: 0.060484
+[0.06087912446602964, 1.939516050335211]
+Iteration 10 | dFB: 0.041203
+[0.3636116941125468, 1.360417971722443]
+Iteration 20 | dFB: 0.003490
+[0.5236377365332084, 1.2117969622572828]
+Iteration 30 | dFB: 0.000225
+[0.5364480340862269, 1.2014470395003294]
+Iteration 40 | dFB: 0.000015
+[0.537284732606167, 1.200777401325508]
+converged!
+used: [A, B]
+[0.5373091679306461, 1.2007578564519952]
+transformation: B: 1.2007578564519952; A: 0.5373091679306461
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_CMP_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_CMP_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+854
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+196.667
+reference_pk_num
+949
+target_pk_num
+854
+use FDR common peaks
+use FDR common background
+common peaks number:
+93893
+common background number:
+132147887
+check!!!
+5430005
+Iteration 0 | dFB: 0.062279
+[0.056493345128334996, 1.9377209680102767]
+Iteration 10 | dFB: 0.025213
+[0.3217965859183153, 1.4400980036295725]
+Iteration 20 | dFB: 0.001877
+[0.4077193630123196, 1.3593484957253876]
+Iteration 30 | dFB: 0.000133
+[0.4144374087629694, 1.3535927374381096]
+Iteration 40 | dFB: 0.000009
+[0.41491749518867505, 1.353184057832322]
+converged!
+used: [A, B]
+[0.41491749518867505, 1.353184057832322]
+transformation: B: 1.353184057832322; A: 0.41491749518867505
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_Ery_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_Ery_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+14633
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+476.0
+reference_pk_num
+949
+target_pk_num
+14633
+use FDR common peaks
+use FDR common background
+common peaks number:
+91262
+common background number:
+132145491
+check!!!
+5334988
+Iteration 0 | dFB: -0.055780
+[0.013044694286215588, 2.0557800316081107]
+Iteration 10 | dFB: 0.053534
+[0.09188665061065046, 1.5442913539157546]
+Iteration 20 | dFB: 0.010557
+[0.2758684424504591, 1.2053311519801537]
+Iteration 30 | dFB: 0.000204
+[0.29463411371227927, 1.1827925126253935]
+converged!
+used: [A, B]
+[0.2949642715594199, 1.182406504035333]
+transformation: B: 1.182406504035333; A: 0.2949642715594199
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_GMP_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_GMP_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+850
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+402.667
+reference_pk_num
+949
+target_pk_num
+850
+use FDR common peaks
+use FDR common background
+common peaks number:
+88290
+common background number:
+132142505
+check!!!
+5533241
+Iteration 0 | dFB: -0.200251
+[0.008202070434072978, 2.200250556039296]
+Iteration 10 | dFB: 0.034374
+[0.25954034029811557, 1.3576047801424265]
+Iteration 20 | dFB: 0.002823
+[0.39505853419335435, 1.2383153767593493]
+Iteration 30 | dFB: 0.000194
+[0.40647245302485896, 1.2297651836852197]
+Iteration 40 | dFB: 0.000013
+[0.4072668515366108, 1.2291766228325454]
+converged!
+used: [A, B]
+[0.40729126719104, 1.2291585467371868]
+transformation: B: 1.2291585467371868; A: 0.40729126719104
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_LTHSC_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_LTHSC_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+857
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+22.3333
+reference_pk_num
+949
+target_pk_num
+857
+use FDR common peaks
+use FDR common background
+common peaks number:
+69811
+common background number:
+132123229
+check!!!
+5714423
+Iteration 0 | dFB: -0.014934
+[0.4804185391453818, 2.0149343877201376]
+Iteration 10 | dFB: -0.003497
+[0.43157383075649697, 2.0890357146889977]
+Iteration 20 | dFB: -0.000741
+[0.4212758607759398, 2.105534521278818]
+Iteration 30 | dFB: -0.000152
+[0.41915733903408814, 2.1089699476002988]
+Iteration 40 | dFB: -0.000031
+[0.4187251653222664, 2.109672528989615]
+converged!
+used: [A, B]
+[0.4186451227616905, 2.1098027193432047]
+transformation: B: 2.1098027193432047; A: 0.4186451227616905
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_MEG_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_MEG_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+3347
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+378.333
+reference_pk_num
+949
+target_pk_num
+3347
+use FDR common peaks
+use FDR common background
+common peaks number:
+95992
+common background number:
+132150096
+check!!!
+5471737
+Iteration 0 | dFB: 0.025896
+[0.023539250047642693, 1.9741041227148621]
+Iteration 10 | dFB: 0.054750
+[0.23970129682437505, 1.4219476691207509]
+Iteration 20 | dFB: 0.009110
+[0.5699753330488248, 1.1492401541065305]
+Iteration 30 | dFB: 0.000973
+[0.6226476234017345, 1.1171383966669888]
+Iteration 40 | dFB: 0.000111
+[0.6286601079411737, 1.1135866848579905]
+converging...
+Iteration 49 | dFB: 0.000016
+used: [A, B]
+[0.6293312121745177, 1.1131915933790153]
+transformation: B: 1.1131915933790153; A: 0.6293312121745177
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_MEP_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_MEP_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+850
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+164.333
+reference_pk_num
+949
+target_pk_num
+850
+use FDR common peaks
+use FDR common background
+common peaks number:
+86697
+common background number:
+132140793
+check!!!
+5533006
+Iteration 0 | dFB: 0.061543
+[0.06985501522984032, 1.9384568811860665]
+Iteration 10 | dFB: 0.015279
+[0.2491646987019798, 1.521900939607394]
+Iteration 20 | dFB: 0.000473
+[0.27566236995422716, 1.4846367612667257]
+Iteration 30 | dFB: 0.000013
+[0.2764453174692487, 1.4835799839763906]
+converged!
+used: [A, B]
+[0.2764518620828389, 1.4835711604834774]
+transformation: B: 1.4835711604834774; A: 0.2764518620828389
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_MPP_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_MPP_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+851
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+47.0
+reference_pk_num
+949
+target_pk_num
+851
+use FDR common peaks
+use FDR common background
+common peaks number:
+77691
+common background number:
+132130476
+check!!!
+5524755
+Iteration 0 | dFB: 0.070326
+[0.540979384143959, 1.9296742833086886]
+Iteration 10 | dFB: 0.018418
+[1.010732167668417, 1.5605325468080917]
+Iteration 20 | dFB: 0.007547
+[1.18605704602933, 1.4489853858317232]
+Iteration 30 | dFB: 0.004351
+[1.2783499113497407, 1.3935587971652725]
+Iteration 40 | dFB: 0.002939
+[1.3382070683275742, 1.3586084282997775]
+converging...
+Iteration 49 | dFB: 0.002251
+used: [A, B]
+[1.377826202882022, 1.3358617097025827]
+transformation: B: 1.3358617097025827; A: 1.377826202882022
+User provide reference.bedgraph: -r average_ref.bedgraph
+User provide target.bedgraph: -t mouse_STHSC_ATAC.markdup.s3norm.bdg
+User provide outputname: -o mouse_STHSC_ATAC.markdup.s3norm.bdg
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p z
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+949
+check peak number in target
+target_pk_num
+907
+fdr peak number < bin_num * rank_lim
+use rank for reference
+257.5
+fdr peak number < bin_num * rank_lim
+use rank for target
+22.6667
+reference_pk_num
+949
+target_pk_num
+907
+use FDR common peaks
+use FDR common background
+common peaks number:
+73806
+common background number:
+132126316
+check!!!
+5731178
+Iteration 0 | dFB: -0.076773
+[0.3051412476360565, 2.0767730516821445]
+Iteration 10 | dFB: -0.006851
+[0.1889418846833303, 2.369272012852677]
+Iteration 20 | dFB: -0.000542
+[0.18217441859257613, 2.390899992759587]
+Iteration 30 | dFB: -0.000045
+[0.18163398790529428, 2.392657947590614]
+converged!
+used: [A, B]
+[0.18159340124093704, 2.392790159719788]
+transformation: B: 2.392790159719788; A: 0.18159340124093704
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.0000   0.2861   0.0000 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.2659   0.5618   0.4688 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.0000   0.4315   0.5815 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.1869   0.5831   0.4145 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.0000   0.4290   0.6003 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.2505   0.4680   0.5484 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.2812   0.5197   0.4365 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.0000   0.4915   0.4690 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.2250   0.4937   0.4308 323.0052 
+[1] "summary negative log10 NB p-value:"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.0000   0.4667   0.5671 323.0052 
+read first file name
+get bed file
+get first file signals
+HPC5_ATAC.markdup.s3norm.bdg
+get all file signals
+mouse_CFUe_ATAC.markdup.s3norm.bdg
+mouse_CMP_ATAC.markdup.s3norm.bdg
+mouse_Ery_ATAC.markdup.s3norm.bdg
+mouse_GMP_ATAC.markdup.s3norm.bdg
+mouse_LTHSC_ATAC.markdup.s3norm.bdg
+mouse_MEG_ATAC.markdup.s3norm.bdg
+mouse_MEP_ATAC.markdup.s3norm.bdg
+mouse_MPP_ATAC.markdup.s3norm.bdg
+mouse_STHSC_ATAC.markdup.s3norm.bdg
+get average_ref
+get reference mean
+get output bedgraph file
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t HPC5_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o HPC5_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+1031570
+reference_pk_num
+4370387
+target_pk_num
+1031570
+use FDR common peaks
+use FDR common background
+common peaks number:
+1031570
+common background number:
+127948501
+check!!!
+6811504
+Iteration 0 | dFB: 0.090941
+[0.674578439949779, 1.909059001770717]
+Iteration 10 | dFB: 0.000670
+[0.6604931298722573, 1.65624990295674]
+converged!
+used: [A, B]
+[0.6604535108703409, 1.6555815351302055]
+transformation: B: 1.6555815351302055; A: 0.6604535108703409
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_CFUe_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_CFUe_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+929186
+reference_pk_num
+4370387
+target_pk_num
+929186
+use FDR common peaks
+use FDR common background
+common peaks number:
+810016
+common background number:
+127829331
+check!!!
+6811504
+Iteration 0 | dFB: 0.092521
+[1.0231415256875773, 1.9074793872004192]
+Iteration 10 | dFB: 0.030108
+[0.9597174280177019, 1.1730962323313365]
+Iteration 20 | dFB: 0.000048
+[0.9493046320771862, 1.1324307415004364]
+converged!
+used: [A, B]
+[0.9492935856257666, 1.1323888131192275]
+transformation: B: 1.1323888131192275; A: 0.9492935856257666
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_CMP_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_CMP_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+1132905
+reference_pk_num
+4370387
+target_pk_num
+1132905
+use FDR common peaks
+use FDR common background
+common peaks number:
+1097643
+common background number:
+127913239
+check!!!
+6811504
+Iteration 0 | dFB: 0.099833
+[0.9937163599932384, 1.9001674914560966]
+Iteration 10 | dFB: 0.004928
+[0.9198292950066992, 1.3861296847183138]
+Iteration 20 | dFB: 0.000005
+[0.9187831242703451, 1.3810051368420275]
+converged!
+used: [A, B]
+[0.9187831242703451, 1.3810051368420275]
+transformation: B: 1.3810051368420275; A: 0.9187831242703451
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_Ery_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_Ery_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+1077406
+reference_pk_num
+4370387
+target_pk_num
+1077406
+use FDR common peaks
+use FDR common background
+common peaks number:
+914018
+common background number:
+127785113
+check!!!
+6811504
+Iteration 0 | dFB: 0.092631
+[1.2963189017750323, 1.907368506328989]
+Iteration 10 | dFB: 0.035696
+[1.1511439907049932, 1.140733110221506]
+Iteration 20 | dFB: 0.000062
+[1.128989121009632, 1.0900262012143]
+converged!
+used: [A, B]
+[1.1289647640492322, 1.0899719398464172]
+transformation: B: 1.0899719398464172; A: 1.1289647640492322
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_GMP_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_GMP_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+1197522
+reference_pk_num
+4370387
+target_pk_num
+1197522
+use FDR common peaks
+use FDR common background
+common peaks number:
+1117005
+common background number:
+127867984
+check!!!
+6811504
+Iteration 0 | dFB: 0.104120
+[1.0157914113353668, 1.8958797457315049]
+Iteration 10 | dFB: 0.004212
+[0.9279289300317981, 1.3868389797144174]
+converged!
+used: [A, B]
+[0.9269361811562699, 1.3824967242354702]
+transformation: B: 1.3824967242354702; A: 0.9269361811562699
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_LTHSC_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_LTHSC_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+646558
+reference_pk_num
+4370387
+target_pk_num
+646558
+use FDR common peaks
+use FDR common background
+common peaks number:
+498029
+common background number:
+127799972
+check!!!
+6811504
+Iteration 0 | dFB: 0.091442
+[0.9498510872209827, 1.9085581107197676]
+Iteration 10 | dFB: 0.015257
+[0.9511579317872071, 1.2842246382026798]
+Iteration 20 | dFB: 0.000019
+[0.9485527394395066, 1.2665165414999286]
+converged!
+used: [A, B]
+[0.948551317845872, 1.2665071306986941]
+transformation: B: 1.2665071306986941; A: 0.948551317845872
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_MEG_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_MEG_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+1292290
+reference_pk_num
+4370387
+target_pk_num
+1292290
+use FDR common peaks
+use FDR common background
+common peaks number:
+1190742
+common background number:
+127846953
+check!!!
+6811504
+Iteration 0 | dFB: 0.097924
+[1.2491987723948572, 1.902075882435921]
+Iteration 10 | dFB: 0.015053
+[1.0631779311375498, 1.2333511205236578]
+Iteration 20 | dFB: 0.000018
+[1.0565727011789807, 1.2162693337530701]
+converged!
+used: [A, B]
+[1.0565692224956367, 1.2162603825995573]
+transformation: B: 1.2162603825995573; A: 1.0565692224956367
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_MEP_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_MEP_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+1116656
+reference_pk_num
+4370387
+target_pk_num
+1116656
+use FDR common peaks
+use FDR common background
+common peaks number:
+951310
+common background number:
+127783155
+check!!!
+6811504
+Iteration 0 | dFB: 0.096116
+[0.9472163650154337, 1.9038844471037635]
+Iteration 10 | dFB: 0.012922
+[0.8941055687277975, 1.2735669072423532]
+Iteration 20 | dFB: 0.000015
+[0.8914021788970382, 1.2590694855117561]
+converged!
+used: [A, B]
+[0.8914007564818686, 1.2590619379622832]
+transformation: B: 1.2590619379622832; A: 0.8914007564818686
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_MPP_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_MPP_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+1034042
+reference_pk_num
+4370387
+target_pk_num
+1034042
+use FDR common peaks
+use FDR common background
+common peaks number:
+946326
+common background number:
+127860785
+check!!!
+6811504
+Iteration 0 | dFB: 0.097528
+[1.238867084707455, 1.902471884223844]
+Iteration 10 | dFB: 0.012644
+[1.114508468241248, 1.2617970647279833]
+Iteration 20 | dFB: 0.000015
+[1.1094987659323259, 1.2477462016619514]
+converged!
+used: [A, B]
+[1.1094961522267761, 1.2477389285487372]
+transformation: B: 1.2477389285487372; A: 1.1094961522267761
+User provide reference.bedgraph: -r average_ref.bedgraph.NBP.bedgraph
+User provide target.bedgraph: -t mouse_STHSC_ATAC.markdup.s3norm.bdg.s3norm.NB.neglog10p.bedgraph
+User provide outputname: -o mouse_STHSC_ATAC.markdup.s3norm.bdg.NBP
+User provide NTmethod: -m non0mean
+User provide B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+User provide rank_lim: -l 0.001
+User provide upperlim: -a 100000.0
+User provide lowerlim: -b 0.0
+User provide p_method: -p neglog10p
+User provide common_pk_binary: -k 0
+User provide common_bg_binary: -g 0
+User provide cross_mark: -c F
+start S3norm.......
+check peak number in reference
+reference_pk_num
+4370387
+check peak number in target
+target_pk_num
+623126
+reference_pk_num
+4370387
+target_pk_num
+623126
+use FDR common peaks
+use FDR common background
+common peaks number:
+449572
+common background number:
+127774947
+check!!!
+6811504
+Iteration 0 | dFB: 0.090262
+[0.8086267514959499, 1.9097383455374666]
+Iteration 10 | dFB: 0.015346
+[0.8341857291734027, 1.2946730416302303]
+Iteration 20 | dFB: 0.000019
+[0.832855962581359, 1.2767307246649986]
+converged!
+used: [A, B]
+[0.8328552218049806, 1.2767211438726673]
+transformation: B: 1.2767211438726673; A: 0.8328552218049806
+User provide script_folder: -s /home/yli11/HemTools/share/script/S3norm/
+User provide input_file_list: -t S3norm_yli11_2021-10-09.S3norm.input
+User provide reference_method: -r mean
+Default NTmethod: -m non0mean
+Default B_init: -i 2.0
+User provide fdr_thresh: -f 0.01
+Default rank_lim: -l 0.001
+Default upperlim: -a 100000
+Default lowerlim: -b 0
+Default p_method: -p z
+Default common_pk_binary: -k 0
+Default common_bg_binary: -g 0
+Default cross_mark: -c F
+start S3norm.......
+generating dummy input
+Get average reference......
+Get average reference......Done
+Get S3norm normalized read counts......
+Get S3norm normalized read counts......Done
+Get signal track of negative log10 p-value based on a NB background model......
+Get signal track of negative log10 p-value based on a NB background model......Done
+Get NBP average reference......
+Get NBP average reference......Done
+Get S3norm normalized negative log10 p-value based on NB background model......
+Get S3norm normalized negative log10 p-value based on NB background model......Done
+Organize folder......
+Save S3norm_NBP_bedgraph
+Save S3norm_rc_bedgraph
+Save NBP_bedgraph
+Save average_ref_bedgraph
+Organize folder......Done
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@noderome185>
+Subject: Job 142517554[1]: <S3norm[1-1]> in cluster <hpcf_research_cluster> Done
+
+Job <S3norm[1-1]> was submitted from host <noderome155> by user <yli11> in cluster <hpcf_research_cluster> at Sat Oct  9 11:34:29 2021
+Job was executed on host(s) <noderome185>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Sat Oct  9 13:17:16 2021
+</home/yli11> was used as the home directory.
+</research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/HemPortal/HemTools_uniform_processed_files/Mouse/ATAC/blood_lineage/atac_seq_yli11_2021-09-24/bam_files> was used as the working directory.
+Started at Sat Oct  9 13:17:16 2021
+Terminated at Sun Oct 10 03:37:22 2021
+Results reported at Sun Oct 10 03:37:22 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P S3norm_yli
+#BSUB -o S3norm_yli11_2021-10-09/log_files/S3norm_%J_%I.out -e S3norm_yli11_2021-10-09/log_files/S3norm_%J_%I.err
+#BSUB -n 1
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=100000]"
+#BSUB -J "S3norm[1-1]"
+
+#BSUB -w "ended(142517553)"
+
+module purge
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $6}'`
+COL7=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $7}'`
+COL8=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $8}'`
+COL9=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1|awk -F "	" '{print $9}'`
+LINE=`head -n $id /research/rgs01/home/clusterHome/yli11/HemTools/utils/../share/misc/sample.tsv|tail -n1`
+
+echo ${COL1}
+echo ${COL2}
+echo ${COL3}
+echo ${COL4}
+echo ${COL5}
+echo ${COL6}
+
+module load conda3
+source activate /home/yli11/.conda/envs/S3norm
+module load R/3.5.1
+ncore=1
+mem=100000
+S3norm_src=/home/yli11/HemTools/share/script/S3norm
+time python $S3norm_src/s3norm_pipeline.py -s $S3norm_src/ -t S3norm_yli11_2021-10-09.S3norm.input -r mean -f 0.01
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   51151.13 sec.
+    Max Memory :                                 54156 MB
+    Average Memory :                             23655.91 MB
+    Total Requested Memory :                     100000.00 MB
+    Delta Memory :                               45844.00 MB
+    Max Swap :                                   -
+    Max Processes :                              7
+    Max Threads :                                8
+    Run time :                                   51605 sec.
+    Turnaround time :                            57773 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <S3norm_yli11_2021-10-09/log_files/S3norm_142517554_1.err> for stderr output of this job.
+

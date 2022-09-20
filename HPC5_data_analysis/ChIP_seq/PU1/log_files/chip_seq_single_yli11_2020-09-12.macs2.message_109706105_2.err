@@ -1,0 +1,499 @@
+INFO  @ Sat, 12 Sep 2020 12:25:57: 
+# Command line: callpeak -t ko_p9_pu1.bam -c ko_p9_input.bam --keep-dup all -n ko_p9_pu1.vs.ko_p9_input -B -g mm
+# ARGUMENTS LIST:
+# name = ko_p9_pu1.vs.ko_p9_input
+# format = AUTO
+# ChIP-seq file = ['ko_p9_pu1.bam']
+# control file = ['ko_p9_input.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ Sat, 12 Sep 2020 12:25:57: #1 read tag files... 
+INFO  @ Sat, 12 Sep 2020 12:25:57: #1 read treatment tags... 
+INFO  @ Sat, 12 Sep 2020 12:25:57: Detected format is: BAM 
+INFO  @ Sat, 12 Sep 2020 12:25:57: * Input file is gzipped. 
+INFO  @ Sat, 12 Sep 2020 12:26:01:  1000000 
+INFO  @ Sat, 12 Sep 2020 12:26:04:  2000000 
+INFO  @ Sat, 12 Sep 2020 12:26:08:  3000000 
+INFO  @ Sat, 12 Sep 2020 12:26:11:  4000000 
+INFO  @ Sat, 12 Sep 2020 12:26:15:  5000000 
+INFO  @ Sat, 12 Sep 2020 12:26:19:  6000000 
+INFO  @ Sat, 12 Sep 2020 12:26:23:  7000000 
+INFO  @ Sat, 12 Sep 2020 12:26:27:  8000000 
+INFO  @ Sat, 12 Sep 2020 12:26:31:  9000000 
+INFO  @ Sat, 12 Sep 2020 12:26:34:  10000000 
+INFO  @ Sat, 12 Sep 2020 12:26:38:  11000000 
+INFO  @ Sat, 12 Sep 2020 12:26:42:  12000000 
+INFO  @ Sat, 12 Sep 2020 12:26:45:  13000000 
+INFO  @ Sat, 12 Sep 2020 12:26:49:  14000000 
+INFO  @ Sat, 12 Sep 2020 12:26:52:  15000000 
+INFO  @ Sat, 12 Sep 2020 12:26:56:  16000000 
+INFO  @ Sat, 12 Sep 2020 12:27:00:  17000000 
+INFO  @ Sat, 12 Sep 2020 12:27:04:  18000000 
+INFO  @ Sat, 12 Sep 2020 12:27:07:  19000000 
+INFO  @ Sat, 12 Sep 2020 12:27:11:  20000000 
+INFO  @ Sat, 12 Sep 2020 12:27:15:  21000000 
+INFO  @ Sat, 12 Sep 2020 12:27:19:  22000000 
+INFO  @ Sat, 12 Sep 2020 12:27:21: #1.2 read input tags... 
+INFO  @ Sat, 12 Sep 2020 12:27:21: Detected format is: BAM 
+INFO  @ Sat, 12 Sep 2020 12:27:21: * Input file is gzipped. 
+INFO  @ Sat, 12 Sep 2020 12:27:24:  1000000 
+INFO  @ Sat, 12 Sep 2020 12:27:28:  2000000 
+INFO  @ Sat, 12 Sep 2020 12:27:31:  3000000 
+INFO  @ Sat, 12 Sep 2020 12:27:35:  4000000 
+INFO  @ Sat, 12 Sep 2020 12:27:39:  5000000 
+INFO  @ Sat, 12 Sep 2020 12:27:43:  6000000 
+INFO  @ Sat, 12 Sep 2020 12:27:46:  7000000 
+INFO  @ Sat, 12 Sep 2020 12:27:50:  8000000 
+INFO  @ Sat, 12 Sep 2020 12:27:53:  9000000 
+INFO  @ Sat, 12 Sep 2020 12:27:57:  10000000 
+INFO  @ Sat, 12 Sep 2020 12:28:00:  11000000 
+INFO  @ Sat, 12 Sep 2020 12:28:04:  12000000 
+INFO  @ Sat, 12 Sep 2020 12:28:08:  13000000 
+INFO  @ Sat, 12 Sep 2020 12:28:11:  14000000 
+INFO  @ Sat, 12 Sep 2020 12:28:15:  15000000 
+INFO  @ Sat, 12 Sep 2020 12:28:19:  16000000 
+INFO  @ Sat, 12 Sep 2020 12:28:22:  17000000 
+INFO  @ Sat, 12 Sep 2020 12:28:26:  18000000 
+INFO  @ Sat, 12 Sep 2020 12:28:30:  19000000 
+INFO  @ Sat, 12 Sep 2020 12:28:34:  20000000 
+INFO  @ Sat, 12 Sep 2020 12:28:38:  21000000 
+INFO  @ Sat, 12 Sep 2020 12:28:41:  22000000 
+INFO  @ Sat, 12 Sep 2020 12:28:45:  23000000 
+INFO  @ Sat, 12 Sep 2020 12:28:49:  24000000 
+INFO  @ Sat, 12 Sep 2020 12:28:53: #1 tag size is determined as 51 bps 
+INFO  @ Sat, 12 Sep 2020 12:28:53: #1 tag size = 51 
+INFO  @ Sat, 12 Sep 2020 12:28:53: #1  total tags in treatment: 20953593 
+INFO  @ Sat, 12 Sep 2020 12:28:53: #1  total tags in control: 24111065 
+INFO  @ Sat, 12 Sep 2020 12:28:53: #1 finished! 
+INFO  @ Sat, 12 Sep 2020 12:28:53: #2 Build Peak Model... 
+INFO  @ Sat, 12 Sep 2020 12:28:53: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Sat, 12 Sep 2020 12:28:55: #2 number of paired peaks: 8417 
+INFO  @ Sat, 12 Sep 2020 12:28:55: start model_add_line... 
+INFO  @ Sat, 12 Sep 2020 12:28:56: start X-correlation... 
+INFO  @ Sat, 12 Sep 2020 12:28:56: end of X-cor 
+INFO  @ Sat, 12 Sep 2020 12:28:56: #2 finished! 
+INFO  @ Sat, 12 Sep 2020 12:28:56: #2 predicted fragment length is 227 bps 
+INFO  @ Sat, 12 Sep 2020 12:28:56: #2 alternative fragment length(s) may be 227 bps 
+INFO  @ Sat, 12 Sep 2020 12:28:56: #2.2 Generate R script for model : ko_p9_pu1.vs.ko_p9_input_model.r 
+INFO  @ Sat, 12 Sep 2020 12:28:56: #3 Call peaks... 
+INFO  @ Sat, 12 Sep 2020 12:28:56: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Sat, 12 Sep 2020 12:31:15: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Sat, 12 Sep 2020 12:31:15: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... ko_p9_pu1.vs.ko_p9_input_treat_pileup.bdg 
+INFO  @ Sat, 12 Sep 2020 12:31:15: #3   Write bedGraph files for control lambda (after scaling if necessary)... ko_p9_pu1.vs.ko_p9_input_control_lambda.bdg 
+INFO  @ Sat, 12 Sep 2020 12:31:15: #3   Pileup will be based on sequencing depth in treatment. 
+INFO  @ Sat, 12 Sep 2020 12:31:15: #3 Call peaks for each chromosome... 
+INFO  @ Sat, 12 Sep 2020 12:33:48: #4 Write output xls file... ko_p9_pu1.vs.ko_p9_input_peaks.xls 
+INFO  @ Sat, 12 Sep 2020 12:33:48: #4 Write peak in narrowPeak format file... ko_p9_pu1.vs.ko_p9_input_peaks.narrowPeak 
+INFO  @ Sat, 12 Sep 2020 12:33:48: #4 Write summits bed file... ko_p9_pu1.vs.ko_p9_input_summits.bed 
+INFO  @ Sat, 12 Sep 2020 12:33:48: Done! 
+INFO  @ Sat, 12 Sep 2020 12:33:50: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:34:23: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:34:51: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 12:35:08: Calculate scores comparing treatment and control by 'qpois'... 
+INFO  @ Sat, 12 Sep 2020 12:37:25: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 12:37:32: Finished 'qpois'! Please check 'ko_p9_pu1.vs.ko_p9_input_treat_pvalue.bdg'! 
+INFO  @ Sat, 12 Sep 2020 12:37:34: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:38:07: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:38:36: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 12:38:53: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Sat, 12 Sep 2020 12:42:18: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 12:43:40: Finished 'FE'! Please check 'ko_p9_pu1.vs.ko_p9_input_FE.bdg'! 
+INFO  @ Sat, 12 Sep 2020 12:43:41: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:44:15: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:44:44: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 12:45:00: Calculate scores comparing treatment and control by 'logLR'... 
+INFO  @ Sat, 12 Sep 2020 12:45:18: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 12:46:47: Finished 'logLR'! Please check 'ko_p9_pu1.vs.ko_p9_input_logLR.bdg'! 
+INFO  @ Sat, 12 Sep 2020 12:46:48: Read and build bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:46:50: Call peaks from bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:46:50: Write peaks... 
+INFO  @ Sat, 12 Sep 2020 12:46:50: Done 
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 147, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 111, in main
+    get_annotation_data(args)
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 85, in get_annotation_data
+    args.tss = myData['%s_gencode33_TSS'%(args.genome)]
+KeyError: 'mm9_gencode33_TSS'
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 95, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 74, in main
+    args.sep = guess_sep(args.input)
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 35, in guess_sep
+    with open(x) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'ko_p9_pu1.vs.ko_p9_input_peaks.rmblck.narrowPeak.annot.tsv'
+INFO  @ Sat, 12 Sep 2020 12:50:49: 
+# Command line: callpeak -t ko_p9_pu1.rmdup.uq.rmchrM.bam -c ko_p9_input.rmdup.uq.rmchrM.bam --keep-dup all -n ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM -B -g mm
+# ARGUMENTS LIST:
+# name = ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM
+# format = AUTO
+# ChIP-seq file = ['ko_p9_pu1.rmdup.uq.rmchrM.bam']
+# control file = ['ko_p9_input.rmdup.uq.rmchrM.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ Sat, 12 Sep 2020 12:50:49: #1 read tag files... 
+INFO  @ Sat, 12 Sep 2020 12:50:49: #1 read treatment tags... 
+INFO  @ Sat, 12 Sep 2020 12:50:50: Detected format is: BAM 
+INFO  @ Sat, 12 Sep 2020 12:50:50: * Input file is gzipped. 
+INFO  @ Sat, 12 Sep 2020 12:50:53:  1000000 
+INFO  @ Sat, 12 Sep 2020 12:50:56:  2000000 
+INFO  @ Sat, 12 Sep 2020 12:51:00:  3000000 
+INFO  @ Sat, 12 Sep 2020 12:51:03:  4000000 
+INFO  @ Sat, 12 Sep 2020 12:51:06:  5000000 
+INFO  @ Sat, 12 Sep 2020 12:51:09:  6000000 
+INFO  @ Sat, 12 Sep 2020 12:51:12:  7000000 
+INFO  @ Sat, 12 Sep 2020 12:51:15:  8000000 
+INFO  @ Sat, 12 Sep 2020 12:51:19:  9000000 
+INFO  @ Sat, 12 Sep 2020 12:51:22:  10000000 
+INFO  @ Sat, 12 Sep 2020 12:51:25:  11000000 
+INFO  @ Sat, 12 Sep 2020 12:51:28:  12000000 
+INFO  @ Sat, 12 Sep 2020 12:51:31:  13000000 
+INFO  @ Sat, 12 Sep 2020 12:51:35:  14000000 
+INFO  @ Sat, 12 Sep 2020 12:51:38:  15000000 
+INFO  @ Sat, 12 Sep 2020 12:51:39: #1.2 read input tags... 
+INFO  @ Sat, 12 Sep 2020 12:51:39: Detected format is: BAM 
+INFO  @ Sat, 12 Sep 2020 12:51:39: * Input file is gzipped. 
+INFO  @ Sat, 12 Sep 2020 12:51:42:  1000000 
+INFO  @ Sat, 12 Sep 2020 12:51:46:  2000000 
+INFO  @ Sat, 12 Sep 2020 12:51:49:  3000000 
+INFO  @ Sat, 12 Sep 2020 12:51:52:  4000000 
+INFO  @ Sat, 12 Sep 2020 12:51:55:  5000000 
+INFO  @ Sat, 12 Sep 2020 12:51:59:  6000000 
+INFO  @ Sat, 12 Sep 2020 12:52:02:  7000000 
+INFO  @ Sat, 12 Sep 2020 12:52:06:  8000000 
+INFO  @ Sat, 12 Sep 2020 12:52:09:  9000000 
+INFO  @ Sat, 12 Sep 2020 12:52:12:  10000000 
+INFO  @ Sat, 12 Sep 2020 12:52:16:  11000000 
+INFO  @ Sat, 12 Sep 2020 12:52:19:  12000000 
+INFO  @ Sat, 12 Sep 2020 12:52:22:  13000000 
+INFO  @ Sat, 12 Sep 2020 12:52:26:  14000000 
+INFO  @ Sat, 12 Sep 2020 12:52:29:  15000000 
+INFO  @ Sat, 12 Sep 2020 12:52:32:  16000000 
+INFO  @ Sat, 12 Sep 2020 12:52:36:  17000000 
+INFO  @ Sat, 12 Sep 2020 12:52:37: #1 tag size is determined as 51 bps 
+INFO  @ Sat, 12 Sep 2020 12:52:37: #1 tag size = 51 
+INFO  @ Sat, 12 Sep 2020 12:52:37: #1  total tags in treatment: 15333470 
+INFO  @ Sat, 12 Sep 2020 12:52:37: #1  total tags in control: 17362299 
+INFO  @ Sat, 12 Sep 2020 12:52:37: #1 finished! 
+INFO  @ Sat, 12 Sep 2020 12:52:37: #2 Build Peak Model... 
+INFO  @ Sat, 12 Sep 2020 12:52:37: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Sat, 12 Sep 2020 12:52:39: #2 number of paired peaks: 12303 
+INFO  @ Sat, 12 Sep 2020 12:52:39: start model_add_line... 
+INFO  @ Sat, 12 Sep 2020 12:52:39: start X-correlation... 
+INFO  @ Sat, 12 Sep 2020 12:52:39: end of X-cor 
+INFO  @ Sat, 12 Sep 2020 12:52:39: #2 finished! 
+INFO  @ Sat, 12 Sep 2020 12:52:39: #2 predicted fragment length is 234 bps 
+INFO  @ Sat, 12 Sep 2020 12:52:39: #2 alternative fragment length(s) may be 234 bps 
+INFO  @ Sat, 12 Sep 2020 12:52:39: #2.2 Generate R script for model : ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_model.r 
+INFO  @ Sat, 12 Sep 2020 12:52:39: #3 Call peaks... 
+INFO  @ Sat, 12 Sep 2020 12:52:39: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Sat, 12 Sep 2020 12:53:41: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Sat, 12 Sep 2020 12:53:41: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_treat_pileup.bdg 
+INFO  @ Sat, 12 Sep 2020 12:53:41: #3   Write bedGraph files for control lambda (after scaling if necessary)... ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_control_lambda.bdg 
+INFO  @ Sat, 12 Sep 2020 12:53:41: #3   Pileup will be based on sequencing depth in treatment. 
+INFO  @ Sat, 12 Sep 2020 12:53:41: #3 Call peaks for each chromosome... 
+INFO  @ Sat, 12 Sep 2020 12:55:53: #4 Write output xls file... ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_peaks.xls 
+INFO  @ Sat, 12 Sep 2020 12:55:53: #4 Write peak in narrowPeak format file... ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_peaks.narrowPeak 
+INFO  @ Sat, 12 Sep 2020 12:55:53: #4 Write summits bed file... ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_summits.bed 
+INFO  @ Sat, 12 Sep 2020 12:55:53: Done! 
+INFO  @ Sat, 12 Sep 2020 12:55:55: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:56:24: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:56:53: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 12:57:09: Calculate scores comparing treatment and control by 'qpois'... 
+INFO  @ Sat, 12 Sep 2020 12:57:33: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 12:57:39: Finished 'qpois'! Please check 'ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_treat_pvalue.bdg'! 
+INFO  @ Sat, 12 Sep 2020 12:57:41: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:58:10: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 12:58:40: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 12:58:55: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Sat, 12 Sep 2020 13:01:57: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 13:03:13: Finished 'FE'! Please check 'ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_FE.bdg'! 
+INFO  @ Sat, 12 Sep 2020 13:03:15: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:03:44: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:04:13: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 13:04:28: Calculate scores comparing treatment and control by 'logLR'... 
+INFO  @ Sat, 12 Sep 2020 13:04:45: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 13:06:08: Finished 'logLR'! Please check 'ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_logLR.bdg'! 
+INFO  @ Sat, 12 Sep 2020 13:06:09: Read and build bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:06:11: Call peaks from bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:06:11: Write peaks... 
+INFO  @ Sat, 12 Sep 2020 13:06:11: Done 
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 147, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 111, in main
+    get_annotation_data(args)
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 85, in get_annotation_data
+    args.tss = myData['%s_gencode33_TSS'%(args.genome)]
+KeyError: 'mm9_gencode33_TSS'
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 95, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 74, in main
+    args.sep = guess_sep(args.input)
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 35, in guess_sep
+    with open(x) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'ko_p9_pu1.vs.ko_p9_input.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak.annot.tsv'
+INFO  @ Sat, 12 Sep 2020 13:10:34: 
+# Command line: callpeak -t ko_p9_pu1.rmdup.bam -c ko_p9_input.rmdup.bam --keep-dup all -n ko_p9_pu1.vs.ko_p9_input.rmdup -B -g mm
+# ARGUMENTS LIST:
+# name = ko_p9_pu1.vs.ko_p9_input.rmdup
+# format = AUTO
+# ChIP-seq file = ['ko_p9_pu1.rmdup.bam']
+# control file = ['ko_p9_input.rmdup.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ Sat, 12 Sep 2020 13:10:34: #1 read tag files... 
+INFO  @ Sat, 12 Sep 2020 13:10:34: #1 read treatment tags... 
+INFO  @ Sat, 12 Sep 2020 13:10:34: Detected format is: BAM 
+INFO  @ Sat, 12 Sep 2020 13:10:34: * Input file is gzipped. 
+INFO  @ Sat, 12 Sep 2020 13:10:38:  1000000 
+INFO  @ Sat, 12 Sep 2020 13:10:41:  2000000 
+INFO  @ Sat, 12 Sep 2020 13:10:45:  3000000 
+INFO  @ Sat, 12 Sep 2020 13:10:49:  4000000 
+INFO  @ Sat, 12 Sep 2020 13:10:52:  5000000 
+INFO  @ Sat, 12 Sep 2020 13:10:56:  6000000 
+INFO  @ Sat, 12 Sep 2020 13:10:59:  7000000 
+INFO  @ Sat, 12 Sep 2020 13:11:03:  8000000 
+INFO  @ Sat, 12 Sep 2020 13:11:07:  9000000 
+INFO  @ Sat, 12 Sep 2020 13:11:10:  10000000 
+INFO  @ Sat, 12 Sep 2020 13:11:14:  11000000 
+INFO  @ Sat, 12 Sep 2020 13:11:17:  12000000 
+INFO  @ Sat, 12 Sep 2020 13:11:21:  13000000 
+INFO  @ Sat, 12 Sep 2020 13:11:25:  14000000 
+INFO  @ Sat, 12 Sep 2020 13:11:28:  15000000 
+INFO  @ Sat, 12 Sep 2020 13:11:32:  16000000 
+INFO  @ Sat, 12 Sep 2020 13:11:36:  17000000 
+INFO  @ Sat, 12 Sep 2020 13:11:39:  18000000 
+INFO  @ Sat, 12 Sep 2020 13:11:41: #1.2 read input tags... 
+INFO  @ Sat, 12 Sep 2020 13:11:41: Detected format is: BAM 
+INFO  @ Sat, 12 Sep 2020 13:11:41: * Input file is gzipped. 
+INFO  @ Sat, 12 Sep 2020 13:11:45:  1000000 
+INFO  @ Sat, 12 Sep 2020 13:11:48:  2000000 
+INFO  @ Sat, 12 Sep 2020 13:11:51:  3000000 
+INFO  @ Sat, 12 Sep 2020 13:11:55:  4000000 
+INFO  @ Sat, 12 Sep 2020 13:11:58:  5000000 
+INFO  @ Sat, 12 Sep 2020 13:12:02:  6000000 
+INFO  @ Sat, 12 Sep 2020 13:12:05:  7000000 
+INFO  @ Sat, 12 Sep 2020 13:12:08:  8000000 
+INFO  @ Sat, 12 Sep 2020 13:12:12:  9000000 
+INFO  @ Sat, 12 Sep 2020 13:12:15:  10000000 
+INFO  @ Sat, 12 Sep 2020 13:12:19:  11000000 
+INFO  @ Sat, 12 Sep 2020 13:12:22:  12000000 
+INFO  @ Sat, 12 Sep 2020 13:12:26:  13000000 
+INFO  @ Sat, 12 Sep 2020 13:12:29:  14000000 
+INFO  @ Sat, 12 Sep 2020 13:12:32:  15000000 
+INFO  @ Sat, 12 Sep 2020 13:12:36:  16000000 
+INFO  @ Sat, 12 Sep 2020 13:12:40:  17000000 
+INFO  @ Sat, 12 Sep 2020 13:12:43:  18000000 
+INFO  @ Sat, 12 Sep 2020 13:12:46:  19000000 
+INFO  @ Sat, 12 Sep 2020 13:12:50:  20000000 
+INFO  @ Sat, 12 Sep 2020 13:12:51: #1 tag size is determined as 51 bps 
+INFO  @ Sat, 12 Sep 2020 13:12:51: #1 tag size = 51 
+INFO  @ Sat, 12 Sep 2020 13:12:51: #1  total tags in treatment: 17523855 
+INFO  @ Sat, 12 Sep 2020 13:12:51: #1  total tags in control: 19752664 
+INFO  @ Sat, 12 Sep 2020 13:12:51: #1 finished! 
+INFO  @ Sat, 12 Sep 2020 13:12:51: #2 Build Peak Model... 
+INFO  @ Sat, 12 Sep 2020 13:12:51: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Sat, 12 Sep 2020 13:12:53: #2 number of paired peaks: 10325 
+INFO  @ Sat, 12 Sep 2020 13:12:53: start model_add_line... 
+INFO  @ Sat, 12 Sep 2020 13:12:53: start X-correlation... 
+INFO  @ Sat, 12 Sep 2020 13:12:53: end of X-cor 
+INFO  @ Sat, 12 Sep 2020 13:12:53: #2 finished! 
+INFO  @ Sat, 12 Sep 2020 13:12:53: #2 predicted fragment length is 232 bps 
+INFO  @ Sat, 12 Sep 2020 13:12:53: #2 alternative fragment length(s) may be 232 bps 
+INFO  @ Sat, 12 Sep 2020 13:12:53: #2.2 Generate R script for model : ko_p9_pu1.vs.ko_p9_input.rmdup_model.r 
+INFO  @ Sat, 12 Sep 2020 13:12:53: #3 Call peaks... 
+INFO  @ Sat, 12 Sep 2020 13:12:53: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Sat, 12 Sep 2020 13:14:04: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Sat, 12 Sep 2020 13:14:04: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... ko_p9_pu1.vs.ko_p9_input.rmdup_treat_pileup.bdg 
+INFO  @ Sat, 12 Sep 2020 13:14:04: #3   Write bedGraph files for control lambda (after scaling if necessary)... ko_p9_pu1.vs.ko_p9_input.rmdup_control_lambda.bdg 
+INFO  @ Sat, 12 Sep 2020 13:14:04: #3   Pileup will be based on sequencing depth in treatment. 
+INFO  @ Sat, 12 Sep 2020 13:14:04: #3 Call peaks for each chromosome... 
+INFO  @ Sat, 12 Sep 2020 13:16:31: #4 Write output xls file... ko_p9_pu1.vs.ko_p9_input.rmdup_peaks.xls 
+INFO  @ Sat, 12 Sep 2020 13:16:31: #4 Write peak in narrowPeak format file... ko_p9_pu1.vs.ko_p9_input.rmdup_peaks.narrowPeak 
+INFO  @ Sat, 12 Sep 2020 13:16:31: #4 Write summits bed file... ko_p9_pu1.vs.ko_p9_input.rmdup_summits.bed 
+INFO  @ Sat, 12 Sep 2020 13:16:31: Done! 
+INFO  @ Sat, 12 Sep 2020 13:16:33: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:17:06: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:17:37: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 13:17:54: Calculate scores comparing treatment and control by 'qpois'... 
+INFO  @ Sat, 12 Sep 2020 13:18:21: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 13:18:29: Finished 'qpois'! Please check 'ko_p9_pu1.vs.ko_p9_input.rmdup_treat_pvalue.bdg'! 
+INFO  @ Sat, 12 Sep 2020 13:18:30: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:19:04: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:19:35: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 13:19:52: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Sat, 12 Sep 2020 13:23:26: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 13:24:52: Finished 'FE'! Please check 'ko_p9_pu1.vs.ko_p9_input.rmdup_FE.bdg'! 
+INFO  @ Sat, 12 Sep 2020 13:24:53: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:25:27: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:26:01: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 13:26:19: Calculate scores comparing treatment and control by 'logLR'... 
+INFO  @ Sat, 12 Sep 2020 13:26:38: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 13:28:12: Finished 'logLR'! Please check 'ko_p9_pu1.vs.ko_p9_input.rmdup_logLR.bdg'! 
+INFO  @ Sat, 12 Sep 2020 13:28:13: Read and build bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:28:15: Call peaks from bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:28:15: Write peaks... 
+INFO  @ Sat, 12 Sep 2020 13:28:15: Done 
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 147, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 111, in main
+    get_annotation_data(args)
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 85, in get_annotation_data
+    args.tss = myData['%s_gencode33_TSS'%(args.genome)]
+KeyError: 'mm9_gencode33_TSS'
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 95, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 74, in main
+    args.sep = guess_sep(args.input)
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 35, in guess_sep
+    with open(x) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'ko_p9_pu1.vs.ko_p9_input.rmdup_peaks.rmblck.narrowPeak.annot.tsv'
+INFO  @ Sat, 12 Sep 2020 13:32:05: 
+# Command line: callpeak -t ko_p9_pu1.markdup.uq.bam -c ko_p9_input.markdup.uq.bam --keep-dup all -n ko_p9_pu1.vs.ko_p9_input.markdup.uq -B -g mm
+# ARGUMENTS LIST:
+# name = ko_p9_pu1.vs.ko_p9_input.markdup.uq
+# format = AUTO
+# ChIP-seq file = ['ko_p9_pu1.markdup.uq.bam']
+# control file = ['ko_p9_input.markdup.uq.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ Sat, 12 Sep 2020 13:32:05: #1 read tag files... 
+INFO  @ Sat, 12 Sep 2020 13:32:05: #1 read treatment tags... 
+INFO  @ Sat, 12 Sep 2020 13:32:05: Detected format is: BAM 
+INFO  @ Sat, 12 Sep 2020 13:32:05: * Input file is gzipped. 
+INFO  @ Sat, 12 Sep 2020 13:32:09:  1000000 
+INFO  @ Sat, 12 Sep 2020 13:32:12:  2000000 
+INFO  @ Sat, 12 Sep 2020 13:32:15:  3000000 
+INFO  @ Sat, 12 Sep 2020 13:32:19:  4000000 
+INFO  @ Sat, 12 Sep 2020 13:32:22:  5000000 
+INFO  @ Sat, 12 Sep 2020 13:32:25:  6000000 
+INFO  @ Sat, 12 Sep 2020 13:32:28:  7000000 
+INFO  @ Sat, 12 Sep 2020 13:32:32:  8000000 
+INFO  @ Sat, 12 Sep 2020 13:32:35:  9000000 
+INFO  @ Sat, 12 Sep 2020 13:32:38:  10000000 
+INFO  @ Sat, 12 Sep 2020 13:32:42:  11000000 
+INFO  @ Sat, 12 Sep 2020 13:32:45:  12000000 
+INFO  @ Sat, 12 Sep 2020 13:32:48:  13000000 
+INFO  @ Sat, 12 Sep 2020 13:32:52:  14000000 
+INFO  @ Sat, 12 Sep 2020 13:32:55:  15000000 
+INFO  @ Sat, 12 Sep 2020 13:32:58:  16000000 
+INFO  @ Sat, 12 Sep 2020 13:33:02: #1.2 read input tags... 
+INFO  @ Sat, 12 Sep 2020 13:33:02: Detected format is: BAM 
+INFO  @ Sat, 12 Sep 2020 13:33:02: * Input file is gzipped. 
+INFO  @ Sat, 12 Sep 2020 13:33:05:  1000000 
+INFO  @ Sat, 12 Sep 2020 13:33:08:  2000000 
+INFO  @ Sat, 12 Sep 2020 13:33:11:  3000000 
+INFO  @ Sat, 12 Sep 2020 13:33:14:  4000000 
+INFO  @ Sat, 12 Sep 2020 13:33:18:  5000000 
+INFO  @ Sat, 12 Sep 2020 13:33:21:  6000000 
+INFO  @ Sat, 12 Sep 2020 13:33:24:  7000000 
+INFO  @ Sat, 12 Sep 2020 13:33:27:  8000000 
+INFO  @ Sat, 12 Sep 2020 13:33:31:  9000000 
+INFO  @ Sat, 12 Sep 2020 13:33:34:  10000000 
+INFO  @ Sat, 12 Sep 2020 13:33:37:  11000000 
+INFO  @ Sat, 12 Sep 2020 13:33:41:  12000000 
+INFO  @ Sat, 12 Sep 2020 13:33:44:  13000000 
+INFO  @ Sat, 12 Sep 2020 13:33:47:  14000000 
+INFO  @ Sat, 12 Sep 2020 13:33:50:  15000000 
+INFO  @ Sat, 12 Sep 2020 13:33:54:  16000000 
+INFO  @ Sat, 12 Sep 2020 13:33:57:  17000000 
+INFO  @ Sat, 12 Sep 2020 13:34:00:  18000000 
+INFO  @ Sat, 12 Sep 2020 13:34:03:  19000000 
+INFO  @ Sat, 12 Sep 2020 13:34:04: #1 tag size is determined as 51 bps 
+INFO  @ Sat, 12 Sep 2020 13:34:04: #1 tag size = 51 
+INFO  @ Sat, 12 Sep 2020 13:34:04: #1  total tags in treatment: 16970928 
+INFO  @ Sat, 12 Sep 2020 13:34:04: #1  total tags in control: 19164409 
+INFO  @ Sat, 12 Sep 2020 13:34:04: #1 finished! 
+INFO  @ Sat, 12 Sep 2020 13:34:04: #2 Build Peak Model... 
+INFO  @ Sat, 12 Sep 2020 13:34:04: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Sat, 12 Sep 2020 13:34:06: #2 number of paired peaks: 10737 
+INFO  @ Sat, 12 Sep 2020 13:34:06: start model_add_line... 
+INFO  @ Sat, 12 Sep 2020 13:34:06: start X-correlation... 
+INFO  @ Sat, 12 Sep 2020 13:34:06: end of X-cor 
+INFO  @ Sat, 12 Sep 2020 13:34:06: #2 finished! 
+INFO  @ Sat, 12 Sep 2020 13:34:06: #2 predicted fragment length is 230 bps 
+INFO  @ Sat, 12 Sep 2020 13:34:06: #2 alternative fragment length(s) may be 230 bps 
+INFO  @ Sat, 12 Sep 2020 13:34:06: #2.2 Generate R script for model : ko_p9_pu1.vs.ko_p9_input.markdup.uq_model.r 
+INFO  @ Sat, 12 Sep 2020 13:34:06: #3 Call peaks... 
+INFO  @ Sat, 12 Sep 2020 13:34:06: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Sat, 12 Sep 2020 13:35:23: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Sat, 12 Sep 2020 13:35:23: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... ko_p9_pu1.vs.ko_p9_input.markdup.uq_treat_pileup.bdg 
+INFO  @ Sat, 12 Sep 2020 13:35:23: #3   Write bedGraph files for control lambda (after scaling if necessary)... ko_p9_pu1.vs.ko_p9_input.markdup.uq_control_lambda.bdg 
+INFO  @ Sat, 12 Sep 2020 13:35:23: #3   Pileup will be based on sequencing depth in treatment. 
+INFO  @ Sat, 12 Sep 2020 13:35:23: #3 Call peaks for each chromosome... 
+INFO  @ Sat, 12 Sep 2020 13:37:35: #4 Write output xls file... ko_p9_pu1.vs.ko_p9_input.markdup.uq_peaks.xls 
+INFO  @ Sat, 12 Sep 2020 13:37:35: #4 Write peak in narrowPeak format file... ko_p9_pu1.vs.ko_p9_input.markdup.uq_peaks.narrowPeak 
+INFO  @ Sat, 12 Sep 2020 13:37:35: #4 Write summits bed file... ko_p9_pu1.vs.ko_p9_input.markdup.uq_summits.bed 
+INFO  @ Sat, 12 Sep 2020 13:37:35: Done! 
+INFO  @ Sat, 12 Sep 2020 13:37:37: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:38:06: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:38:35: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 13:38:50: Calculate scores comparing treatment and control by 'qpois'... 
+INFO  @ Sat, 12 Sep 2020 13:39:41: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 13:39:48: Finished 'qpois'! Please check 'ko_p9_pu1.vs.ko_p9_input.markdup.uq_treat_pvalue.bdg'! 
+INFO  @ Sat, 12 Sep 2020 13:39:50: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:40:19: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:40:48: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 13:41:04: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Sat, 12 Sep 2020 13:44:16: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 13:45:33: Finished 'FE'! Please check 'ko_p9_pu1.vs.ko_p9_input.markdup.uq_FE.bdg'! 
+INFO  @ Sat, 12 Sep 2020 13:45:35: Read and build treatment bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:46:05: Read and build control bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:46:33: Build scoreTrackII... 
+INFO  @ Sat, 12 Sep 2020 13:46:49: Calculate scores comparing treatment and control by 'logLR'... 
+INFO  @ Sat, 12 Sep 2020 13:47:06: Write bedGraph of scores... 
+INFO  @ Sat, 12 Sep 2020 13:48:34: Finished 'logLR'! Please check 'ko_p9_pu1.vs.ko_p9_input.markdup.uq_logLR.bdg'! 
+INFO  @ Sat, 12 Sep 2020 13:48:35: Read and build bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:48:37: Call peaks from bedGraph... 
+INFO  @ Sat, 12 Sep 2020 13:48:37: Write peaks... 
+INFO  @ Sat, 12 Sep 2020 13:48:37: Done 
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 147, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 111, in main
+    get_annotation_data(args)
+  File "/home/yli11/HemTools/bin/annot_gene_features.py", line 85, in get_annotation_data
+    args.tss = myData['%s_gencode33_TSS'%(args.genome)]
+KeyError: 'mm9_gencode33_TSS'
+Traceback (most recent call last):
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 95, in <module>
+    main()
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 74, in main
+    args.sep = guess_sep(args.input)
+  File "/home/yli11/HemTools/bin/pie_plot.py", line 35, in guess_sep
+    with open(x) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'ko_p9_pu1.vs.ko_p9_input.markdup.uq_peaks.rmblck.narrowPeak.annot.tsv'

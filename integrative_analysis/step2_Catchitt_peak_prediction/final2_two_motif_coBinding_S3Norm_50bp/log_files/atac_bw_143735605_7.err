@@ -1,0 +1,10 @@
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/research/rgs01/scratch_lsf/java -XX:ParallelGCThreads=1
+Parameters of tool "Chromatin accessibility" (access, version: 0.1):
+d - Data source (The format of the input file containing the coverage information, range={BAM/SAM, Bigwig}, default = BAM/SAM)	= Bigwig
+    Parameters for selection "BAM/SAM":
+    	i - Input SAM/BAM (The input file containing the mapped DNase-seq/ATAC-seq reads, type = bam,sam)	= null
+    Parameters for selection "Bigwig":
+    	i - Input Bigwig (The input file containing the mapped DNase-seq/ATAC-seq reads, type = bw,bigwig)	= /research/rgs01/project_space/chenggrp/blood_regulome/chenggrp/HemPortal/HemTools_uniform_processed_files/Mouse/ATAC/blood_lineage/atac_seq_yli11_2021-09-24/bam_files/S3norm_yli11_2021-10-09/S3norm_rc_bedgraph/mouse_MEP_ATAC.markdup.s3norm.bdg.s3norm.bw
+    	f - FastA index (The genome index, type = fai)	= /home/yli11/Data/Mouse/mm9/fasta/mm9_main.fa.fai
+b - Bin width (The width of the genomic bins considered)	= 50
+outdir - The output directory, defaults to the current working directory (.)	= final2_two_motif_coBinding_S3Norm_50bp/ATAC/MEP

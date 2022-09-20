@@ -1,0 +1,24 @@
+minFragmentLength: 0
+verbose: False
+out_file_for_raw_data: None
+numberOfSamples: None
+bedFile: None
+bamFilesList: ['HPC5_ATAC.markdup.bam']
+numberOfProcessors: 4
+samFlag_exclude: None
+save_data: False
+stepSize: 20
+smoothLength: 60
+blackListFileName: ['/research/dept/hem/common/sequencing/chenggrp/pipelines/mm9/mm9.blacklist.bed']
+center_read: False
+skipZeroOverZero: False
+ignoreDuplicates: False
+defaultFragmentLength: read length
+chrsToSkip: ['chrX', 'chrM']
+region: None
+maxPairedFragmentLength: 1000
+samFlag_include: None
+binLength: 20
+maxFragmentLength: 0
+minMappingQuality: None
+zerosToNans: False

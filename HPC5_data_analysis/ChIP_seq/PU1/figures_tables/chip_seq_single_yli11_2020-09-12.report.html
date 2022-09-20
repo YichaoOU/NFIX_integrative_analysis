@@ -1,0 +1,735 @@
+
+	
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">  </script>
+	<style  type="text/css" >  
+
+		.blank.level0 {
+			display: none;
+		}
+		.row_heading {
+			display: none;
+		}
+	</style>
+	</head>
+	<body>
+		<div name="content" class="container">
+			<div class="row">
+				<div class="col-xs-9">
+					<h1>chip_seq_single_yli11_2020-09-12</h1>
+					<h4>Number of samples: 12</h4>
+					<h4>Report generated at : 2020-09-12</h4>
+					<h4>Pipeline type: chip_seq_single</h4>
+					<h4>Aligner: BWA 0.7.16a</h4>
+					<h4>Peak caller: macs2 2.1.1</h4>
+					<h4>Contact: Yichao.Li@stjude.org or Yong.Cheng@stjude.org</h4>
+					<hr>
+					<h1>FASTQC report</h1>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ko p9 pu1 R1 </th>
+      <th>wt p7 runx1 R1 </th>
+      <th>ko p7 pu1 R1 </th>
+      <th>wt p9 input R1 </th>
+      <th>ko p9 runx1 R1 </th>
+      <th>ko p9 input R1 </th>
+      <th>wt p9 runx1 R1 </th>
+      <th>wt p7 input R1 </th>
+      <th>ko p7 input R1 </th>
+      <th>wt p7 pu1 R1 </th>
+      <th>ko p7 runx1 R1 </th>
+      <th>wt p9 pu1 R1 </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Basic Statistics</th>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Per base sequence quality</th>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Per sequence quality scores</th>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Per base sequence content</th>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td><span style="color:orange">warn</span></td>
+      <td>pass</td>
+      <td><span style="color:orange">warn</span></td>
+      <td>pass</td>
+      <td><span style="color:orange">warn</span></td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Per sequence GC content</th>
+      <td><span style="color:orange">warn</span></td>
+      <td><span style="color:orange">warn</span></td>
+      <td><span style="color:orange">warn</span></td>
+      <td><span style="color:orange">warn</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:orange">warn</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:orange">warn</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:orange">warn</span></td>
+      <td><span style="color:orange">warn</span></td>
+      <td><span style="color:orange">warn</span></td>
+    </tr>
+    <tr>
+      <th>Per base N content</th>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Sequence Length Distribution</th>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Sequence Duplication Levels</th>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Overrepresented sequences</th>
+      <td>pass</td>
+      <td><span style="color:orange">warn</span></td>
+      <td>pass</td>
+      <td>pass</td>
+      <td><span style="color:orange">warn</span></td>
+      <td>pass</td>
+      <td><span style="color:orange">warn</span></td>
+      <td>pass</td>
+      <td>pass</td>
+      <td><span style="color:orange">warn</span></td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Adapter Content</th>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+      <td>pass</td>
+    </tr>
+    <tr>
+      <th>Kmer Content</th>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td>pass</td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+      <td><span style="color:red;font-weight:bold">fail</span></td>
+    </tr>
+  </tbody>
+</table>
+					<hr>
+					<h1>Alignment report</h1>
+					<h2>Flagstat (raw BAM)</h2>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ko p9 pu1</th>
+      <th>wt p7 runx1</th>
+      <th>ko p7 pu1</th>
+      <th>wt p9 input</th>
+      <th>ko p9 runx1</th>
+      <th>ko p9 input</th>
+      <th>wt p9 runx1</th>
+      <th>wt p7 input</th>
+      <th>ko p7 input</th>
+      <th>wt p7 pu1</th>
+      <th>ko p7 runx1</th>
+      <th>wt p9 pu1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mapped passed</th>
+      <td>20953764.0</td>
+      <td>26606825.0</td>
+      <td>65628720.0</td>
+      <td>23705531.0</td>
+      <td>15161696.0</td>
+      <td>24111304.0</td>
+      <td>15946189.0</td>
+      <td>21535953.0</td>
+      <td>19497498.0</td>
+      <td>13299859.0</td>
+      <td>23087569.0</td>
+      <td>25752624.0</td>
+    </tr>
+    <tr>
+      <th>total passed</th>
+      <td>22162283.0</td>
+      <td>27754825.0</td>
+      <td>68347377.0</td>
+      <td>24481995.0</td>
+      <td>17301910.0</td>
+      <td>24826181.0</td>
+      <td>18930631.0</td>
+      <td>22104329.0</td>
+      <td>20130280.0</td>
+      <td>14287574.0</td>
+      <td>24101150.0</td>
+      <td>26953209.0</td>
+    </tr>
+    <tr>
+      <th>mapped passed pct</th>
+      <td>94.55</td>
+      <td>95.86</td>
+      <td>96.02</td>
+      <td>96.83</td>
+      <td>87.63</td>
+      <td>97.12</td>
+      <td>84.23</td>
+      <td>97.43</td>
+      <td>96.86</td>
+      <td>93.09</td>
+      <td>95.79</td>
+      <td>95.55</td>
+    </tr>
+    <tr>
+      <th>properly paired passed</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>properly paired passed pct</th>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+    </tr>
+    <tr>
+      <th>duplicates passed</th>
+      <td>3429738.0</td>
+      <td>4779646.0</td>
+      <td>12555475.0</td>
+      <td>4144516.0</td>
+      <td>2429520.0</td>
+      <td>4358401.0</td>
+      <td>2560001.0</td>
+      <td>4005454.0</td>
+      <td>3766081.0</td>
+      <td>1812500.0</td>
+      <td>4222353.0</td>
+      <td>4107717.0</td>
+    </tr>
+    <tr>
+      <th>duplication rate pct</th>
+      <td>15.475562693608778</td>
+      <td>17.220955275344014</td>
+      <td>18.370090486427884</td>
+      <td>16.928832801411815</td>
+      <td>14.041917915420898</td>
+      <td>17.555664320662125</td>
+      <td>13.523062173680318</td>
+      <td>18.120676723550396</td>
+      <td>18.70853758616373</td>
+      <td>12.68584855623495</td>
+      <td>17.519300946220408</td>
+      <td>15.240177894958629</td>
+    </tr>
+  </tbody>
+</table>
+					<h2>Flagstat (chrM BAM)</h2>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ko p9 pu1</th>
+      <th>wt p7 runx1</th>
+      <th>ko p7 pu1</th>
+      <th>wt p9 input</th>
+      <th>ko p9 runx1</th>
+      <th>ko p9 input</th>
+      <th>wt p9 runx1</th>
+      <th>wt p7 input</th>
+      <th>ko p7 input</th>
+      <th>wt p7 pu1</th>
+      <th>ko p7 runx1</th>
+      <th>wt p9 pu1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mapped passed</th>
+      <td>2359.0</td>
+      <td>5309.0</td>
+      <td>6983.0</td>
+      <td>69543.0</td>
+      <td>3717.0</td>
+      <td>78593.0</td>
+      <td>2338.0</td>
+      <td>46440.0</td>
+      <td>52350.0</td>
+      <td>1562.0</td>
+      <td>5812.0</td>
+      <td>2453.0</td>
+    </tr>
+    <tr>
+      <th>total passed</th>
+      <td>2359.0</td>
+      <td>5309.0</td>
+      <td>6983.0</td>
+      <td>69543.0</td>
+      <td>3717.0</td>
+      <td>78593.0</td>
+      <td>2338.0</td>
+      <td>46440.0</td>
+      <td>52350.0</td>
+      <td>1562.0</td>
+      <td>5812.0</td>
+      <td>2453.0</td>
+    </tr>
+    <tr>
+      <th>mapped passed pct</th>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>properly paired passed</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>properly paired passed pct</th>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+    </tr>
+    <tr>
+      <th>duplicates passed</th>
+      <td>240.0</td>
+      <td>692.0</td>
+      <td>1081.0</td>
+      <td>43596.0</td>
+      <td>426.0</td>
+      <td>51553.0</td>
+      <td>201.0</td>
+      <td>24592.0</td>
+      <td>28914.0</td>
+      <td>116.0</td>
+      <td>787.0</td>
+      <td>204.0</td>
+    </tr>
+    <tr>
+      <th>duplication rate pct</th>
+      <td>10.173802458668927</td>
+      <td>13.03446976831795</td>
+      <td>15.480452527566948</td>
+      <td>62.689271386048915</td>
+      <td>11.46085552865214</td>
+      <td>65.59490030918784</td>
+      <td>8.597091531223269</td>
+      <td>52.954349698535744</td>
+      <td>55.232091690544415</td>
+      <td>7.426376440460948</td>
+      <td>13.540949759119064</td>
+      <td>8.316347329800244</td>
+    </tr>
+  </tbody>
+</table>
+					<h2>Flagstat (non-chrM BAM)</h2>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ko p9 pu1</th>
+      <th>wt p7 runx1</th>
+      <th>ko p7 pu1</th>
+      <th>wt p9 input</th>
+      <th>ko p9 runx1</th>
+      <th>ko p9 input</th>
+      <th>wt p9 runx1</th>
+      <th>wt p7 input</th>
+      <th>ko p7 input</th>
+      <th>wt p7 pu1</th>
+      <th>ko p7 runx1</th>
+      <th>wt p9 pu1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>total passed</th>
+      <td>22159924.0</td>
+      <td>27749516.0</td>
+      <td>68340394.0</td>
+      <td>24412452.0</td>
+      <td>17298193.0</td>
+      <td>24747588.0</td>
+      <td>18928293.0</td>
+      <td>22057889.0</td>
+      <td>20077930.0</td>
+      <td>14286012.0</td>
+      <td>24095338.0</td>
+      <td>26950756.0</td>
+    </tr>
+    <tr>
+      <th>duplicates passed</th>
+      <td>3429498.0</td>
+      <td>4778954.0</td>
+      <td>12554394.0</td>
+      <td>4100920.0</td>
+      <td>2429094.0</td>
+      <td>4306848.0</td>
+      <td>2559800.0</td>
+      <td>3980862.0</td>
+      <td>3737167.0</td>
+      <td>1812384.0</td>
+      <td>4221566.0</td>
+      <td>4107513.0</td>
+    </tr>
+    <tr>
+      <th>mapped passed</th>
+      <td>20951405.0</td>
+      <td>26601516.0</td>
+      <td>65621737.0</td>
+      <td>23635988.0</td>
+      <td>15157979.0</td>
+      <td>24032711.0</td>
+      <td>15943851.0</td>
+      <td>21489513.0</td>
+      <td>19445148.0</td>
+      <td>13298297.0</td>
+      <td>23081757.0</td>
+      <td>25750171.0</td>
+    </tr>
+    <tr>
+      <th>properly paired passed</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>duplication rate</th>
+      <td>0.1547612708419036</td>
+      <td>0.17221756228108628</td>
+      <td>0.18370385748727172</td>
+      <td>0.16798476449641356</td>
+      <td>0.14042472528778005</td>
+      <td>0.17403102072007987</td>
+      <td>0.13523670623653172</td>
+      <td>0.18047338981531733</td>
+      <td>0.18613308244425594</td>
+      <td>0.12686423614931866</td>
+      <td>0.1752026055828725</td>
+      <td>0.15240808087164606</td>
+    </tr>
+    <tr>
+      <th>mapped passed pct</th>
+      <td>0.9454637570056649</td>
+      <td>0.9586299090766124</td>
+      <td>0.9602188860661236</td>
+      <td>0.9681939364386666</td>
+      <td>0.8762752849387216</td>
+      <td>0.9711132656645165</td>
+      <td>0.8423290467872618</td>
+      <td>0.9742325296858643</td>
+      <td>0.9684837032502852</td>
+      <td>0.9308613908486147</td>
+      <td>0.9579345597891177</td>
+      <td>0.9554526411058747</td>
+    </tr>
+    <tr>
+      <th>properly paired passed pct</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+					<h2>Library complexity (filtered non-mito BAM)</h2>
+					<table border="1" class="table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ko p9 pu1</th>
+      <th>wt p7 runx1</th>
+      <th>ko p7 pu1</th>
+      <th>wt p9 input</th>
+      <th>ko p9 runx1</th>
+      <th>ko p9 input</th>
+      <th>wt p9 runx1</th>
+      <th>wt p7 input</th>
+      <th>ko p7 input</th>
+      <th>wt p7 pu1</th>
+      <th>ko p7 runx1</th>
+      <th>wt p9 pu1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Total Reads</th>
+      <td>20951405.0</td>
+      <td>26601516.0</td>
+      <td>65621737.0</td>
+      <td>23635988.0</td>
+      <td>15157979.0</td>
+      <td>24032711.0</td>
+      <td>15943851.0</td>
+      <td>21489513.0</td>
+      <td>19445148.0</td>
+      <td>13298297.0</td>
+      <td>23081757.0</td>
+      <td>25750171.0</td>
+    </tr>
+    <tr>
+      <th>Distinct Reads</th>
+      <td>17646939.0</td>
+      <td>21983240.0</td>
+      <td>53392001.0</td>
+      <td>19681515.0</td>
+      <td>12826251.0</td>
+      <td>19880465.0</td>
+      <td>13488540.0</td>
+      <td>17650307.0</td>
+      <td>15850190.0</td>
+      <td>11565088.0</td>
+      <td>19008590.0</td>
+      <td>21783088.0</td>
+    </tr>
+    <tr>
+      <th>One Read</th>
+      <td>16418325.0</td>
+      <td>20479220.0</td>
+      <td>49679285.0</td>
+      <td>18506906.0</td>
+      <td>11994490.0</td>
+      <td>18728676.0</td>
+      <td>12643031.0</td>
+      <td>16474363.0</td>
+      <td>14964456.0</td>
+      <td>10963201.0</td>
+      <td>17710567.0</td>
+      <td>20156574.0</td>
+    </tr>
+    <tr>
+      <th>Two Reads</th>
+      <td>1093570.0</td>
+      <td>1345174.0</td>
+      <td>3346664.0</td>
+      <td>1041665.0</td>
+      <td>720291.0</td>
+      <td>1002891.0</td>
+      <td>748886.0</td>
+      <td>1043428.0</td>
+      <td>778428.0</td>
+      <td>534927.0</td>
+      <td>1154225.0</td>
+      <td>1446167.0</td>
+    </tr>
+    <tr>
+      <th>NRF = Distinct/Total</th>
+      <td>0.8422799999999999</td>
+      <td>0.82639</td>
+      <td>0.8136329999999999</td>
+      <td>0.832693</td>
+      <td>0.8461719999999999</td>
+      <td>0.827225</td>
+      <td>0.8460030000000001</td>
+      <td>0.8213450000000001</td>
+      <td>0.8151229999999999</td>
+      <td>0.869667</td>
+      <td>0.823533</td>
+      <td>0.8459399999999999</td>
+    </tr>
+    <tr>
+      <th>PBC1 = OneRead/Distinct</th>
+      <td>0.930378</td>
+      <td>0.9315829999999999</td>
+      <td>0.9304629999999999</td>
+      <td>0.940319</td>
+      <td>0.9351520000000001</td>
+      <td>0.9420639999999999</td>
+      <td>0.937316</td>
+      <td>0.933375</td>
+      <td>0.944118</td>
+      <td>0.9479569999999999</td>
+      <td>0.9317139999999999</td>
+      <td>0.9253309999999999</td>
+    </tr>
+    <tr>
+      <th>PBC2 = OneRead/TwoReads</th>
+      <td>15.013511</td>
+      <td>15.224216</td>
+      <td>14.844420000000001</td>
+      <td>17.766658</td>
+      <td>16.652283999999998</td>
+      <td>18.674687</td>
+      <td>16.882451</td>
+      <td>15.788692000000001</td>
+      <td>19.223944</td>
+      <td>20.494760999999997</td>
+      <td>15.344120000000002</td>
+      <td>13.93793</td>
+    </tr>
+  </tbody>
+</table>
+
+				</div>  
+			</div>
+		</div>
+	</body>
+</html> 
+	

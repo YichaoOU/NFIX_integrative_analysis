@@ -1,0 +1,64 @@
+Sender: LSF System <lsfadmin@nodecn240>
+Subject: Job 109706096[9]: <QC1[1-12]> in cluster <hpcf_research_cluster> Done
+
+Job <QC1[1-12]> was submitted from host <nodecn125> by user <yli11> in cluster <hpcf_research_cluster> at Sat Sep 12 09:46:42 2020.
+Job was executed on host(s) <nodecn240>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Sat Sep 12 09:46:43 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/HPC5/PU1/pu1_fastq_files> was used as the working directory.
+Started at Sat Sep 12 09:46:43 2020.
+Terminated at Sat Sep 12 09:48:48 2020.
+Results reported at Sat Sep 12 09:48:48 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P chip_seq_single
+#BSUB -o chip_seq_single_yli11_2020-09-12.fastqc.message_%J_%I.out -e chip_seq_single_yli11_2020-09-12.fastqc.message_%J_%I.err
+#BSUB -n 1
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=4000]"
+#BSUB -J "QC1[1-12]"
+module purge
+module load fastqc/0.11.5
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id chip_seq_single_yli11_2020-09-12.fastqc.input|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id chip_seq_single_yli11_2020-09-12.fastqc.input|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id chip_seq_single_yli11_2020-09-12.fastqc.input|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id chip_seq_single_yli11_2020-09-12.fastqc.input|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id chip_seq_single_yli11_2020-09-12.fastqc.input|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id chip_seq_single_yli11_2020-09-12.fastqc.input|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id chip_seq_single_yli11_2020-09-12.fastqc.input|tail -n1`
+
+fastqc ${COL1}
+
+		
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   125.91 sec.
+    Max Memory :                                 176 MB
+    Average Memory :                             159.20 MB
+    Total Requested Memory :                     4000.00 MB
+    Delta Memory :                               3824.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                17
+    Run time :                                   125 sec.
+    Turnaround time :                            126 sec.
+
+The output (if any) follows:
+
+Analysis complete for ko_p7_input_R1.fastq.gz
+
+
+PS:
+
+Read file <chip_seq_single_yli11_2020-09-12.fastqc.message_109706096_9.err> for stderr output of this job.
+

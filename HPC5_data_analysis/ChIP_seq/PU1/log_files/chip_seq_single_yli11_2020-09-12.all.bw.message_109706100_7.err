@@ -1,0 +1,24 @@
+minFragmentLength: 0
+verbose: False
+out_file_for_raw_data: None
+numberOfSamples: None
+bedFile: None
+bamFilesList: ['wt_p9_runx1.markdup.bam']
+numberOfProcessors: 6
+samFlag_exclude: None
+save_data: False
+stepSize: 50
+smoothLength: 200
+blackListFileName: None
+center_read: False
+skipZeroOverZero: False
+ignoreDuplicates: False
+defaultFragmentLength: read length
+chrsToSkip: ['chrX', 'chrM']
+region: None
+maxPairedFragmentLength: 1000
+samFlag_include: None
+binLength: 50
+maxFragmentLength: 0
+minMappingQuality: None
+zerosToNans: False

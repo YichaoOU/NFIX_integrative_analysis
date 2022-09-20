@@ -1,0 +1,25 @@
+
+
+#BSUB -P chip_seq_single
+#BSUB -o chip_seq_single_yli11_2020-09-12.rmdup.uq.bw.message_%J_%I.out -e chip_seq_single_yli11_2020-09-12.rmdup.uq.bw.message_%J_%I.err
+#BSUB -n 6
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=4500]"
+#BSUB -J "rmdup.uq.bw[1-12]"
+module purge
+#BSUB -w "ended(109706098[*])"
+#BSUB -R "select[rhel7]"
+module load python/2.7.15-rhel7
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id SE.list|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id SE.list|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id SE.list|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id SE.list|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id SE.list|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id SE.list|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id SE.list|tail -n1`
+
+bamCoverage -b ${COL2}.rmdup.uq.bam -o ${COL2}.rmdup.uq.bw --smoothLength=200 --ignoreForNormalization chrX chrM   --effectiveGenomeSize 1865500000 --numberOfProcessors 6
+
+		

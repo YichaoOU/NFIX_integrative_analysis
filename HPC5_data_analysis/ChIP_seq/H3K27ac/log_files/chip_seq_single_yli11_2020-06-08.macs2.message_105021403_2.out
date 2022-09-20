@@ -1,0 +1,92 @@
+Sender: LSF System <lsfadmin@nodecn262>
+Subject: Job 105021403[2]: <macs2[1-2]> in cluster <hpcf_research_cluster> Done
+
+Job <macs2[1-2]> was submitted from host <nodecn012> by user <yli11> in cluster <hpcf_research_cluster> at Mon Jun  8 16:50:28 2020.
+Job was executed on host(s) <nodecn262>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Mon Jun  8 18:53:38 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/figures/chromHMM_input/H3K27ac_enhancer> was used as the working directory.
+Started at Mon Jun  8 18:53:38 2020.
+Terminated at Mon Jun  8 21:21:42 2020.
+Results reported at Mon Jun  8 21:21:42 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P chip_seq_single
+#BSUB -o chip_seq_single_yli11_2020-06-08.macs2.message_%J_%I.out -e chip_seq_single_yli11_2020-06-08.macs2.message_%J_%I.err
+#BSUB -n 1
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=30000]"
+#BSUB -J "macs2[1-2]"
+module purge
+#BSUB -w "ended(105021397)"
+module load macs2/2.1.1
+module load bedtools/2.29.2
+module load conda3
+source activate /home/yli11/.conda/envs/py2
+export PATH=$PATH:"/home/yli11/HemTools/bin"
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id peakcall.tsv|tail -n1`
+
+macs2 callpeak -t ${COL1}.bam -c ${COL2}.bam --keep-dup all -n ${COL3} -B -g mm
+macs2 bdgcmp -t ${COL3}_treat_pileup.bdg -c ${COL3}_control_lambda.bdg -m qpois -o ${COL3}_treat_pvalue.bdg
+macs2 bdgcmp -t ${COL3}_treat_pileup.bdg -c ${COL3}_control_lambda.bdg -m FE -o ${COL3}_FE.bdg
+macs2 bdgcmp -t ${COL3}_treat_pileup.bdg -c ${COL3}_control_lambda.bdg -m logLR -o ${COL3}_logLR.bdg -p 0.01
+macs2 bdgpeakcall -i ${COL3}_treat_pvalue.bdg -c 1.301 -l 100 -g 75 -o ${COL3}_bdgpeaks.bed
+intersectBed -a ${COL3}_peaks.narrowPeak -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}_peaks.rmblck.narrowPeak
+intersectBed -a ${COL3}_bdgpeaks.bed -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}_bdgpeaks.rmblck.bed
+annot_gene_features.py -f ${COL3}_peaks.rmblck.narrowPeak -o ${COL3}_peaks.rmblck.narrowPeak.annot.tsv -g mm9
+pie_plot.py -f ${COL3}_peaks.rmblck.narrowPeak.annot.tsv --order Exon,Promoter,5UTR,3UTR,Intron,Intergenic --use_col -1 --header -o ${COL3}_peaks.rmblck.narrowPeak.genomic_features.pie_chart
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}_treat_pvalue.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}_treat_pvalue.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}_FE.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}_FE.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}_logLR.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}_logLR.bw
+macs2 callpeak -t ${COL1}.rmdup.uq.rmchrM.bam -c ${COL2}.rmdup.uq.rmchrM.bam --keep-dup all -n ${COL3}.rmdup.uq.rmchrM -B -g mm
+macs2 bdgcmp -t ${COL3}.rmdup.uq.rmchrM_treat_pileup.bdg -c ${COL3}.rmdup.uq.rmchrM_control_lambda.bdg -m qpois -o ${COL3}.rmdup.uq.rmchrM_treat_pvalue.bdg
+macs2 bdgcmp -t ${COL3}.rmdup.uq.rmchrM_treat_pileup.bdg -c ${COL3}.rmdup.uq.rmchrM_control_lambda.bdg -m FE -o ${COL3}.rmdup.uq.rmchrM_FE.bdg
+macs2 bdgcmp -t ${COL3}.rmdup.uq.rmchrM_treat_pileup.bdg -c ${COL3}.rmdup.uq.rmchrM_control_lambda.bdg -m logLR -o ${COL3}.rmdup.uq.rmchrM_logLR.bdg -p 0.01
+macs2 bdgpeakcall -i ${COL3}.rmdup.uq.rmchrM_treat_pvalue.bdg -c 1.301 -l 100 -g 75 -o ${COL3}.rmdup.uq.rmchrM_bdgpeaks.bed
+intersectBed -a ${COL3}.rmdup.uq.rmchrM_peaks.narrowPeak -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak
+intersectBed -a ${COL3}.rmdup.uq.rmchrM_bdgpeaks.bed -b /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.blacklist.bed -v -wa > ${COL3}.rmdup.uq.rmchrM_bdgpeaks.rmblck.bed
+annot_gene_features.py -f ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak -o ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak.annot.tsv -g mm9
+pie_plot.py -f ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak.annot.tsv --order Exon,Promoter,5UTR,3UTR,Intron,Intergenic --use_col -1 --header -o ${COL3}.rmdup.uq.rmchrM_peaks.rmblck.narrowPeak.genomic_features.pie_chart
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup.uq.rmchrM_treat_pvalue.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup.uq.rmchrM_treat_pvalue.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup.uq.rmchrM_FE.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup.uq.rmchrM_FE.bw
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/wigToBigWig ${COL3}.rmdup.uq.rmchrM_logLR.bdg /research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../mm9/mm9.chrom.sizes ${COL3}.rmdup.uq.rmchrM_logLR.bw
+macs2 callpeak -t ${COL1}.rmdup.bam -c ${COL2}.rmdup.bam --keep-dup all -n ${COL3}.rmdup -B -g mm
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9018.52 sec.
+    Max Memory :                                 18782 MB
+    Average Memory :                             2536.48 MB
+    Total Requested Memory :                     30000.00 MB
+    Delta Memory :                               11218.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                32
+    Run time :                                   8881 sec.
+    Turnaround time :                            16274 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <chip_seq_single_yli11_2020-06-08.macs2.message_105021403_2.err> for stderr output of this job.
+

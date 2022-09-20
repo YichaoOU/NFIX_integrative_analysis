@@ -1,0 +1,204 @@
+Sender: LSF System <lsfadmin@nodecn218>
+Subject: Job 105021404[1]: <tracks[1-1]> in cluster <hpcf_research_cluster> Done
+
+Job <tracks[1-1]> was submitted from host <nodecn012> by user <yli11> in cluster <hpcf_research_cluster> at Mon Jun  8 16:50:28 2020.
+Job was executed on host(s) <nodecn218>, in queue <standard>, as user <yli11> in cluster <hpcf_research_cluster> at Mon Jun  8 21:29:56 2020.
+</home/yli11> was used as the home directory.
+</home/yli11/Share/Megan/figures/chromHMM_input/H3K27ac_enhancer> was used as the working directory.
+Started at Mon Jun  8 21:29:56 2020.
+Terminated at Mon Jun  8 21:37:01 2020.
+Results reported at Mon Jun  8 21:37:01 2020.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+
+#BSUB -P chip_seq_single
+#BSUB -o chip_seq_single_yli11_2020-06-08.tracks.message_%J_%I.out -e chip_seq_single_yli11_2020-06-08.tracks.message_%J_%I.err
+#BSUB -n 1
+#BSUB -q standard
+#BSUB -R "span[hosts=1] rusage[mem=2000]"
+#BSUB -J "tracks[1-1]"
+module purge
+#BSUB -w "ended(105021395) && ended(105021398) && ended(105021397) && ended(105021396) && ended(105021402) && ended(105021400) && ended(105021403) && ended(105021401) && ended(105021399)"
+module load python/2.7.13
+
+id=$LSB_JOBINDEX
+COL1=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $1}'`
+COL2=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $2}'`
+COL3=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $3}'`
+COL4=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $4}'`
+COL5=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $5}'`
+COL6=`head -n $id peakcall.tsv|tail -n1|awk -F "	" '{print $6}'`
+LINE=`head -n $id peakcall.tsv|tail -n1`
+
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/upload_tracks.py ae152dc376eb 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined_treat_pvalue.bw,1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_treat_pvalue.bw,1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_treat_pvalue.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined_treat_pvalue.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_treat_pvalue.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_treat_pvalue.bw treat_pvalue.bw mm9
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/upload_tracks.py cfee346c6a88 histone_input_HPC5_combined.rmdup.bw,1706666_MW127_H3K27ac.rmdup.bw,1706665_MW127_H3K27ac.rmdup.bw rmdup.bw mm9
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/upload_tracks.py e6c70970bf72 histone_input_HPC5_combined.rmdup.uq.bw,1706666_MW127_H3K27ac.rmdup.uq.bw,1706665_MW127_H3K27ac.rmdup.uq.bw rmdup.uq.bw mm9
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/upload_tracks.py 6b2ebeb61f60 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined_FE.bw,1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_FE.bw,1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_FE.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined_FE.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_FE.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_FE.bw FE.bw mm9
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/upload_tracks.py 139a62593d03 histone_input_HPC5_combined.all.bw,1706666_MW127_H3K27ac.all.bw,1706665_MW127_H3K27ac.all.bw all.bw mm9
+/research/dept/hem/common/sequencing/chenggrp/pipelines/subcmd/../bin/upload_tracks.py 935790edeb75 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined_logLR.bw,1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_logLR.bw,1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_logLR.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined_logLR.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_logLR.bw,1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_logLR.bw logLR.bw mm9
+
+		
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   221.53 sec.
+    Max Memory :                                 50 MB
+    Average Memory :                             48.80 MB
+    Total Requested Memory :                     2000.00 MB
+    Delta Memory :                               1950.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                33
+    Run time :                                   424 sec.
+    Turnaround time :                            17193 sec.
+
+The output (if any) follows:
+
+connecting to server
+creating user's dir
+wait 5
+wait 5 done
+generating json file
+transfering file
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined_treat_pvalue.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_treat_pvalue.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_treat_pvalue.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined_treat_pvalue.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_treat_pvalue.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_treat_pvalue.bw
+wait 5
+wait 5 done
+https://ppr.stjude.org/?study=HemPipelines/yli11/ae152dc376eb/treat_pvalue.bw.json
+connecting to server
+creating user's dir
+wait 5
+wait 5 done
+generating json file
+transfering file
+wait 5
+wait 5 done
+trasferring histone_input_HPC5_combined.rmdup.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.rmdup.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.rmdup.bw
+wait 5
+wait 5 done
+https://ppr.stjude.org/?study=HemPipelines/yli11/cfee346c6a88/rmdup.bw.json
+connecting to server
+creating user's dir
+wait 5
+wait 5 done
+generating json file
+transfering file
+wait 5
+wait 5 done
+trasferring histone_input_HPC5_combined.rmdup.uq.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.rmdup.uq.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.rmdup.uq.bw
+wait 5
+wait 5 done
+https://ppr.stjude.org/?study=HemPipelines/yli11/e6c70970bf72/rmdup.uq.bw.json
+connecting to server
+creating user's dir
+wait 5
+wait 5 done
+generating json file
+transfering file
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined_FE.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_FE.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_FE.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined_FE.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_FE.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_FE.bw
+wait 5
+wait 5 done
+https://ppr.stjude.org/?study=HemPipelines/yli11/6b2ebeb61f60/FE.bw.json
+connecting to server
+creating user's dir
+wait 5
+wait 5 done
+generating json file
+transfering file
+wait 5
+wait 5 done
+trasferring histone_input_HPC5_combined.all.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.all.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.all.bw
+wait 5
+wait 5 done
+https://ppr.stjude.org/?study=HemPipelines/yli11/139a62593d03/all.bw.json
+connecting to server
+creating user's dir
+wait 5
+wait 5 done
+generating json file
+transfering file
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined_logLR.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_logLR.bw
+wait 5
+wait 5 done
+trasferring 1706666_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_logLR.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined_logLR.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup.uq.rmchrM_logLR.bw
+wait 5
+wait 5 done
+trasferring 1706665_MW127_H3K27ac.vs.histone_input_HPC5_combined.rmdup_logLR.bw
+wait 5
+wait 5 done
+https://ppr.stjude.org/?study=HemPipelines/yli11/935790edeb75/logLR.bw.json
+
+
+PS:
+
+Read file <chip_seq_single_yli11_2020-06-08.tracks.message_105021404_1.err> for stderr output of this job.
+
